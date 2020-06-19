@@ -17,6 +17,36 @@ function view(name){
     name: 'infoBuf',
     component: view('infoBuf')
   },
+  {
+    path: '/infoBuf1',
+    name: 'infoBuf1',
+    component: view('infoBuf1')
+  }, 
+  {
+    path: '/addBuf',
+    name: 'addBuf',
+    component: view('addBuf')
+  }, 
+  {
+    path: '/infoFarmer',
+    name: 'infoFarmer',
+    component: view('infoFarmer')
+  },
+  {
+    path: '/report',
+    name: 'report',
+    component: view('report')
+  },
+  {
+    path: '/sumReport',
+    name: 'sumReport',
+    component: view('sumReport')
+  },
+  {
+    path: '/growReport',
+    name: 'growReport',
+    component: view('growReport')
+  },
   
 ]
 
