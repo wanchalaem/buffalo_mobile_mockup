@@ -4,23 +4,23 @@
     <v-main>
         <router-view />
     </v-main>
-    <v-bottom-navigation dark shift>
-        <v-btn>
+    <v-bottom-navigation shift class="pa-2 elevation-10 ">
+        <v-btn > 
             <span>หน้าหลัก</span>
             <v-icon>mdi-home</v-icon>
         </v-btn>
 
-        <v-btn>
+        <v-btn >
             <span>ข้อมูลกระบือ</span>
             <v-icon>mdi-cow</v-icon>
         </v-btn>
 
-        <v-btn>
+        <v-btn >
             <span>ข้อมูลการเจริญเติบโต</span>
             <v-icon>mdi-clipboard-text-outline</v-icon>
         </v-btn>
 
-        <v-btn>
+        <v-btn >
             <span>รายงาน</span>
             <v-icon>mdi-clipboard-text-multiple-outline</v-icon>
         </v-btn>

@@ -10,7 +10,6 @@
             <v-text-field class="rounded-lg" outlined name="name" label="ชื่อฟาร์ม" id="id"></v-text-field>
             <v-text-field class="rounded-lg" outlined name="name" label="ใบพันธุ์ประวัติสำหรับอ้างอิง" id="id"></v-text-field>
             <v-text-field class="rounded-lg" outlined name="name" label="ใบพันธุ์ประวัติทางการ" id="id"></v-text-field>
-
         </v-card>
 
     </v-container>
