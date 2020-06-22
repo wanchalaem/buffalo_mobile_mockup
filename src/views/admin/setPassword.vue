@@ -1,49 +1,45 @@
 <template>
-<v-app>
+<div>
+    <Navbar icon="mdi-account-cog" name="ตั้งค่ารหัสผ่าน" />
+    <div class="pa-4">
+        <v-layout row wrap>
+            <v-flex xs12>
+            <v-toolbar-title>
+                <center>
+                <v-text-field clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line class="widths rounded-lg pa-1"></v-text-field>
+            </center>
+            </v-toolbar-title>  
+            <v-spacer></v-spacer>
+            
+            <v-card class="ma-2">
+                    <v-spacer></v-spacer>
+                    
+                    <div class="d-flex flex-no-wrap ">
+                        <div class="ma-3">
+                            <h4>ชื่อ : นายแดง แดงแดง </h4>
+                            <h4>อีเมล์ : dang@gmail.com </h4>
+                            <h4>กลุ่มผู้ใช้ : แม่ใจ </h4>
+                        </div>
+                        
+                    </div>
+                </v-card>
+            </v-flex>
+ 
+        </v-layout>
+    </div>
 
-    <v-main>
-        <router-view />
-    </v-main>
-    <v-bottom-navigation dark shift>
-        <v-btn>
-            <span>หน้าหลัก</span>
-            <v-icon>mdi-home</v-icon>
-        </v-btn>
-
-        <v-btn>
-            <span>ข้อมูลกระบือ</span>
-            <v-icon>mdi-cow</v-icon>
-        </v-btn>
-
-        <v-btn>
-            <span>ข้อมูลการเจริญเติบโต</span>
-            <v-icon>mdi-clipboard-text-outline</v-icon>
-        </v-btn>
-
-        <v-btn>
-            <span>รายงาน</span>
-            <v-icon>mdi-clipboard-text-multiple-outline</v-icon>
-        </v-btn>
-    </v-bottom-navigation>
-
-</v-app>
-</template>
+</div>
+</template>                
 
 <script>
 export default {
-    name: 'home-template',
+    name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
     components: {
 
     },
     /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
     props: {
-        icon: {
-            default: 'mdi-view-dashboard',
-        },
-        name: {
-            default: 'Menu',
-        }
 
     },
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
@@ -76,5 +72,7 @@ export default {
 </script>
 
 <style  scoped>
-
+.widths{
+    width: 80%;
+}
 </style>

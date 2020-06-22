@@ -1,8 +1,23 @@
 <template>
 <div>
-    <Navbar name="สิทธิ์การใช้งาน" />
+    <Navbar icon=" " name="ผู้ดูแลระบบ" />
     <div class="pa-4">
         <v-layout row wrap>
+            <v-flex xs12>
+                <v-card class="ma-2">
+                    <div class="d-flex flex-no-wrap ">
+                        <div class="ma-3">
+                            <v-btn color="danger" fab dark>
+                                <v-icon>mdi-domain</v-icon>
+                            </v-btn>
+                        </div>
+                        <div>
+                            <v-card-title class="headline">จำนวนสมาชิกในเดือนนี้</v-card-title>
+                            <v-card-subtitle>120 คน</v-card-subtitle>
+                        </div>
+                    </div>
+                </v-card>
+            </v-flex>
             <v-flex xs6>
                 <v-card class="ma-2 rounded-lg">
                     <div class="d-flex flex-no-wrap">
@@ -19,11 +34,7 @@
                                 39ตัว
                             </h2>
                         </div>
-                        <!-- <div> 
-                          <h3>39ตัว</h3>
-                            <v-card-title class="headline">39ตัว</v-card-title>
-                            <v-card-subtitle>จำนวนกระบือทั้งหมด</v-card-subtitle>
-                        </div> -->
+                        
                     </div>
                 </v-card>
             </v-flex>
@@ -35,29 +46,44 @@
                                 <v-icon>mdi-domain</v-icon>
                             </v-btn>
                         </div>
-                        <div>
-                            <v-card-title class="headline">1</v-card-title>
-                            <v-card-subtitle>2</v-card-subtitle>
+                             <div class="ml-auto text-right" style="margin-right: 4px;">
+                            <h5 class="body-3 grey--text font-weight-light">
+                                จำนวนกระบือทั้งหมด
+                            </h5>
+                            <h2>
+                                39ตัว
+                            </h2>
                         </div>
+
                     </div>
                 </v-card>
             </v-flex>
-            <v-flex xs12>
-                <v-card class="ma-2">
-                    <div class="d-flex flex-no-wrap ">
-                        <div class="ma-3">
-                            <v-btn color="danger" fab dark>
-                                <v-icon>mdi-domain</v-icon>
-                            </v-btn>
-                        </div>
-                        <div>
-                            <v-card-title class="headline">3</v-card-title>
-                            <v-card-subtitle>4</v-card-subtitle>
-                        </div>
-                    </div>
-                </v-card>
-            </v-flex>
+            
         </v-layout>
+    </div>
+
+    <div class="pa-4">
+        <v-card class="mx-auto text-center" color="green" dark max-width="600">
+            <v-card-text>
+                <v-sheet color="rgba(0, 0, 0, .12)">
+                    <v-sparkline :value="value" color="rgba(255, 255, 255, .7)" height="100" padding="24" stroke-linecap="round" smooth>
+                        <template v-slot:label="item">
+                            ${{ item.value }}
+                        </template>
+                    </v-sparkline>
+                </v-sheet>
+            </v-card-text>
+
+            <v-card-text>
+                <div class="display-1 font-weight-thin">Sales Last 24h</div>
+            </v-card-text>
+
+            <v-divider></v-divider>
+
+            <v-card-actions class="justify-center">
+                <v-btn block text>Go to Report</v-btn>
+            </v-card-actions>
+        </v-card>
     </div>
 
     <div class="pa-4">
