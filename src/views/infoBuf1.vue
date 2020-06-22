@@ -1,7 +1,7 @@
 <template>
 <div>
 
-    <Navbar icon="mdi-arrow-left-bold" name="ข้อมูลกระบือ" />
+    <Navbar icon="mdi-arrow-left-bold" name="ข้อมูลกระบือ" /> 
 
     <v-tabs grow>
         <v-tab>

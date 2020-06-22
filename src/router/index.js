@@ -8,9 +8,9 @@ function view(name){
 
   const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: view('Home')
+    path: '/dashFarmer',
+    name: 'dashFarmer',
+    component: view('dashFarmer')
   },
   {
     path: '/infoBuf',

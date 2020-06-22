@@ -33,14 +33,15 @@
         </v-tab>
 
         <v-tab-item>
-            <v-card flat>
+            
+            <v-card flat> 
                 <v-card-text>
                     <v-card class="mx-auto rounded-lg" max-width="auto"> 
                         <h3 class="pa-3">ชื่อหรือหมายเลขกระบือ : พ่อเปี้ย</h3>
                         <h3 class="pa-3">หมายเลข : NID</h3>
                         <h3 class="pa-3">เพศ : ผู้</h3> 
                     </v-card>
-                </v-card-text>
+                </v-card-text> 
 
                 <v-card-text>
                     <v-card class="mx-auto rounded-lg" max-width="auto"> 
