@@ -1,28 +1,38 @@
 <template>
-<v-app>
+<div>
+    <v-footer>
+    <template v-slot:append>
+    <v-bottom-navigation :value="activeBtn" grow color="teal">
+        <v-btn>
+            <span>Recents</span>
+            <v-icon>mdi-history</v-icon>
+        </v-btn>
 
-    <v-main>
-        <router-view />
-    </v-main>
-    
-</v-app>
-</template>
+        <v-btn>
+            <span>Favorites</span>
+            <v-icon>mdi-heart</v-icon>
+        </v-btn>
+
+        <v-btn>
+            <span>Nearby</span>  
+            <v-icon>mdi-map-marker</v-icon>
+        </v-btn>
+    </v-bottom-navigation>
+    </template>
+    </v-footer>
+</div>
+<template>
+
 
 <script>
 export default {
-    name: 'home-template',
+    name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
     components: {
 
     },
     /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
     props: {
-        icon: {
-            default: 'mdi-view-dashboard',
-        },
-        name: {
-            default: 'Menu',
-        }
 
     },
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/

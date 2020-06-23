@@ -7,6 +7,16 @@ function view(name){
 }
 
   const routes = [
+    {
+      path: '/',
+      name: 'login',
+      component: view('login')
+    },
+     {
+    path: '/register',
+    name: 'register',
+    component: view('register')
+  },
   {
     path: '/dashFarmer',
     name: 'dashFarmer',

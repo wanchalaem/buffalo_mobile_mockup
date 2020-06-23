@@ -24,15 +24,12 @@
             <div class="ma-3">
                 <h3>รายละเอียด</h3>
             </div>
-
-            <div class="ml-auto text-right" style="margin-right: 4px;">
+            <!-- <div class="ml-auto text-right" style="margin-right: 4px;">
                 <h5 class="body-3 grey--text font-weight-light">
-                    <!-- <v-btn outlined color="teal" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
-                                    </v-btn> -->
                     <v-icon @click="dialog=false">mdi-pencil</v-icon>
                     <v-icon>mdi-delete</v-icon>
                 </h5>
-            </div>
+            </div> -->
         </div>
         <v-spacer></v-spacer>
 
@@ -65,6 +62,7 @@ export default {
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
+            
             province: [{
                     text: 'พะเยา'
                 },
