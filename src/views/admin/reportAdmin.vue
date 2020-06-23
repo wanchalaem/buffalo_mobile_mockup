@@ -1,64 +1,89 @@
 <template>
 <div class="bg">
-    <NavbarAdmin icon=" " name="ผู้ดูแลระบบ" />
-<v-container grid-list-xs class="w3-margin w3-padding-32">
-    <v-flex xs12 row wrap>
-        <v-flex xs12>
-            <v-hover v-slot:default="{ hover }" close-delay="200">
-                <v-card :elevation="hover ? 16 : 2" class="mx-auto" max-width="520">
-                    <v-card-title>
-                        <v-icon large left>
-                            mdi-clipboard-text-outline
-                        </v-icon>
-                        <h4>รายงานสรุปจำนวนกระบือที่มีชีวิต</h4><br>
-                    </v-card-title>
+    <Navbar icon="mdi-clipboard-text" name="รายงาน" />
+    <v-container grid-list-xs>
+        <center>
+            <v-flex xs12 row wrap>
+                <v-flex xs12 row wrap class="ma-3">
+                    <v-flex xs12 class="pa-4">
+                        <v-hover v-slot:default="{ hover }" close-delay="150" class="lg4 sm6 xs12">
 
-                    <v-card-text class=" font-weight-bold" large>
-                        <v-btn outlined block @click="$router.push('reportBuffalo')" color="teal">ดูรายงาน</v-btn>
-                    </v-card-text>
-                </v-card>
-            </v-hover>
-        </v-flex>
+                            <v-card :elevation="hover ? 16 : 2  " class="mx-auto pa-3 rounded-lg">
+                                <!-- <div class="v-card--material pa-3 v-card--material-stats v-card v-sheet theme--light v-card--material--has-heading"> -->
+                                <div class="d-flex grow flex-wrap">
+                                    <v-icon dark large class=" info pa-5 rounded-lg" style="max-height: 50px; width: 50px;">mdi-account-multiple</v-icon>
+                                    <v-spacer></v-spacer>
+                                    <div class="col-ml-6 ">
+                                        <div class="ml-auto text-right">
+                                            <div class="body-3 grey--text font-weight-light">
+                                                รายงานสรุปจำนวนกระบือที่มีชีวิต
+                                            </div>
+                                            <v-btn text color="gray" @click="$router.push('reportBuffalo')">
+                                                ดูรายงาน
+                                            </v-btn>
+                                            <v-spacer></v-spacer>
+                                        </div>
+                                    </div>
 
-        <v-flex xs12>
-            <v-hover v-slot:default="{ hover }" close-delay="200">
-                <v-card :elevation="hover ? 16 : 2" class="mx-auto" max-width="520">
-                    <v-card-title>
-                        <v-icon large left>
-                            mdi-map-marker-radius-outline
-                        </v-icon>
-                        <h4>รายงานเชิงแผนที่</h4><br>
-                    </v-card-title>
+                                </div>
+                                <!-- </div> -->
+                            </v-card>
 
-                    <v-card-text class=" font-weight-bold" large>
-                        <v-btn outlined block @click="$router.push('reportMap')" color="teal">ดูรายงาน</v-btn>
-                    </v-card-text>
-                </v-card>
-            </v-hover>
-        </v-flex>
+                        </v-hover>
+                    </v-flex>
 
-        <v-flex xs12>
-            <v-hover v-slot:default="{ hover }" close-delay="200">
-                <v-card :elevation="hover ? 16 : 2" class="mx-auto w3-margin-top" max-width="520">
-                    <v-card-title>
-                        <v-icon large left>
-                            mdi-clipboard-flow-outline
-                        </v-icon>
-                        <h4>รายงานความเคลื่อนไหวการใช้งานระบบ</h4><br>
-                    </v-card-title>
+                    <v-flex xs12 class="pa-2">
+                        <v-hover v-slot:default="{ hover }" close-delay="150" class="lg4 sm6 xs12">
+                            <v-card :elevation="hover ? 16 : 2  " class="mx-auto pa-3 rounded-lg">
+                                <!-- <div class="v-card--material pa-3 v-card--material-stats v-card v-sheet theme--light v-card--material--has-heading"> -->
+                                <div class="d-flex grow flex-wrap">
+                                    <v-icon dark large class=" indigo pa-5 rounded-lg" style="max-height: 50px; width: 50px;">mdi-account-clock</v-icon>
+                                    <v-spacer></v-spacer>
+                                    <div class="col-ml-6 ">
+                                        <div class="ml-auto text-right">
+                                            <div class="body-3 grey--text font-weight-light">
+                                                รายงานเชิงแผนที่
+                                            </div>
+                                            <v-btn text color="gray" @click="$router.push('reportMap')">
+                                                ดูรายงาน
+                                            </v-btn>
+                                            <v-spacer></v-spacer>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                            </v-card>
+                        </v-hover>
+                    </v-flex>
 
-                    <v-card-text class=" font-weight-bold" large>
-                        <v-btn outlined block @click="$router.push('reportSystem')" color="teal">ดูรายงาน</v-btn>
-                    </v-card-text>
-                </v-card>
-            </v-hover>
-        </v-flex>
+                    <v-flex xs12 class="pa-2">
+                        <v-hover v-slot:default="{ hover }" close-delay="150" class="lg4 sm6 xs12">
+                            <v-card :elevation="hover ? 16 : 2  " class="mx-auto pa-3 rounded-lg">
+                                <!-- <div class="v-card--material pa-3 v-card--material-stats v-card v-sheet theme--light v-card--material--has-heading"> -->
+                                <div class="d-flex grow flex-wrap">
+                                    <v-icon dark large class=" success pa-5 rounded-lg" style="max-height: 50px; width: 50px;">mdi-cow</v-icon>
+                                    <v-spacer></v-spacer>
+                                    <div class="col-ml-6 ">
+                                        <div class="ml-auto text-right">
+                                            <div class="body-3 grey--text font-weight-light">
+                                                รายงานความเคลื่อไหวการใช้งาน
+                                            </div>
+                                            <v-btn text color="gray" @click="$router.push('reportSystem')">
+                                                ดูรายงาน
+                                            </v-btn>
+                                            <v-spacer></v-spacer>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                            </v-card>
+                        </v-hover>
+                    </v-flex>
+                </v-flex>
 
-
-
-    </v-flex>
-
-</v-container>
+            </v-flex>
+        </center>
+    </v-container>
 </div>
 </template>
 
@@ -66,11 +91,9 @@
 export default {
     name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
-    components: {
-    },
+    components: {},
     /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
-    props: {
-    },
+    props: {},
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
@@ -87,8 +110,7 @@ export default {
         next()
     },
     /*-------------------------ใช้จัดการ operation  หรือ คำนวณค่าต่างๆ (คล้าย methods)------------------------------------------*/
-    computed: {
-    },
+    computed: {},
     /*-------------------------Methods------------------------------------------*/
     methods: {
         /******* Methods default run ******/

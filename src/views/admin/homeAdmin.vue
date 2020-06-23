@@ -1,6 +1,6 @@
 <template>
 <div>
-    <Navbar icon=" " name="ผู้ดูแลระบบ" />
+    <Navbar name="ผู้ดูแลระบบ" />
     <div class="pa-4">
         <v-layout row wrap>
             <v-flex xs12>
@@ -12,8 +12,8 @@
                             </v-btn>
                         </div>
                         <div>
-                            <v-card-title class="headline">จำนวนสมาชิกในเดือนนี้</v-card-title>
-                            <v-card-subtitle>120 คน</v-card-subtitle>
+                            <v-card-title class="headline">120 คน</v-card-title>
+                            <v-card-subtitle>จำนวนสมาชิกในเดือนนี้</v-card-subtitle>
                         </div>
                     </div>
                 </v-card>

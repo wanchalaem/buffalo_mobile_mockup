@@ -5,8 +5,21 @@
         <v-layout row wrap>
             <v-flex xs12>
                 <v-card class="ma-2">
+                    <div class="d-flex flex-no-wrap">
+                            <div class="ma-3">
+                                <h3>รายละเอียดผู้ดูแลระบบ</h3>
+                            </div>
+
+                            <div class="ml-auto text-right" style="margin-right: 4px;">
+                                <h5 class="body-3 grey--text font-weight-light">
+                                    <!-- <v-btn outlined color="teal" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                    </v-btn> -->
+                                    <v-icon @click="dialog=false">mdi-pencil</v-icon>
+                                    <v-icon>mdi-delete</v-icon>
+                                </h5>
+                            </div>
+                        </div>
                     <v-spacer></v-spacer>
-                    
                     <div class="d-flex flex-no-wrap ">
                         <div class="ma-3">
                             <h4>ชื่อ : นายแดง แดงแดง </h4>

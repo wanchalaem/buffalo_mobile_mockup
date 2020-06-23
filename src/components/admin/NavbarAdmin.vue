@@ -3,7 +3,7 @@
     <v-app-bar color="white" flat>
         
         <h1 class="menu ">
-            <v-icon class="icon">{{icon}}</v-icon>&nbsp;{{name}}
+            <v-icon @click="$router.push('reportAdmin')" class="icon">{{icon}}</v-icon>&nbsp;{{name}}
         </h1>
         
         <v-spacer></v-spacer>

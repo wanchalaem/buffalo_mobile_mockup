@@ -1,7 +1,7 @@
 <template>
 <div>
 
-    <Navbar icon="" name="รายงาน" />
+    <Navbar icon="mdi-clipboard-text" name="รายงาน" />
 
     <v-container grid-list-xs>
         <v-card class="ma-2 rounded-lg">
