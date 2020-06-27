@@ -1,7 +1,7 @@
 <template>
 <div>
 
-    <Navbar icon="mdi-arrow-left-bold" name="เพิ่มกระบือ" />
+    <Navbar icon="mdi-chevron-left" name="เพิ่มควาย" />
     <v-container grid-list-xs>
         <div v-for="item in desserts" :key="item.name" class="ma-3">
             <v-text-field class="rounded-lg" outlined v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
@@ -66,7 +66,7 @@
 
         
     </v-container>
-    <v-btn color="teal" dark large block>บันทึก</v-btn>
+    <v-btn @click="$router.push('/infoBuf')" color="teal" dark large block>บันทึก</v-btn>
 
 </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
 <div>
-    <NavbarAdmin icon="mdi-chevron-left" name="รายงานสรุปจำนวนกระบือที่มีชีวิต" />
-
+    <NavbarAdmin icon="mdi-chevron-left" name="รายงานสรุปจำนวนควายที่มีชีวิต" />
+<v-flex xs10 pa-3>
     <div class="pa-4">
         <v-row>
             <v-flex xs6>
@@ -40,11 +40,12 @@
                 <h4>จังหวัด : พะเยา</h4>
                 <h4>อำเภอ : เมือง</h4>
                 <h4>ตำบล : แม่กา</h4>
-                <h4>จำนวนกระบือทั้งหมด : 30 ตัว</h4>
+                <h4>จำนวนควายทั้งหมด : 30 ตัว</h4>
             </div>
 
         </div>
     </v-card>
+</v-flex>
 </div>
 </template>
 

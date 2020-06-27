@@ -1,11 +1,11 @@
 <template>
 <div>
 
-    <Navbar icon="mdi-arrow-left-bold" name="รายงานการเติบโต" />
+    <Navbar icon="mdi-chevron-left" name="รายงานการเติบโต" />
     <v-container grid-list-xs>
-        <h3>รายงานสรุปการเจริญเติบโต
-            พันธุ์ประวัติรายฟาร์ม</h3>
-
+        <div class="text-center">
+            <h4>รายงานสรุปการเจริญเติบโต พันธุ์ประวัติรายฟาร์ม</h4>
+        </div>
         <v-card class="ma-4 pa-4 rounded-lg">
             <v-text-field class="rounded-lg" outlined name="name" label="ชื่อฟาร์ม" id="id"></v-text-field>
             <v-text-field class="rounded-lg" outlined name="name" label="ใบพันธุ์ประวัติสำหรับอ้างอิง" id="id"></v-text-field>

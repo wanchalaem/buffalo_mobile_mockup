@@ -1,7 +1,7 @@
 <template>
 <div>
 
-    <Navbar icon="mdi-arrow-left-bold" name="ข้อมูลกระบือ" /> 
+    <Navbar icon="mdi-chevron-left" name="ข้อมูลควาย" /> 
 
     <v-tabs grow>
         <v-tab>
@@ -19,7 +19,7 @@
                     <v-card class="elevation-5 rounded-lg pa-2">
                         <div class="d-flex flex-no-wrap">
                             <div class="ma-3">
-                                <h3>รายละเอียดกระบือ</h3>
+                                <h3>รายละเอียดควาย</h3>
                             </div>
 
                             <div class="ml-auto text-right" style="margin-right: 4px;">
@@ -114,7 +114,7 @@
                                 </template>
                                 <v-card>
                                     <v-card-title>
-                                        <h3>อายุกระบือ</h3> 
+                                        <h3>อายุควาย</h3> 
                                     </v-card-title>
                                     <v-card-text>
                                         <v-container>

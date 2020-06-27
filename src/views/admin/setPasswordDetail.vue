@@ -1,6 +1,6 @@
- <template>
+<template>
 <div>
-    <NavbarAdmin icon=" " name="ตั้งค่ารหัสผ่านผู้ใช้งาน" />
+    <NavbarAdmin icon="mdi-chevron-left" name="แก้ไขข้อมูลเกษตรกร" />
     <v-card class="mx-auto rounded-lg elevation-10" max-width="200">
         <v-img height="220" src="https://www.siamzone.com/music/news/2015/07381.jpg">
         </v-img>
@@ -32,6 +32,8 @@
                                     <div class="ml-auto text-right">
                                         <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                         </v-btn>
+                                        <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
+                                        </v-btn>
                                     </div>
                                 </div>
                             </div>
@@ -50,9 +52,42 @@
                         </v-card-text>
                     </v-flex>
 
-                    
                 </v-flex>
- 
+
+            </v-tab-item>
+            <v-tab-item>
+                <v-flex xs12 row wrap>
+                    <v-flex xs12>
+                        <v-card-text>
+                            <div class="d-flex grow flex-wrap">
+                                <h5>ข้อมูลผู้ใช้</h5>
+                                <v-spacer></v-spacer>
+                                <div class="col-ml-6 ">
+                                    <div class="ml-auto text-right">
+                                        <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                        </v-btn>
+                                        <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
+                                        </v-btn>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <v-flex xs12>
+                                <div v-for="item in informationfarmer" :key="item.name">
+                                    <v-text-field outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
+                                </div>
+                                <div>
+                                    <center>
+                                        <h6>ภาพถ่ายบัตรประจำตัวประชาชน</h6>
+                                        <v-img class="rounded-lg elevation-5" height="200" width="350" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
+                                    </center>
+                                </div>
+                            </v-flex>
+                        </v-card-text>
+                    </v-flex>
+
+                </v-flex>
+
             </v-tab-item>
 
             <v-tab-item>
@@ -65,6 +100,8 @@
                                 <div class="col-ml-6 ">
                                     <div class="ml-auto text-right">
                                         <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                        </v-btn>
+                                        <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
                                         </v-btn>
                                     </div>
                                 </div>
@@ -92,20 +129,21 @@
         </v-tabs>
     </v-card>
 
-    </div>
+</div>
 </template>
 
-    <script>
+    
+<script>
 export default {
     name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
     components: {
 
     },
-  /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
-props:{
+    /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
+    props: {
 
-},
+    },
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data: () => ({
         tab: null,
@@ -113,10 +151,9 @@ props:{
         dialog1: true,
         dialog: false,
         items: [
-            'ข้อมูลเกษตกร', 'ข้อมูลกระบือ',
+            'ข้อมูลเกษตกร', 'ข้อมูลควาย',
         ],
-        headers: [
-            {
+        headers: [{
                 text: 'รหัสผ่าน',
                 value: 'password'
             },
@@ -150,18 +187,13 @@ props:{
                 // sortable: false
             },
         ],
-        informationfarmer: [
-            {
+        informationfarmer: [{
                 describe: 'หมายเลขบัตรประจำตัวประชาชน',
                 calories: '3560700347135',
             },
             {
                 describe: 'อีเมล',
                 calories: 'dang',
-            },
-            {
-                describe: 'รหัสผ่าน',
-                calories: 'รหัสผ่าน',
             },
             {
                 describe: 'คำนำหน้า',
@@ -175,7 +207,7 @@ props:{
                 describe: 'นามสกุล',
                 calories: 'แก้วบุญเรือง',
             },
-            
+
             {
                 describe: 'เพศ',
                 calories: 'ชาย',
@@ -289,6 +321,7 @@ props:{
     },
 }
 </script>
+
 <style  scoped>
 
 </style>

@@ -28,13 +28,13 @@
                         </div>
                         <div class="ml-auto text-right" style="margin-right: 4px;">
                             <h5 class="body-3 grey--text font-weight-light">
-                                จำนวนกระบือทั้งหมด
+                                จำนวนควายทั้งหมด
                             </h5>
                             <h2>
                                 39ตัว
                             </h2>
                         </div>
-                        
+
                     </div>
                 </v-card>
             </v-flex>
@@ -46,9 +46,9 @@
                                 <v-icon>mdi-domain</v-icon>
                             </v-btn>
                         </div>
-                             <div class="ml-auto text-right" style="margin-right: 4px;">
+                        <div class="ml-auto text-right" style="margin-right: 4px;">
                             <h5 class="body-3 grey--text font-weight-light">
-                                จำนวนกระบือทั้งหมด
+                                จำนวนควายทั้งหมด
                             </h5>
                             <h2>
                                 39ตัว
@@ -58,7 +58,7 @@
                     </div>
                 </v-card>
             </v-flex>
-            
+
         </v-layout>
     </div>
 
@@ -75,7 +75,7 @@
             </v-card-text>
 
             <v-card-text>
-                <div class="display-1 font-weight-thin">Sales Last 24h</div>
+                <div class="display-1 font-weight-thin">จำนวนสมาชิกในเดือนนี้</div>
             </v-card-text>
 
             <v-divider></v-divider>
@@ -99,7 +99,7 @@
             </v-card-text>
 
             <v-card-text>
-                <div class="display-1 font-weight-thin">Sales Last 24h</div>
+                <div class="display-1 font-weight-thin">จำนวนควายทั้งหมด</div>
             </v-card-text>
 
             <v-divider></v-divider>
@@ -109,7 +109,7 @@
             </v-card-actions>
         </v-card>
     </div>
-
+    <NavigationAdmin />
 </div>
 </template>
 

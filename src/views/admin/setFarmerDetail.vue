@@ -1,32 +1,28 @@
 <template>
 <div>
-    <Navbar icon="mdi-account-key" name="ตั้งค่ารหัสผ่าน" />
+    <Navbar icon="mdi-chevron-left" name="ตั้งค่ารหัสผ่าน" />
     <div class="pa-6">
         <v-layout row wrap>
             <v-flex xs12>
                 <v-toolbar-title>
                     <center>
-                        <v-text-field clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line class="widths rounded-lg pa-1"></v-text-field>
-                    </center>
-                </v-toolbar-title>
-                <v-spacer></v-spacer><br>
-
-                <v-card @click="$router.push('/setFarmerDetail')" class="ma-2">
-                    <v-spacer></v-spacer>
-
-                    <div class="d-flex flex-no-wrap ">
-                        <div class="ma-3">
-                            <h4>ชื่อ : นายแดง แดงแดง </h4>
-                            <h4>อีเมล์ : dang@gmail.com </h4>
-                            <h4>กลุ่มผู้ใช้ : แม่ใจ </h4>
+                        <v-text-field clearable flat hide-details label="ตั้งรหัสผ่าน" outlined single-line class="widths rounded-lg pa-1"></v-text-field>
+                        <v-text-field clearable flat hide-details label="ยืนยันรหัสผผ่าน" outlined single-line class="widths rounded-lg pa-1"></v-text-field>
+                    </center><br>
+                    <div class="col-ml-6 ">
+                        <div class="ml-auto text-center">
+                            <v-btn class="rounded-lg " style="width:70%" color="teal" outlined @click="$router.push('/setPassword')">ยืนยัน<v-icon>mdi-pencil</v-icon>
+                            </v-btn>
                         </div>
-
                     </div>
-                </v-card>
+
+                </v-toolbar-title>
+                <v-spacer></v-spacer>
+
             </v-flex>
 
         </v-layout>
-    </div><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
     <NavigationAdmin />
 </div>
 </template>

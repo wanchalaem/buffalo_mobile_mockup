@@ -14,7 +14,12 @@
 
 <script>
 export default {
-    data: () => ({
+    data: () => (
+        {items1: [
+            {
+                title: 'ออกจากระบบ',
+            },
+        ],
        
 
     }),
@@ -25,6 +30,7 @@ export default {
         name: {
             default: 'Menu',
         }
+        
     }
 
 }

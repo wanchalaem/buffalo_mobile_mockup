@@ -1,8 +1,8 @@
 <template>
 <div>
-    <NavbarAdmin icon=" " name="บัญชีผู้ใช้" />
+    <NavbarAdmin icon="mdi-chevron-left" name="แก้ไขข้อมูลผู้ดูแลระบบ" />
     <v-card class="mx-auto rounded-lg elevation-10" max-width="200">
-        <v-img height="220" src="https://www.siamzone.com/music/news/2015/07381.jpg">
+        <v-img height="220" src="https://cdn-th.tunwalai.net/files/member/139588/1601081451-member.jpg">
         </v-img>
     </v-card>
     <br>
@@ -14,11 +14,7 @@
         <v-tabs grow>
             <v-tab>
                 <v-icon>mdi-account-outline</v-icon>
-                <h5>ข้อมูลเกษตกร</h5>
-            </v-tab>
-            <v-tab>
-                <v-icon dark>mdi-file-outline</v-icon>
-                <h5>ข้อมูลฟาร์ม</h5>
+                <h5>ข้อมูลผู้ดูแลระบบ</h5>
             </v-tab>
 
             <v-tab-item>
@@ -32,6 +28,8 @@
                                     <div class="ml-auto text-right">
                                         <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                         </v-btn>
+                                        <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
+                                        </v-btn>
                                     </div>
                                 </div>
                             </div>
@@ -40,12 +38,7 @@
                                 <div v-for="item in informationfarmer" :key="item.name">
                                     <v-text-field outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
                                 </div>
-                                <div>
-                                    <center>
-                                        <h6>ภาพถ่ายบัตรประจำตัวประชาชน</h6>
-                                        <v-img class="rounded-lg elevation-5" height="200" width="350" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
-                                    </center>
-                                </div>
+                                
                             </v-flex>
                         </v-card-text>
                     </v-flex>
@@ -53,44 +46,12 @@
                 </v-flex>
 
             </v-tab-item>
+            
 
-            <v-tab-item>
-                <v-card flat background-color="transparent" color="basil">
-                    <v-flex xs12>
-                        <v-card-text>
-                            <div class="d-flex grow flex-wrap">
-                                <h5>ข้อมูลฟาร์ม</h5>
-                                <v-spacer></v-spacer>
-                                <div class="col-ml-6 ">
-                                    <div class="ml-auto text-right">
-                                        <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
-                                        </v-btn>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h6>สภาพฟาร์ม</h6>
-                                <center>
-                                    <v-img class="rounded-lg elevation-5" height="200" width="auto" src="https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-                                    </v-img>
-                                </center>
-                            </div>
-                            <br>
-                            <v-flex xs12>
-                                <div v-for="item in informationfarm1" :key="item.name">
-                                    <v-text-field outlined :readonly="dialog1" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
-                                </div>
-
-                            </v-flex>
-                        </v-card-text>
-                    </v-flex>
-                </v-card>
-            </v-tab-item>
-
+        
         </v-tabs>
     </v-card>
-<Navigation/>
+
 </div>
 </template>
 
@@ -113,7 +74,7 @@ export default {
         dialog1: true,
         dialog: false,
         items: [
-            'ข้อมูลเกษตกร', 'ข้อมูลควาย',
+            'ผู้ดูแลระบบ'
         ],
         headers: [{
                 text: 'รหัสผ่าน',
@@ -154,78 +115,20 @@ export default {
                 calories: '3560700347135',
             },
             {
-                describe: 'อีเมล',
-                calories: 'dang',
-            },
-            {
                 describe: 'คำนำหน้า',
                 calories: 'นาย',
             },
             {
                 describe: 'ชื่อ',
-                calories: 'เชิดชู',
+                calories: 'แดง',
             },
             {
                 describe: 'นามสกุล',
-                calories: 'แก้วบุญเรือง',
-            },
-
-            {
-                describe: 'เพศ',
-                calories: 'ชาย',
+                calories: 'แดงแดง',
             },
             {
-                describe: 'อายุ',
-                calories: '58',
-            },
-            {
-                describe: 'ที่อยู่ตามทะเบียนบ้าน',
-                calories: '4 หมู่ 7 ต.เจริญราษฎร์ อ.แม่ใจ จ.พะเยา 56130',
-            },
-            {
-                describe: 'เบอร์โทรศัพท์',
-                calories: '0861800385',
-            },
-        ],
-        informationfarm1: [{
-                describe1: 'ชื่อฟาร์ม',
-                calories1: 'ฟาร์มพ่อหร่วน',
-            },
-            {
-                describe1: 'บ้านเลขที่ ถนน ซอย',
-                calories1: 'เชิดชู',
-            },
-            {
-                describe1: 'พิกัดฟาร์มตามระบบ GPS (ละติจูด)',
-                calories1: '19.391271',
-            },
-            {
-                describe1: 'พิกัดฟาร์มตามระบบ GPS (ลองติจูด)',
-                calories1: '99.816495',
-            },
-            {
-                describe1: 'จำนวนควายทั้งหมด',
-                calories1: '40',
-            },
-            {
-                describe1: 'กลุ่มเกษตรกร',
-                calories1: 'กลุ่มแม่ใจ',
-            },
-            {
-                describe1: 'ตำบล',
-                calories1: 'เจริญราษฎร์',
-            },
-            {
-                describe1: 'อำเภอ',
-                calories1: 'แม่กา',
-            },
-            {
-                describe1: 'จังหวัด',
-                calories1: 'พะเยา',
-            },
-            {
-                describe1: 'ไปรษณีย์',
-                calories1: '56000',
+                describe: 'อีเมล',
+                calories: 'dang@gmail.com',
             },
         ],
         desserts: [],

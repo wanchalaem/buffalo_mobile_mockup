@@ -5,10 +5,12 @@ import vuetify from './plugins/vuetify';
 
 import Navbar from '@/components/core/Navbar'
 import NavbarAdmin from '@/components/admin/NavbarAdmin'
+import Navigation from '@/components/Navigation'
 import NavigationAdmin from '@/components/admin/NavigationAdmin'
 
 Vue.component('Navbar',Navbar)
 Vue.component('NavbarAdmin',NavbarAdmin)
+Vue.component('Navigation',Navigation)
 Vue.component('NavigationAdmin',NavigationAdmin)
 
 Vue.config.productionTip = false

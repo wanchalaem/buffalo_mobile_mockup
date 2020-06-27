@@ -1,36 +1,28 @@
 <template>
-<div>
-    <Navbar icon="mdi-account-key" name="ตั้งค่ารหัสผ่าน" />
-    <div class="pa-6">
-        <v-layout row wrap>
-            <v-flex xs12>
-                <v-toolbar-title>
-                    <center>
-                        <v-text-field clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line class="widths rounded-lg pa-1"></v-text-field>
-                    </center>
-                </v-toolbar-title>
-                <v-spacer></v-spacer><br>
+<v-bottom-navigation>
+    <v-btn>
+        <span>หน้าหลัก</span>
+        <v-icon @click="$router.push('/dashFarmer')">mdi-home</v-icon>
+    </v-btn>
 
-                <v-card @click="$router.push('/setFarmerDetail')" class="ma-2">
-                    <v-spacer></v-spacer>
+    <v-btn>
+        <span>ข้อมูลส่วนตัว</span>
+        <v-icon @click="$router.push('/infoFarmer')">mdi-account-cog</v-icon>
+    </v-btn>
 
-                    <div class="d-flex flex-no-wrap ">
-                        <div class="ma-3">
-                            <h4>ชื่อ : นายแดง แดงแดง </h4>
-                            <h4>อีเมล์ : dang@gmail.com </h4>
-                            <h4>กลุ่มผู้ใช้ : แม่ใจ </h4>
-                        </div>
+    <v-btn>
+        <span>ข้อมูลการควาย</span>
+        <v-icon @click="$router.push('/infoBuf')">mdi-chart-line</v-icon>
+    </v-btn>
 
-                    </div>
-                </v-card>
-            </v-flex>
-
-        </v-layout>
-    </div><br><br><br><br><br><br><br><br><br><br><br><br>
-    <NavigationAdmin />
-</div>
+    <v-btn>
+        <span>รายงาน</span>
+        <v-icon @click="$router.push('/report')">mdi-clipboard-text</v-icon>
+    </v-btn>
+</v-bottom-navigation>
 </template>
 
+    
 <script>
 export default {
     name: 'Root',
@@ -71,8 +63,6 @@ export default {
 }
 </script>
 
-<style scoped>
-.widths {
-    width: 80%;
-}
+<style  scoped>
+
 </style>

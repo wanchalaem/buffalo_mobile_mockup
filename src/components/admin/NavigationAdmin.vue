@@ -1,29 +1,28 @@
 <template>
-<div>
-    <v-footer>
-    <template v-slot:append>
-    <v-bottom-navigation :value="activeBtn" grow color="teal">
-        <v-btn>
-            <span>Recents</span>
-            <v-icon>mdi-history</v-icon>
-        </v-btn>
+<v-bottom-navigation>
+    <v-btn>
+        <span>หน้าหลัก</span>
+        <v-icon @click="$router.push('/homeAdmin')">mdi-home</v-icon>
+    </v-btn>
 
-        <v-btn>
-            <span>Favorites</span>
-            <v-icon>mdi-heart</v-icon>
-        </v-btn>
+    <v-btn>
+        <span>สิทธิ์การใช้งาน</span>
+        <v-icon @click="$router.push('/checkUser')">mdi-account-cog</v-icon>
+    </v-btn>
 
-        <v-btn>
-            <span>Nearby</span>  
-            <v-icon>mdi-map-marker</v-icon>
-        </v-btn>
-    </v-bottom-navigation>
-    </template>
-    </v-footer>
-</div>
-<template>
+    <v-btn>
+        <span>เกี่ยวกับเกษตรกร</span>
+        <v-icon @click="$router.push('/setPassword')">mdi-account-group</v-icon>
+    </v-btn>
 
+    <v-btn>
+        <span>รายงาน</span>
+        <v-icon @click="$router.push('/reportAdmin')">mdi-clipboard-text</v-icon>
+    </v-btn>
+</v-bottom-navigation>
+</template>
 
+    
 <script>
 export default {
     name: 'Root',

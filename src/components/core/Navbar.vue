@@ -15,7 +15,7 @@
             </template>
             <v-list>
                 <v-list-item v-for="(item, i) in items1" :key="i" @click="() => {}">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    <v-list-item-title @click="$router.push('/')">{{ item.title }}</v-list-item-title>
                 </v-list-item>
             </v-list>
         </v-menu>
@@ -26,9 +26,7 @@
 <script>
 export default {
     data: () => ({
-        items1: [{
-                title: 'ข้อมูลส่วนตัว',
-            },
+        items1: [
             {
                 title: 'ออกจากระบบ',
             },
