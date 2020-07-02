@@ -1,5 +1,5 @@
 <template>
-<v-bottom-navigation>
+<v-bottom-navigation >
     <v-btn>
         <span>หน้าหลัก</span>
         <v-icon @click="$router.push('/homeAdmin')">mdi-home</v-icon>
@@ -16,7 +16,7 @@
     </v-btn>
     <v-btn>
         <span>คำขอรหัสผ่าน</span>
-        <v-icon @click="$router.push('/reportAdmin')">mdi-account-key</v-icon>
+        <v-icon @click="$router.push('/askPassword')">mdi-account-key</v-icon>
     </v-btn>
     <v-btn>
         <span>รายงาน</span>

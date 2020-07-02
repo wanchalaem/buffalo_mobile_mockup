@@ -143,6 +143,11 @@ function view(name){
     name: 'forgotPassword',
     component: view('admin/forgotPassword')
   },
+  {
+    path: '/askPassword',
+    name: 'askPassword',
+    component: view('admin/askPassword')
+  },
   
 ]
 
