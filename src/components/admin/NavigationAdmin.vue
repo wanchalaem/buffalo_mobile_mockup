@@ -11,10 +11,13 @@
     </v-btn>
 
     <v-btn>
-        <span>เกี่ยวกับเกษตรกร</span>
+        <span>เกษตรกร</span>
         <v-icon @click="$router.push('/setPassword')">mdi-account-group</v-icon>
     </v-btn>
-
+    <v-btn>
+        <span>คำขอรหัสผ่าน</span>
+        <v-icon @click="$router.push('/reportAdmin')">mdi-account-key</v-icon>
+    </v-btn>
     <v-btn>
         <span>รายงาน</span>
         <v-icon @click="$router.push('/reportAdmin')">mdi-clipboard-text</v-icon>
@@ -22,7 +25,6 @@
 </v-bottom-navigation>
 </template>
 
-    
 <script>
 export default {
     name: 'Root',
