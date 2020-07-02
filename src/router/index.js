@@ -57,7 +57,12 @@ function view(name){
     name: 'growReport',
     component: view('growReport')
   },
-  
+  {
+    path: '/addAgeBuff',
+    name: 'addAgeBuff',
+    component: view('addAgeBuff')
+    
+  },
   {
     path: '/homeAdmin',
     name: 'homeAdmin',
@@ -81,12 +86,7 @@ function view(name){
   {
     path: '/setDetail',
     name: 'setPasswordDetail',
-    component: view('admin/setPasswordDetail')
-  },
-  {
-    path: '/setDetail',
-    name: 'setPasswordDetail',
-    component: view('admin/setPasswordDetail')
+    component: view('admin/setFarmerDetai')
   },
   {
     path: '/reportBuffalo',
@@ -114,20 +114,35 @@ function view(name){
     component: view('admin/setFarmer')
   },
   {
-    path: '/setFarmerDetail',
-    name: 'setFarmerDetail',
-    component: view('admin/setFarmerDetail')
+    path: '/setPasswordDetail',
+    name: 'setPasswordDetail',
+    component: view('admin/setPasswordDetail')
   },
   {
     path: '/adminDetail',
     name: 'adminDetail',
     component: view('admin/adminDetail')
   },
-  
-  
-
-
-  
+  {
+    path: '/infoBufAdmin',
+    name: 'infoBufAdmin',
+    component: view('admin/infoBufAdmin')
+  },
+  {
+    path: '/infoBuffDetail',
+    name: 'infoBuffDetail',
+    component: view('admin/infoBuffDetail')
+  },
+  {
+    path: '/ageBuffAdmin',
+    name: 'ageBuffAdmin',
+    component: view('admin/ageBuffAdmin')
+  },
+  {
+    path: '/forgotPassword',
+    name: 'forgotPassword',
+    component: view('admin/forgotPassword')
+  },
   
 ]
 

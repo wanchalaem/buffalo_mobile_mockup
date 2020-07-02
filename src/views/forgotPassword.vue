@@ -14,14 +14,10 @@
                     </div>
                     <v-form>
                         <v-text-field dark outlined label="ชื่อผู้ใช้งาน"  prepend-inner-icon="mdi-account-star" ></v-text-field>
-                        <v-text-field dark outlined label="รหัสผ่าน"  prepend-inner-icon="mdi-lock" type="password"></v-text-field>
-                        <v-text-field dark outlined label="ชื่อ"  prepend-inner-icon="mdi-account" type="text"></v-text-field>
+                        <v-text-field dark outlined label="ชื่อ"  prepend-inner-icon="mdi-account" ></v-text-field>
                         <v-text-field dark outlined label="นามสกุล"  prepend-inner-icon="mdi-account" ></v-text-field>
-                        <v-overflow-btn :items="province" dark label="กรุณาเลือกจังหวัด"  prepend-inner-icon="mdi-home-group" hide-details class="pa-0" outlined></v-overflow-btn><br>
-                        <v-overflow-btn :items="district" dark label="กรุณาเลือกอำเภอ"  prepend-inner-icon="mdi-home-flood" hide-details class="pa-0" outlined></v-overflow-btn><br>
-                        <v-overflow-btn :items="place" dark label="กรุณาเลือกตำบล"  prepend-inner-icon="mdi-home" hide-details class="pa-0" outlined></v-overflow-btn><br>
-                        <v-text-field dark outlined label="รหัสไปษณีย์"  prepend-inner-icon="mdi-home-city" ></v-text-field>
-
+                        <v-text-field dark outlined label="เบอร์โทรศัพท์"  prepend-inner-icon="mdi-phone-classic" ></v-text-field>
+                        
                     </v-form>
 
                     <v-spacer></v-spacer>

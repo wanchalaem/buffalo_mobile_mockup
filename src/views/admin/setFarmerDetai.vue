@@ -8,6 +8,7 @@
     <br>
     <center>
         <h3> นายแดง เชิดชู </h3><br>
+        <v-btn class="rounded-lg " color="indigo" outlined @click="$router.push('/infoBufAdmin')">ข้อมูลควาย<v-icon>mdi-account-key</v-icon></v-btn>
         <v-btn class="rounded-lg " color="teal" outlined @click="$router.push('/setPasswordDetail')">ตั้งค่ารหัสผ่าน<v-icon>mdi-account-key</v-icon></v-btn>
     </center> <br>
 
@@ -32,6 +33,8 @@
                                 <div class="col-ml-6 ">
                                     <div class="ml-auto text-right">
                                         <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                        </v-btn>
+                                        <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
                                         </v-btn>
                                     </div>
                                 </div>
@@ -65,6 +68,8 @@
                                 <div class="col-ml-6 ">
                                     <div class="ml-auto text-right">
                                         <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                        </v-btn>
+                                        <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
                                         </v-btn>
                                     </div>
                                 </div>

@@ -1,17 +1,34 @@
 <template>
 <div>
-    <Navbar icon="mdi-account-key" name="ตั้งค่ารหัสผ่าน" />
+    <Navbar icon="mdi-account-key" name="เกี่ยวกับเกษตรกร" />
     <div class="pa-6">
         <v-layout row wrap>
             <v-flex xs12>
-                <v-toolbar-title>
-                    <center>
-                        <v-text-field clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line class="widths rounded-lg pa-1"></v-text-field>
-                    </center>
-                </v-toolbar-title>
-                <v-spacer></v-spacer><br>
+                <v-card class="rounded-lg pa-2">
+                    <v-flex xs12>
+                        <v-toolbar-title>
+                            <center>
+                                <v-text-field clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
+                            </center>
+                        </v-toolbar-title><br>
+                    </v-flex>
+                    <div class="d-flex flex-no-wrap">
+                            <div class="ma-3">
+                                <h4>รายละเอียดเกษตรกร</h4>
+                            </div>
+                            <v-spacer></v-spacer>
+                            <div class="col-ml-6 ">
+                                <div class="ml-auto text-right">
+                                    <v-btn text class="rounded-lg " color="teal" outlined @click="$router.push('/setDetail')">
+                                        <v-icon>mdi-pencil</v-icon>
+                                    </v-btn>
+                                    <v-btn text class="rounded-lg " color="red" outlined @click="dialog1=false">
+                                        <v-icon>mdi-delete</v-icon>
+                                    </v-btn>
+                                </div>
+                            </div>
+                        </div>
 
-                <v-card @click="$router.push('/setFarmerDetail')" class="ma-2">
                     <v-spacer></v-spacer>
 
                     <div class="d-flex flex-no-wrap ">
@@ -26,7 +43,7 @@
             </v-flex>
 
         </v-layout>
-    </div><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div><br><br><br><br><br><br><br><br><br><br>
     <NavigationAdmin />
 </div>
 </template>

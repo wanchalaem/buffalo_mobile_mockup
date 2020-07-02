@@ -4,31 +4,28 @@
         <v-container class="fill-height" fluid>
             <v-row align="center" justify="center">
                 <v-col cols="10" sm="8" md="4">
-                    <v-card class="elevation-12 text-center">
-                        <img style="width:65%;" src="https://www.img.in.th/images/209695056f7b9ddfe087f862d5b107d8.png" alt="">
-                        <v-divider></v-divider>
-                        <v-card-text>
-                            <v-form>
-                                <v-text-field outlined label="เข้าสู่ระบบ" name="login" prepend-icon="mdi-account" type="text"></v-text-field>
+                    <div class=" text-center logo">
+                        <img style="width:65%;" src="https://www.img.in.th/images/baec9e10112fc5b2253841c3099c9e42.png" alt="">
+                    </div>
+                    <div class="form">
+                        <v-text-field dark outlined label="เข้าสู่ระบบ" name="login" prepend-inner-icon="mdi-account" type="text"></v-text-field>
+                        <v-text-field dark outlined id="password" label="รหัสผ่าน" name="password" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
+                        <v-spacer></v-spacer>
+                        <v-btn class="width" outlined @click="$router.push('dashFarmer')" large color="green">เข้าสู่ระบบ</v-btn>
+                    </div>
+                    <div>
+                        <v-btn text @click="$router.push('/forgotPassword')" color="white">ลืมรหัสผ่าน</v-btn>
+                    </div>
+                    <div class="mt">
+                        <hr>
+                    </div>
 
-                                <v-text-field outlined id="password" label="รหัสผ่าน" name="password" prepend-icon="mdi-lock" type="password"></v-text-field>
-                            </v-form>
-
-                            
-                                <v-row align="center" justify="center"> 
-                                    <div class="my-2">
-                                        <p>คุณไม่มีบัญชีผู้ใช้ใช่หรือไม่? <v-btn text small @click="$router.push('register')" color="primary">สมัครสมาชิก</v-btn>
-                                        </p>
-                                    </div>
-                                </v-row>
-                        </v-card-text>
-                        <v-card-actions>
-                            <v-spacer></v-spacer>
-                            <v-btn class="width" @click="$router.push('dashFarmer')" large color="primary">เข้าสู่ระบบ</v-btn>
-                        </v-card-actions>
-                    </v-card>
                 </v-col>
             </v-row>
+            <div class="my-2 mr" text-color="white">
+                <p style="color:white;">คุณไม่มีบัญชีผู้ใช้ใช่หรือไม่? <v-btn outlined @click="$router.push('register')" color="yellow darken-1">สมัครสมาชิก</v-btn>
+                </p>
+            </div>
         </v-container>
     </v-main>
 </v-app>
@@ -89,5 +86,20 @@ export default {
 
 .width {
     width: 100%;
+}
+
+.mt {
+    margin-top: 45%;
+}
+
+.logo {
+    margin-top: 25%;
+}
+
+.form {
+    margin-top: 5%;
+}
+.mr {
+    margin-left: 5%;
 }
 </style>

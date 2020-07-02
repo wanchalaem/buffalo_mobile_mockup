@@ -13,6 +13,7 @@
                                 <div class="d-flex grow flex-wrap">
                                     <v-icon dark large class=" info pa-5 rounded-lg" style="max-height: 50px; width: 50px;">mdi-account-multiple</v-icon>
                                     <v-spacer></v-spacer>
+                                
                                     <div class="col-ml-6 ">
                                         <div class="ml-auto text-right">
                                             <div class="body-3 grey--text font-weight-light">

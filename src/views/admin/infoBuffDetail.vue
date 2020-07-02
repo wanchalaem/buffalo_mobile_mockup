@@ -114,7 +114,7 @@
                 <div class="d-flex flex-no-wrap">
                     <div class="ml-auto text-right" style="margin-top:4px; margin-right:4px;">
                         <div class="pa-3">
-                            <v-btn  @click="$router.push('/addAgeBuff')" class="rounded-lg" outlined color="teal" dark>
+                            <v-btn  @click="$router.push('/ageBuffAdmin')" class="rounded-lg" outlined color="teal" dark>
                                 เพิ่มข้อมูลอายุ
                             </v-btn>
 
