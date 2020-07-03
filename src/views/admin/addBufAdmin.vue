@@ -1,22 +1,72 @@
 <template>
 <div>
-
-    <!-- <Navbar icon="mdi-chevron-left" name="เพิ่มข้อมูลอายุควาย" /> -->
-    <Navigation name="เพิ่มข้อมูลอายุควาย" />
+    <!-- <Navbar icon="mdi-chevron-left" name="เพิ่มควาย" /> -->
+    <NavigationAdmin name="เพิ่มควาย"/>
     <v-container grid-list-xs>
-            <v-card-text>
-                <v-container>
-                    <v-text-field class="rounded-lg"  outlined label="น้ำหนัก (กิโลกรัม)"></v-text-field>
-                    <v-text-field class="rounded-lg"  outlined label="ความกว้างรอบอก (เซนติเมตร)"></v-text-field>
-                    <v-text-field class="rounded-lg"  outlined label="ความยาวลำตัว (เซนติเมตร)"></v-text-field>
-                    <v-text-field class="rounded-lg"  outlined label="ความสูง (เซนติเมตร)"></v-text-field>
-                    <v-select class="rounded-lg"  outlined :items="['240วัน', '400วัน', '600วัน']" label="อายุ"></v-select>
-                    <v-btn @click="$router.push('/infoBuf1')" class="rounded-lg" color="green" dark large block>บันทึก</v-btn>
-                </v-container>
-            </v-card-text> 
+        <div v-for="item in desserts" :key="item.name" class="ma-3">
+            <v-text-field class="rounded-lg" outlined v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
+        </div>
+        <center>
+            <v-flex xs12 row wrap>
+                <v-flex xs6 pa-3>
+                    <v-card class="elevation-5 rounded-lg">
+                        <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="1.7"></v-img>
+                        <v-list two-line>
+                            <center>
+                                <h5>ภาพด้านข้าง</h5>
+                            </center>
+                        </v-list>
+                    </v-card>
+                </v-flex>
+                <v-flex xs6 pa-3>
+                    <v-card class="elevation-5 rounded-lg ">
+                        <v-img src="https://images.pexels.com/photos/2261770/pexels-photo-2261770.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="1.7"></v-img>
+                        <v-list two-line>
+                            <center>
+                                <h5>ภาพด้านหลัง</h5>
+                            </center>
+                        </v-list>
+                    </v-card>
+                </v-flex>
 
+                <v-flex xs6 pa-3>
+                    <v-card class="elevation-5 rounded-lg ">
+                        <div class="d-flex flex-no-wrap">
+                            <div class="ma-3">
+                                <v-icon dark large class="elevation-6 error rounded-lg" style="max-height: auto; width: auto;">mdi-file-pdf-outline</v-icon>
+                            </div>
+                            <div class="ml-auto text-right " style="margin-right:4px; margin-top:8px;">
+                                <h5>
+                                    ใบพันธุ์ประวัติอ้างอิง
+                                </h5>
+                            </div>
+                        </div>
+
+                    </v-card>
+                </v-flex>
+
+                <v-flex xs6 pa-3>
+                    <v-card class="elevation-5 rounded-lg ">
+                        <div class="d-flex flex-no-wrap">
+                            <div class="ma-3">
+                                <v-icon dark large class="elevation-6 error rounded-lg" style="max-height: auto; width: auto;">mdi-file-pdf-outline</v-icon>
+                            </div>
+                            <div class="ml-auto text-right " style="margin-right:4px; margin-top:8px;">
+                                <h5>
+                                    ใบพันธุ์ประวัติทางการ
+                                </h5>
+                            </div>
+                        </div>
+
+                    </v-card>
+                </v-flex>
+
+            </v-flex>
+        </center>
+
+        
     </v-container>
-    
+    <v-btn @click="$router.push('/infoBufAdmin')" color="green" dark large block>บันทึก</v-btn>
 
 </div>
 </template>
@@ -115,7 +165,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style>
 .bg {
     /* background: rgba(0, 128, 0, 0.1); */
     /* background: rgba(242, 243, 244);

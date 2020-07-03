@@ -1,37 +1,18 @@
 <template>
-<div>
-    <NavbarAdmin icon="mdi-chevron-left" name="รายงานสรุปจำนวนควายที่มีชีวิต" />
+<div class="bg">
+    <!-- <NavbarAdmin icon="mdi-chevron-left" name="รายงานสรุปจำนวนควายที่มีชีวิต" /> -->
+    <NavigationAdmin name="รายงานเชิงแผนที่" />
+    <v-container>
+        <v-select solo outlined class="rounded-lg mt-2 mb-2" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
+        <v-select solo outlined class="rounded-lg mb-2" :items="district" label="กรุณาเลือกอำเภอ" hide-details></v-select>
+        <v-select solo outlined class="rounded-lg mb-2" :items="place" label="กรุณาเลือกตำบล" hide-details></v-select>
+    </v-container>
 
-    <div class="pa-4">
-        
-        <v-row>
-            <v-flex xs4>
-                <v-overflow-btn :items="province" label="กรุณาเลือกจังหวัด" hide-details class="pa-0" outlined></v-overflow-btn>
-            </v-flex>
-            <v-flex xs4>
-                <v-overflow-btn :items="district" label="กรุณาเลือกอำเภอ" hide-details class="pa-0" outlined></v-overflow-btn>
-            </v-flex>
-            <v-flex xs4>
-                <v-overflow-btn :items="place" label="กรุณาเลือกตำบล" hide-details class="pa-0" outlined></v-overflow-btn>
-            </v-flex>
-        </v-row>
+    <v-container>
+        <v-card class="rounded-lg elevation-5" flat height="300px" width="400px" img="https://cdn.vuetifyjs.com/images/toolbar/map.jpg">
+        </v-card>
 
-    </div>
-    <v-card class="ma-2">
-        <v-spacer></v-spacer>
-
-        <div class="d-flex flex-no-wrap ma-4">
-            <div class="ma-3">
-                <h4>ชื่อฟาร์ม : สวัสดิ์ฟาร์ม </h4>
-                <h4>กลุ่มเกษตกร : แม่ใจ</h4>
-                <h4>จังหวัด : พะเยา</h4>
-                <h4>อำเภอ : เมือง</h4>
-                <h4>ตำบล : แม่กา</h4>
-                <h4>จำนวนควายทั้งหมด : 30 ตัว</h4>
-            </div>
-
-        </div>
-    </v-card>
+    </v-container>
 </div>
 </template>
 
@@ -178,6 +159,21 @@ export default {
 }
 </script>
 
-<style  scoped>
+<style scoped>
+.bg {
+    /* background: rgba(0, 128, 0, 0.1); */
+    /* background: rgba(242, 243, 244);
+    background-size: cover; */
 
+    background: rgba(242, 243, 244);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat;
+    background-size: cover;
+    /* background-size:100% 100%; */
+}
 </style>

@@ -1,10 +1,11 @@
 <template>
-<div>
+<div class="bg">
 
-    <Navbar icon="mdi-chevron-left" name="รายงานการเติบโต" />
-    <v-container grid-list-xs>
+    <!-- <Navbar icon="mdi-chevron-left" name="รายงานการเติบโต" /> -->
+    <Navigation name="รายงานการเติบโต" />
+    <v-container>
         <div class="text-center">
-            <h4>รายงานสรุปการเจริญเติบโต พันธุ์ประวัติรายฟาร์ม</h4>
+            <h2>รายงานสรุปการเจริญเติบโตพันธุ์ประวัติรายฟาร์ม</h2>
         </div>
         <v-card class="ma-4 pa-4 rounded-lg">
             <v-text-field class="rounded-lg" outlined name="name" label="ชื่อฟาร์ม" id="id"></v-text-field>
@@ -27,8 +28,20 @@ export default {
 </script>
 
 <style>
-.v-sheet--offset {
-    top: -24px;
-    position: relative;
+.bg {
+    /* background: rgba(0, 128, 0, 0.1); */
+    /* background: rgba(242, 243, 244);
+    background-size: cover; */
+
+    background: rgba(242, 243, 244);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat;
+    background-size: cover;
+    /* background-size:100% 100%; */
 }
 </style>

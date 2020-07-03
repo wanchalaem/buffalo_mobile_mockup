@@ -1,51 +1,29 @@
 <template>
-<div>
-    <NavbarAdmin icon="mdi-chevron-left" name="รายงานสรุปจำนวนควายที่มีชีวิต" />
-<v-flex xs10 pa-3>
-    <div class="pa-4">
-        <v-row>
-            <v-flex xs6>
-                <v-overflow-btn :items="province" label="กรุณาเลือกจังหวัด" hide-details class="pa-0" outlined></v-overflow-btn>
-            </v-flex>
-            <v-flex xs6>
-                <v-overflow-btn :items="district" label="กรุณาเลือกอำเภอ" hide-details class="pa-0" outlined></v-overflow-btn>
-            </v-flex>
-            <v-flex xs6>
-                <v-overflow-btn :items="place" label="กรุณาเลือกตำบล" hide-details class="pa-0" outlined></v-overflow-btn>
-            </v-flex>
-            <v-flex xs6>
-                <v-overflow-btn :items="farm" label="กรุณาเลือกฟาร์ม" hide-details class="pa-0" outlined></v-overflow-btn>
-            </v-flex>
-        </v-row>
+<div class="bg">
+    <!-- <NavbarAdmin icon="mdi-chevron-left" name="รายงานสรุปจำนวนควายที่มีชีวิต" /> -->
+    <NavigationAdmin name="รายงานสรุปจำนวนควายที่มีชีวิต" />
+    <v-container>
+        <v-select solo outlined class="rounded-lg mt-2 mb-2" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
+        <v-select solo outlined class="rounded-lg mb-2" :items="district" label="กรุณาเลือกอำเภอ" hide-details></v-select>
+        <v-select solo outlined class="rounded-lg mb-2" :items="place" label="กรุณาเลือกตำบล" hide-details></v-select>
+        <v-select solo outlined class="rounded-lg mb-2" :items="farm" label="กรุณาเลือกฟาร์ม" hide-details></v-select>
+    </v-container>
 
-    </div>
-    <v-card class="ma-2">
-        <div class="d-flex flex-no-wrap">
-            <div class="ma-3">
-                <h3>รายละเอียด</h3>
+    <v-container grid-list-xs>
+        <v-card class="rounded-lg">
+            <div class="d-flex flex-no-wrap ma-4">
+                <div class="ma-3">
+                    <h4>ชื่อฟาร์ม : สวัสดิ์ฟาร์ม </h4>
+                    <h4>กลุ่มเกษตกร : แม่ใจ</h4>
+                    <h4>จังหวัด : พะเยา</h4>
+                    <h4>อำเภอ : เมือง</h4>
+                    <h4>ตำบล : แม่กา</h4>
+                    <h4>จำนวนควายทั้งหมด : 30 ตัว</h4>
+                </div> 
             </div>
-            <!-- <div class="ml-auto text-right" style="margin-right: 4px;">
-                <h5 class="body-3 grey--text font-weight-light">
-                    <v-icon @click="dialog=false">mdi-pencil</v-icon>
-                    <v-icon>mdi-delete</v-icon>
-                </h5>
-            </div> -->
-        </div>
-        <v-spacer></v-spacer>
+        </v-card> 
+    </v-container>
 
-        <div class="d-flex flex-no-wrap ma-4">
-            <div class="ma-3">
-                <h4>ชื่อฟาร์ม : สวัสดิ์ฟาร์ม </h4>
-                <h4>กลุ่มเกษตกร : แม่ใจ</h4>
-                <h4>จังหวัด : พะเยา</h4>
-                <h4>อำเภอ : เมือง</h4>
-                <h4>ตำบล : แม่กา</h4>
-                <h4>จำนวนควายทั้งหมด : 30 ตัว</h4>
-            </div>
-
-        </div>
-    </v-card>
-</v-flex>
 </div>
 </template>
 
@@ -63,7 +41,7 @@ export default {
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
-            
+
             province: [{
                     text: 'พะเยา'
                 },
@@ -193,6 +171,21 @@ export default {
 }
 </script>
 
-<style  scoped>
+<style scoped>
+.bg {
+    /* background: rgba(0, 128, 0, 0.1); */
+    /* background: rgba(242, 243, 244);
+    background-size: cover; */
 
+    background: rgba(242, 243, 244);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat;
+    background-size: cover;
+    /* background-size:100% 100%; */
+}
 </style>

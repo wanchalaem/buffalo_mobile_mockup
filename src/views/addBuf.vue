@@ -1,7 +1,7 @@
 <template>
 <div>
-
-    <Navbar icon="mdi-chevron-left" name="เพิ่มควาย" />
+    <!-- <Navbar icon="mdi-chevron-left" name="เพิ่มควาย" /> -->
+    <Navigation name="เพิ่มควาย" />
     <v-container grid-list-xs>
         <div v-for="item in desserts" :key="item.name" class="ma-3">
             <v-text-field class="rounded-lg" outlined v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
@@ -66,7 +66,7 @@
 
         
     </v-container>
-    <v-btn @click="$router.push('/infoBuf')" color="teal" dark large block>บันทึก</v-btn>
+    <v-btn @click="$router.push('/infoBuf')" color="green" dark large block>บันทึก</v-btn>
 
 </div>
 </template>
@@ -166,5 +166,21 @@ export default {
 </script>
 
 <style>
+.bg {
+    /* background: rgba(0, 128, 0, 0.1); */
+    /* background: rgba(242, 243, 244);
+    background-size: cover; */
+
+    background: rgba(242, 243, 244);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat;
+    background-size: cover;
+    /* background-size:100% 100%; */
+}
 
 </style>

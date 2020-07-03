@@ -1,25 +1,22 @@
 <template>
 <div>
 
-    <Navbar icon="mdi-chevron-left" name="เพิ่มข้อมูลอายุควาย" />
+    <!-- <Navbar icon="mdi-chevron-left" name="เพิ่มข้อมูลอายุควาย" /> -->
+    <NavigationAdmin name="เพิ่มข้อมูลอายุควาย"/>
     <v-container grid-list-xs>
-        <v-card>
-            <v-card-title>
-                <h3>อายุควาย</h3>
-            </v-card-title>
             <v-card-text>
                 <v-container>
-                    <v-text-field class="rounded-lg" outlined label="น้ำหนัก (กิโลกรัม)"></v-text-field>
-                    <v-text-field class="rounded-lg" outlined label="ความกว้างรอบอก (เซนติเมตร)"></v-text-field>
-                    <v-text-field class="rounded-lg" outlined label="ความยาวลำตัว (เซนติเมตร)"></v-text-field>
-                    <v-text-field class="rounded-lg" outlined label="ความสูง (เซนติเมตร)"></v-text-field>
-                    <v-select outlined :items="['240วัน', '400วัน', '600วัน']" label="อายุ"></v-select>
+                    <v-text-field class="rounded-lg"  outlined label="น้ำหนัก (กิโลกรัม)"></v-text-field>
+                    <v-text-field class="rounded-lg"  outlined label="ความกว้างรอบอก (เซนติเมตร)"></v-text-field>
+                    <v-text-field class="rounded-lg"  outlined label="ความยาวลำตัว (เซนติเมตร)"></v-text-field>
+                    <v-text-field class="rounded-lg"  outlined label="ความสูง (เซนติเมตร)"></v-text-field>
+                    <v-select class="rounded-lg"  outlined :items="['240วัน', '400วัน', '600วัน']" label="อายุ"></v-select>
+                    <v-btn @click="$router.push('/infoBuffDetail')" class="rounded-lg" color="green" dark large block>บันทึก</v-btn>
                 </v-container>
-            </v-card-text>
-        </v-card>
+            </v-card-text> 
 
     </v-container>
-    <v-btn @click="$router.push('/infoBuffDetail')" color="teal" dark large block>บันทึก</v-btn>
+    
 
 </div>
 </template>
@@ -118,6 +115,22 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
+.bg {
+    /* background: rgba(0, 128, 0, 0.1); */
+    /* background: rgba(242, 243, 244);
+    background-size: cover; */
+
+    background: rgba(242, 243, 244);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat;
+    background-size: cover;
+    /* background-size:100% 100%; */
+}
 
 </style>

@@ -1,14 +1,17 @@
 <template>
-<div>
-    <NavbarAdmin icon="mdi-chevron-left" name="แก้ไขข้อมูลผู้ดูแลระบบ" />
-    <v-card class="mx-auto rounded-lg elevation-10" max-width="200">
-        <v-img height="220" src="https://cdn-th.tunwalai.net/files/member/139588/1601081451-member.jpg">
-        </v-img>
-    </v-card>
-    <br>
-    <center>
-        <h3> นายแดง เชิดชู </h3>
-    </center> <br>
+<div class="bg">
+    <NavigationAdmin name="แก้ไขข้อมูลผู้ดูแลระบบ" />
+    <!-- <NavbarAdmin icon="mdi-chevron-left" name="แก้ไขข้อมูลผู้ดูแลระบบ" /> -->
+    <v-container grid-list-xs>
+        <v-card class="mx-auto rounded-lg elevation-10" max-width="200">
+            <v-img height="220" src="https://cdn-th.tunwalai.net/files/member/139588/1601081451-member.jpg">
+            </v-img>
+        </v-card>
+        <br>
+        <center>
+            <h3> นายแดง เชิดชู </h3>
+        </center>
+    </v-container>
 
     <v-card class="rounded-lg pa-2">
         <v-tabs grow>
@@ -18,15 +21,15 @@
             </v-tab>
 
             <v-tab-item>
-                <v-flex xs12 row wrap>
+                <v-flex xs12>
                     <v-flex xs12>
                         <v-card-text>
                             <div class="d-flex grow flex-wrap">
-                                <h5>ข้อมูลผู้ใช้</h5>
+                                <!-- <h3>ข้อมูลผู้ใช้</h3> -->
                                 <v-spacer></v-spacer>
                                 <div class="col-ml-6 ">
                                     <div class="ml-auto text-right">
-                                        <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                        <v-btn class="rounded-lg mr-2" color="green" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                         </v-btn>
                                         <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
                                         </v-btn>
@@ -38,24 +41,19 @@
                                 <div v-for="item in informationfarmer" :key="item.name">
                                     <v-text-field outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
                                 </div>
-                                
+
                             </v-flex>
                         </v-card-text>
-                    </v-flex>
-
-                </v-flex>
-
+                    </v-flex> 
+                </v-flex> 
             </v-tab-item>
-            
 
-        
         </v-tabs>
     </v-card>
 
 </div>
 </template>
 
-    
 <script>
 export default {
     name: 'Root',
@@ -187,6 +185,12 @@ export default {
 }
 </script>
 
-<style  scoped>
-
+<style scoped>
+.bg {
+    background: rgba(242, 243, 244);
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
 </style>

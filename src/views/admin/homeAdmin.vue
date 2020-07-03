@@ -1,121 +1,99 @@
 <template>
-<div>
-    <Navbar name="ผู้ดูแลระบบ" />
-        <div class="pa-4">
-            <v-layout row wrap>
-                <v-flex xs12>
-                    <v-card class="ma-2">
-                        <div class="d-flex flex-no-wrap ">
-                            <div class="ma-3">
-                                <v-btn color="danger" fab dark>
-                                    <v-icon>mdi-domain</v-icon>
-                                </v-btn>
-                            </div>
-                            <div>
-                                <v-card-title class="headline">120 คน</v-card-title>
-                                <v-card-subtitle>จำนวนสมาชิกในเดือนนี้</v-card-subtitle>
-                            </div>
+<div class="bg">
+    <!-- <Navbar name="ผู้ดูแลระบบ" /> -->
+    <NavigationAdmin name="ผู้ดูแลระบบ" />
+    <div class="pa-4">
+        <v-layout row wrap>
+            <v-flex xs12>
+                <v-card class="ma-2">
+                    <div class="d-flex flex-no-wrap ">
+                        <div class="ma-3">
+                            <v-btn color="info" fab dark>
+                                <v-icon>mdi-domain</v-icon>
+                            </v-btn>
                         </div>
-                    </v-card>
-                </v-flex>
-                <v-flex xs6>
-                    <v-card class="ma-2 rounded-lg">
-                        <div class="d-flex flex-no-wrap">
-                            <div class="ma-3">
-                                <v-btn color="success" fab dark>
-                                    <v-icon>mdi-cow</v-icon>
-                                </v-btn>
-                            </div>
-                            <div class="ml-auto text-right" style="margin-right: 4px;">
-                                <h5 class="body-3 grey--text font-weight-light">
-                                    จำนวนควายทั้งหมด
-                                </h5>
-                                <h2>
-                                    39ตัว
-                                </h2>
-                            </div>
-
+                        <div>
+                            <v-card-title class="headline">120 คน</v-card-title>
+                            <v-card-subtitle>จำนวนสมาชิกในเดือนนี้</v-card-subtitle>
                         </div>
-                    </v-card>
-                </v-flex>
-                <v-flex xs6>
-                    <v-card class="ma-2">
-                        <div class="d-flex flex-no-wrap ">
-                            <div class="ma-3">
-                                <v-btn color="primary" fab dark>
-                                    <v-icon>mdi-domain</v-icon>
-                                </v-btn>
-                            </div>
-                            <div class="ml-auto text-right" style="margin-right: 4px;">
-                                <h5 class="body-3 grey--text font-weight-light">
-                                    จำนวนควายทั้งหมด
-                                </h5>
-                                <h2>
-                                    39ตัว
-                                </h2>
-                            </div>
-
+                    </div>
+                </v-card>
+            </v-flex>
+            <v-flex xs6>
+                <v-card class="ma-2 rounded-lg">
+                    <div class="d-flex flex-no-wrap">
+                        <div class="ma-3">
+                            <v-btn color="success" fab dark>
+                                <v-icon>mdi-cow</v-icon>
+                            </v-btn>
                         </div>
-                    </v-card>
-                </v-flex>
+                        <div class="ml-auto text-right" style="margin-right: 4px;">
+                            <h5 class="body-3 grey--text font-weight-light">
+                                จำนวนควายทั้งหมด
+                            </h5>
+                            <h2>
+                                39ตัว
+                            </h2>
+                        </div>
 
-            </v-layout>
-        </div>
+                    </div>
+                </v-card>
+            </v-flex>
+            <v-flex xs6>
+                <v-card class="ma-2">
+                    <div class="d-flex flex-no-wrap ">
+                        <div class="ma-3">
+                            <v-btn color="primary" fab dark>
+                                <v-icon>mdi-domain</v-icon>
+                            </v-btn>
+                        </div>
+                        <div class="ml-auto text-right" style="margin-right: 4px;">
+                            <h5 class="body-3 grey--text font-weight-light">
+                                จำนวนควายทั้งหมด
+                            </h5>
+                            <h2>
+                                39ตัว
+                            </h2>
+                        </div>
 
-        <div class="pa-4">
-            <v-card class="mx-auto text-center" color="green" dark max-width="600">
-                <v-card-text>
-                    <v-sheet color="rgba(0, 0, 0, .12)">
-                        <v-sparkline :value="value" color="rgba(255, 255, 255, .7)" height="100" padding="24" stroke-linecap="round" smooth>
-                            <template v-slot:label="item">
-                                ${{ item.value }}
-                            </template>
-                        </v-sparkline>
-                    </v-sheet>
-                </v-card-text>
+                    </div>
+                </v-card>
+            </v-flex>
 
-                <v-card-text>
-                    <div class="display-1 font-weight-thin">จำนวนสมาชิกในเดือนนี้</div>
-                </v-card-text>
+        </v-layout>
+    </div>
 
-                <v-divider></v-divider>
+    <div class="pa-4">
+        <v-card class="mt-3">
+            <v-card-title>
+                จำนวนสมาชิกในเดือนนี้
+            </v-card-title>
+            <column-chart :colors="['#339933']" :data="chartData"></column-chart> 
+        </v-card>
 
-                <v-card-actions class="justify-center">
-                    <v-btn block text>Go to Report</v-btn>
-                </v-card-actions>
-            </v-card>
-        </div>
-
-        <div class="pa-4">
-            <v-card class="mx-auto text-center" color="green" dark max-width="600">
-                <v-card-text>
-                    <v-sheet color="rgba(0, 0, 0, .12)">
-                        <v-sparkline :value="value" color="rgba(255, 255, 255, .7)" height="100" padding="24" stroke-linecap="round" smooth>
-                            <template v-slot:label="item">
-                                ${{ item.value }}
-                            </template>
-                        </v-sparkline>
-                    </v-sheet>
-                </v-card-text>
-
-                <v-card-text>
-                    <div class="display-1 font-weight-thin">จำนวนควายทั้งหมด</div>
-                </v-card-text>
-
-                <v-divider></v-divider>
-
-                <v-card-actions class="justify-center">
-                    <v-btn block text>Go to Report</v-btn>
-                </v-card-actions>
-            </v-card>
-        </div>
-    <NavigationAdmin />
+        <v-card class="mt-3">
+            <v-card-title>
+                จำนวนควายทั้งหมด
+            </v-card-title>
+            <area-chart :colors="['#3399FF']" :data="chartData"></area-chart> 
+        </v-card>
+ 
+    </div> 
+ 
 </div>
 </template>
 
 <script>
 export default {
     data: () => ({
+        chartData: {
+            '1/7/2020': 40,
+            '2/7/2020': 40,
+            '3/7/2020': 40,
+            '4/7/2020': 42,
+            '5/7/2020': 42,
+            '6/7/2020': 45,
+        },
         value: [
             423,
             446,
@@ -144,8 +122,25 @@ export default {
     font-weight: 100 !important;
 }
 
-.bg {
+/* .bg {
     background-color: #f5f5ff;
     background-attachment: fixed;
+} */
+
+.bg {
+    /* background: rgba(0, 128, 0, 0.1); */
+    /* background: rgba(242, 243, 244);
+    background-size: cover; */
+
+    background: rgba(242, 243, 244);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat;
+    background-size: cover;
+    /* background-size:100% 100%; */
 }
 </style>

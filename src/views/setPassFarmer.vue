@@ -1,40 +1,29 @@
 <template>
 <div class="bg">
-    <!-- <Navbar icon="mdi-account-key" name="คำขอรหัสผ่าน" /> -->
-    <NavigationAdmin name="คำขอรหัสผ่าน" />
-
-    <!-- <div class="ma-6"> -->
-    <v-container grid-list-xs>
+    <!-- <Navbar icon="mdi-chevron-left" name="ตั้งค่ารหัสผ่าน" /> -->
+    <Navigation name="ตั้งค่ารหัสผ่าน" />
+    <div class="pa-6">
         <v-layout row wrap>
             <v-flex xs12>
-                <v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
-                    <template v-slot:activator="{ on, attrs }">
-                        <v-text-field outlined solo class="rounded-lg mt-3" v-model="date" label="Picker in menu" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
-                    </template>
-                    <v-date-picker v-model="date" no-title scrollable>
-                        <v-spacer></v-spacer>
-                        <v-btn text color="primary" @click="menu = false">Cancel</v-btn>
-                        <v-btn text color="primary" @click="$refs.menu.save(date)">OK</v-btn>
-                    </v-date-picker>
-                </v-menu>
-
-                <v-card class="rounded-lg">
-                    <div class="d-flex flex-no-wrap ">
-                        <div class="ma-3">
-                            <h4>ชื่อ-นามสกุล : นายแดง แม่ใจ </h4>
-                            <h4>เบอร์โทร : 0123123123 </h4>
-                            
+                <v-toolbar-title>
+                    <center>
+                        <v-text-field clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class="widths rounded-lg pa-1"></v-text-field>
+                        <v-text-field clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class="widths rounded-lg pa-1"></v-text-field>
+                    </center><br>
+                    <!-- <div class="col-ml-6 "> -->
+                        <div class="ml-auto text-center">
+                            <v-btn dark large class="widths rounded-lg " color="green" @click="$router.push('/infoFarmer')">ตกลง
+                            </v-btn>
                         </div>
+                    <!-- </div> -->
 
-                    </div>
-                    <v-btn @click="$router.push('/setDetail')" class="widths" text color="success">ดูข้อมูล</v-btn>
-                </v-card>
+                </v-toolbar-title>
+                <v-spacer></v-spacer>
+
             </v-flex>
 
         </v-layout>
-    </v-container>
-
-    <!-- </div>  -->
+    </div>   
 </div>
 </template>
 
@@ -53,12 +42,7 @@ export default {
     data() {
         return {
 
-            txt: 'Hello World',
-
-            date: new Date().toISOString().substr(0, 10),
-            menu: false,
-            modal: false,
-            menu2: false,
+            txt: 'Hello World'
 
         };
     },
@@ -72,13 +56,20 @@ export default {
         next()
     },
     /*-------------------------ใช้จัดการ operation  หรือ คำนวณค่าต่างๆ (คล้าย methods)------------------------------------------*/
+    computed: {
 
+    },
+    /*-------------------------Methods------------------------------------------*/
+    methods: {
+        /******* Methods default run ******/
+        load: async function () {}
+    },
 }
 </script>
 
 <style scoped>
 .widths {
-    width: 100%;
+    width: 80%;
 }
 
 .bg {

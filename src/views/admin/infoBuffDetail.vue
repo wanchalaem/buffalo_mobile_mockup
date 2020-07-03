@@ -1,22 +1,20 @@
 <template>
-<div>
-
-    <Navbar icon="mdi-chevron-left" name="ข้อมูลควาย" />
-
+<div> 
+    <NavigationAdmin name="ข้อมูลควาย"/>
     <v-tabs grow>
         <v-tab>
-            <v-icon left>mdi-gender-male</v-icon>
+            <v-icon left>mdi-file-document-outline</v-icon>
             พันธุ์ประวัติ
         </v-tab>
         <v-tab>
-            <v-icon left>mdi-gender-female</v-icon>
+            <v-icon left>mdi-chart-bell-curve-cumulative</v-icon>
             การเจริญเติบโต
         </v-tab>
 
         <v-tab-item>
             <v-card flat>
                 <v-card-text>
-                    <v-card class="elevation-5 rounded-lg pa-2">
+                    <!-- <v-card class="elevation-5 rounded-lg pa-2"> -->
                         <div class="d-flex flex-no-wrap">
                             <div class="ma-3">
                                 <h3>รายละเอียดควาย</h3>
@@ -24,14 +22,14 @@
 
                             <div class="ml-auto text-right" style="margin-right: 4px;">
                                 <h5 class="body-3 grey--text font-weight-light">
-                                    <!-- <v-btn outlined color="teal" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                    <!-- <v-btn outlined color="green" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                     </v-btn> -->
                                     <!-- <v-icon>mdi-upload</v-icon>
                                     <v-icon @click="dialog=false">mdi-pencil</v-icon>
                                     <v-icon>mdi-delete</v-icon> -->
                                     <div class="col-ml-6 ">
                                         <div class="ml-auto text-right">
-                                            <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                            <v-btn class="rounded-lg mr-2" color="green" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                             </v-btn>
                                             <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
                                             </v-btn>
@@ -102,19 +100,19 @@
                         <div v-for="item in desserts" :key="item.name">
                             <v-text-field class="rounded-lg" outlined :readonly="dialog" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
                         </div>
-                    </v-card>
+                    <!-- </v-card> -->
                     <br>
                 </v-card-text>
 
             </v-card>
         </v-tab-item>
 
-        <v-tab-item>
-            <v-card flat>
+        <v-tab-item >
+            <v-card flat >
                 <div class="d-flex flex-no-wrap">
                     <div class="ml-auto text-right" style="margin-top:4px; margin-right:4px;">
                         <div class="pa-3">
-                            <v-btn  @click="$router.push('/ageBuffAdmin')" class="rounded-lg" outlined color="teal" dark>
+                            <v-btn  @click="$router.push('/ageBuffAdmin')" class="rounded-lg" solo color="green" dark>
                                 เพิ่มข้อมูลอายุ
                             </v-btn>
 
@@ -122,22 +120,21 @@
                     </div>
                 </div>
 
-                <v-card-text>
+                <v-card-text >
                     <v-card class="elevation-5 rounded-lg pa-2">
                         <div class="d-flex flex-no-wrap">
-                            <h5 style="margin-bottom:13px;">ข้อมูลการเจริญเติบโต อายุ 240 วัน</h5>
-
+                            <h5 style="margin-bottom:13px;">อายุ 240 วัน</h5>
                             <div class="ml-auto text-right" style="margin-right: 4px;">
                                 <h5 class="body-3 grey--text font-weight-light">
-                                    <!-- <v-btn outlined color="teal" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                    <!-- <v-btn outlined color="green" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                     </v-btn> -->
                                     <div class="col-ml-6 ">
                                         <div class="ml-auto text-right">
-                                            <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">
-                                                <v-icon>mdi-pencil</v-icon>
+                                            <v-btn class="rounded-lg mr-2" color="green" outlined @click="dialog1=false">
+                                                แก้ไข<v-icon>mdi-pencil</v-icon>
                                             </v-btn>
                                             <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">
-                                                <v-icon>mdi-delete</v-icon>
+                                                ลบ<v-icon>mdi-delete</v-icon>
                                             </v-btn>
                                         </div>
                                     </div>
@@ -154,15 +151,14 @@
                 <v-card-text>
                     <v-card class="elevation-5 rounded-lg pa-2">
                         <div class="d-flex flex-no-wrap">
-                            <h5 style="margin-bottom:16px;">ข้อมูลการเจริญเติบโต อายุ 400 วัน</h5>
-
+                            <h5 style="margin-bottom:16px;">อายุ 400 วัน</h5>
                             <div class="ml-auto text-right" style="margin-right: 4px;">
                                 <h5 class="body-3 grey--text font-weight-light">
-                                    <!-- <v-btn outlined color="teal" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                    <!-- <v-btn outlined color="green" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                     </v-btn> -->
                                     <div class="col-ml-6 ">
                                         <div class="ml-auto text-right">
-                                            <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">
+                                            <v-btn class="rounded-lg " color="green" outlined @click="dialog1=false">
                                                 <v-icon>mdi-pencil</v-icon>
                                             </v-btn>
                                             <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">
@@ -183,15 +179,15 @@
                 <v-card-text>
                     <v-card class="elevation-5 rounded-lg pa-2">
                         <div class="d-flex flex-no-wrap">
-                            <h5 style="margin-bottom:20px;">ข้อมูลการเจริญเติบโต อายุ 600 วัน</h5>
-
+                            <!-- <h5 style="margin-bottom:20px;">ข้อมูลการเจริญเติบโต อายุ 600 วัน</h5> -->
+                            <h5 style="margin-bottom:20px;">อายุ 600 วัน</h5>
                             <div class="ml-auto text-right" style="margin-right: 4px;">
                                 <h5 class="body-3 grey--text font-weight-light">
-                                    <!-- <v-btn outlined color="teal" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                    <!-- <v-btn outlined color="green" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                     </v-btn> -->
                                     <div class="col-ml-6 ">
                                         <div class="ml-auto text-right">
-                                            <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">
+                                            <v-btn class="rounded-lg " color="green" outlined @click="dialog1=false">
                                                 <v-icon>mdi-pencil</v-icon>
                                             </v-btn>
                                             <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">

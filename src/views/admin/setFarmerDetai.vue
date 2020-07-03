@@ -1,19 +1,24 @@
 <template>
-<div>
-    <NavbarAdmin icon=" " name="บัญชีผู้ใช้" />
-    <v-card class="mx-auto rounded-lg elevation-10" max-width="200">
-        <v-img height="220" src="https://www.siamzone.com/music/news/2015/07381.jpg">
-        </v-img>
-    </v-card>
-    <br>
-    <center>
-        <h3> นายแดง เชิดชู </h3><br>
-        <v-btn class="rounded-lg " color="indigo" outlined @click="$router.push('/infoBufAdmin')">ข้อมูลควาย<v-icon>mdi-account-key</v-icon></v-btn>
-        <v-btn class="rounded-lg " color="teal" outlined @click="$router.push('/setPasswordDetail')">ตั้งค่ารหัสผ่าน<v-icon>mdi-account-key</v-icon></v-btn>
-    </center> <br>
+<div class="bg">
+    <!-- <NavbarAdmin icon=" " name="บัญชีผู้ใช้" /> -->
+    <NavigationAdmin name="ข้อมูลผู้ใช้" />
+    <v-container class="mt-1">
+        <v-card class="mx-auto rounded-lg elevation-10" max-width="200">
+            <v-img height="220" src="https://www.siamzone.com/music/news/2015/07381.jpg">
+            </v-img>
+        </v-card>
+        <br>
+        <center>
+            <h3> นายแดง เชิดชู </h3><br>
+            <v-btn class="rounded-lg ma-2" dark color="indigo" @click="$router.push('/infoBufAdmin')">ข้อมูลควาย<v-icon>mdi-cow</v-icon>
+            </v-btn>
+            <v-btn class="rounded-lg ma-2" dark color="green" @click="$router.push('/setPasswordDetail')">ตั้งค่ารหัสผ่าน<v-icon>mdi-account-key</v-icon>
+            </v-btn>
+        </center>
+    </v-container>
 
     <v-card class="rounded-lg pa-2">
-        <v-tabs grow>
+        <v-tabs grow color="green">
             <v-tab>
                 <v-icon>mdi-account-outline</v-icon>
                 <h5>ข้อมูลเกษตกร</h5>
@@ -24,15 +29,14 @@
             </v-tab>
 
             <v-tab-item>
-                <v-flex xs12 row wrap>
-                    <v-flex xs12>
+                <v-flex xs12 > 
                         <v-card-text>
                             <div class="d-flex grow flex-wrap">
-                                <h5>ข้อมูลผู้ใช้</h5>
+                                <!-- <h5>ข้อมูลผู้ใช้</h5> -->
                                 <v-spacer></v-spacer>
                                 <div class="col-ml-6 ">
                                     <div class="ml-auto text-right">
-                                        <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                        <v-btn class="rounded-lg mr-2" color="green" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                         </v-btn>
                                         <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
                                         </v-btn>
@@ -52,9 +56,7 @@
                                 </div>
                             </v-flex>
                         </v-card-text>
-                    </v-flex>
-
-                </v-flex>
+                    </v-flex> 
 
             </v-tab-item>
 
@@ -63,11 +65,11 @@
                     <v-flex xs12>
                         <v-card-text>
                             <div class="d-flex grow flex-wrap">
-                                <h5>ข้อมูลฟาร์ม</h5>
+                                <!-- <h5>ข้อมูลฟาร์ม</h5> -->
                                 <v-spacer></v-spacer>
                                 <div class="col-ml-6 ">
                                     <div class="ml-auto text-right">
-                                        <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                        <v-btn class="rounded-lg " color="green" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                         </v-btn>
                                         <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
                                         </v-btn>
@@ -96,11 +98,10 @@
 
         </v-tabs>
     </v-card>
-<Navigation/>
+
 </div>
 </template>
 
-    
 <script>
 export default {
     name: 'Root',
@@ -290,6 +291,12 @@ export default {
 }
 </script>
 
-<style  scoped>
-
+<style scoped>
+.bg {
+    background: rgba(242, 243, 244);
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
 </style>

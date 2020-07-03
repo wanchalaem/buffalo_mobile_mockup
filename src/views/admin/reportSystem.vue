@@ -1,51 +1,24 @@
 <template>
-<div>
-    <NavbarAdmin icon="mdi-chevron-left" name="รายงานสรุปจำนวนควายที่มีชีวิต" />
-
-    <center>
-        <h4>จำนวนการกรอกข้อมูลในแต่ละเดือน</h4>
-    </center>
-    <div class="pa-4">
-        <v-row>
-            <v-flex xs4>
-                <v-overflow-btn :items="province" label="กรุณาเลือกจังหวัด" hide-details class="pa-0" outlined></v-overflow-btn>
-            </v-flex>
-            <v-flex xs4>
-                <v-overflow-btn :items="district" label="กรุณาเลือกเดือน" hide-details class="pa-0" outlined></v-overflow-btn>
-            </v-flex>
-            <v-flex xs4>
-                <v-overflow-btn :items="place" label="กรุณาเลือกปี" hide-details class="pa-0" outlined></v-overflow-btn>
-            </v-flex>
-        </v-row>
-
-    </div>
-    <center>
-        <h4>จำนวนการกรอกข้อมูลในแต่ละเดือน</h4>
-    </center>
-
-    <div class="pa-4">
-        <v-card class="mx-auto text-center" color="green" dark max-width="600">
-            <v-card-text>
-                <v-sheet color="rgba(0, 0, 0, .12)">
-                    <v-sparkline :value="value" color="rgba(255, 255, 255, .7)" height="100" padding="24" stroke-linecap="round" smooth>
-                        <template v-slot:label="item">
-                            ${{ item.value }}
-                        </template>
-                    </v-sparkline>
-                </v-sheet>
-            </v-card-text>
-
-            <v-card-text>
-                <div class="display-1 font-weight-thin">Sales Last 24h</div>
-            </v-card-text>
-
-            <v-divider></v-divider>
-
-            <v-card-actions class="justify-center">
-                <v-btn block text>Go to Report</v-btn>
-            </v-card-actions>
+<div class="bg">
+    <!-- <NavbarAdmin icon="mdi-chevron-left" name="รายงานสรุปจำนวนควายที่มีชีวิต" /> -->
+    <NavigationAdmin name="รายงานความเคลื่อไหนการใช้งาน" />
+     
+    <v-container>
+        <h3>จำนวนการกรอกข้อมูลในแต่ละเดือน</h3>
+        <v-select solo outlined class="rounded-lg mt-2 mb-2" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
+        <v-select solo outlined class="rounded-lg mb-2" :items="district" label="กรุณาเลือกอำเภอ" hide-details></v-select>
+        <v-select solo outlined class="rounded-lg mb-2" :items="place" label="กรุณาเลือกตำบล" hide-details></v-select>
+    </v-container>
+ 
+    <div class="pa-4"> 
+        <v-card class="mt-3">
+            <v-card-title>
+                จำนวนการกรอกข้อมูลในแต่ละเดือน
+            </v-card-title>
+            <area-chart :colors="['#3399FF']" :data="chartData"></area-chart> 
         </v-card>
-    </div>
+ 
+    </div> 
 </div>
 </template>
 
@@ -63,6 +36,14 @@ export default {
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
+            chartData: {
+            '1/7/2020': 140,
+            '2/7/2020': 80,
+            '3/7/2020': 30,
+            '4/7/2020': 50,
+            '5/7/2020': 12,
+            '6/7/2020': 105,
+        },
             province: [{
                     text: 'พะเยา'
                 },
@@ -190,5 +171,20 @@ export default {
 </script>
 
 <style  scoped>
+.bg {
+    /* background: rgba(0, 128, 0, 0.1); */
+    /* background: rgba(242, 243, 244);
+    background-size: cover; */
 
+    background: rgba(242, 243, 244);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat;
+    background-size: cover;
+    /* background-size:100% 100%; */
+}
 </style>

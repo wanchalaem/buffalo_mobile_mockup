@@ -141,12 +141,22 @@ function view(name){
   {
     path: '/forgotPassword',
     name: 'forgotPassword',
-    component: view('admin/forgotPassword')
+    component: view('forgotPassword')
   },
   {
     path: '/askPassword',
     name: 'askPassword',
     component: view('admin/askPassword')
+  },
+  {
+    path: '/addBufAdmin',
+    name: 'addBufAdmin',
+    component: view('admin/addBufAdmin')
+  },
+  {
+    path: '/setPassFarmer',
+    name: 'setPassFarmer',
+    component: view('setPassFarmer')
   },
   
 ]

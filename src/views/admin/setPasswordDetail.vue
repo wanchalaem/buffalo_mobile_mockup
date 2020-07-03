@@ -1,20 +1,21 @@
 <template>
-<div>
-    <Navbar icon="mdi-chevron-left" name="ตั้งค่ารหัสผ่าน" />
+<div class="bg">
+    <!-- <Navbar icon="mdi-chevron-left" name="ตั้งค่ารหัสผ่าน" /> -->
+    <NavigationAdmin name="ตั้งค่ารหัสผ่าน"/>
     <div class="pa-6">
         <v-layout row wrap>
             <v-flex xs12>
                 <v-toolbar-title>
                     <center>
-                        <v-text-field clearable flat hide-details label="ตั้งรหัสผ่าน" outlined single-line class="widths rounded-lg pa-1"></v-text-field>
-                        <v-text-field clearable flat hide-details label="ยืนยันรหัสผผ่าน" outlined single-line class="widths rounded-lg pa-1"></v-text-field>
+                        <v-text-field clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class="widths rounded-lg pa-1"></v-text-field>
+                        <v-text-field clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class="widths rounded-lg pa-1"></v-text-field>
                     </center><br>
-                    <div class="col-ml-6 ">
+                    <!-- <div class="col-ml-6 "> -->
                         <div class="ml-auto text-center">
-                            <v-btn class="rounded-lg " style="width:70%" color="teal" outlined @click="$router.push('/setPassword')">ยืนยัน <v-icon>mdi-pencil</v-icon>
+                            <v-btn dark large class="widths rounded-lg " color="green" @click="$router.push('/setPassword')">ตกลง
                             </v-btn>
                         </div>
-                    </div>
+                    <!-- </div> -->
 
                 </v-toolbar-title>
                 <v-spacer></v-spacer>
@@ -22,8 +23,7 @@
             </v-flex>
 
         </v-layout>
-    </div><br><br><br><br><br><br><br><br><br><br><br><br>
-    <NavigationAdmin />
+    </div>   
 </div>
 </template>
 
@@ -70,5 +70,22 @@ export default {
 <style scoped>
 .widths {
     width: 80%;
+}
+
+.bg {
+    /* background: rgba(0, 128, 0, 0.1); */
+    /* background: rgba(242, 243, 244);
+    background-size: cover; */
+
+    background: rgba(242, 243, 244);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat;
+    background-size: cover;
+    /* background-size:100% 100%; */
 }
 </style>

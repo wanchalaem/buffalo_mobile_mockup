@@ -1,29 +1,27 @@
 <template>
-<div>
-    <Navbar icon="mdi-account-key" name="เกี่ยวกับเกษตรกร" />
-    <div class="pa-6">
+<div class="bg">
+    <!-- <Navbar icon="mdi-account-key" name="เกี่ยวกับเกษตรกร" /> -->
+    <NavigationAdmin name="เกษตรกร"/>
+
+    <v-container>
+        <v-text-field class="rounded-lg pt-3" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" solo outlined single-line></v-text-field>
+    </v-container>
+    <div class="pa-6"> 
         <v-layout row wrap>
             <v-flex xs12>
-                <v-card class="rounded-lg pa-2">
-                    <v-flex xs12>
-                        <v-toolbar-title>
-                            <center>
-                                <v-text-field clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line></v-text-field>
-                            </center>
-                        </v-toolbar-title><br>
-                    </v-flex>
+                <v-card class="rounded-lg pa-2"> 
                     <div class="d-flex flex-no-wrap">
                             <div class="ma-3">
-                                <h4>รายละเอียดเกษตรกร</h4>
+                                <h4>ข้อมูลเกษตรกร</h4>
                             </div>
                             <v-spacer></v-spacer>
                             <div class="col-ml-6 ">
                                 <div class="ml-auto text-right">
-                                    <v-btn text class="rounded-lg " color="teal" outlined @click="$router.push('/setDetail')">
-                                        <v-icon>mdi-pencil</v-icon>
+                                    <v-btn text class="rounded-lg " color="green" outlined @click="$router.push('/setDetail')">
+                                        แก้ไข<v-icon>mdi-pencil</v-icon>
                                     </v-btn>
                                     <v-btn text class="rounded-lg " color="red" outlined @click="dialog1=false">
-                                        <v-icon>mdi-delete</v-icon>
+                                        ลบ<v-icon>mdi-delete</v-icon>
                                     </v-btn>
                                 </div>
                             </div>
@@ -43,8 +41,7 @@
             </v-flex>
 
         </v-layout>
-    </div><br><br><br><br><br><br><br><br><br><br>
-    <NavigationAdmin />
+    </div>  
 </div>
 </template>
 
@@ -88,8 +85,12 @@ export default {
 }
 </script>
 
-<style scoped>
-.widths {
-    width: 80%;
+<style scoped> 
+.bg {
+    background: rgba(242, 243, 244);
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
 }
 </style>

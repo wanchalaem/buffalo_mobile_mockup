@@ -1,55 +1,50 @@
 <template>
-<div>
-    <Navbar icon="mdi-account-cog" name="สิทธิ์การใช้งาน" />
+<div class="bg">
+    <!-- <Navbar icon="mdi-account-cog" name="สิทธิ์การใช้งาน" /> -->
+    <NavigationAdmin name="สิทธิ์การใช้งาน" />
 
-    <v-card class="rounded-lg pa-2">
-        <v-flex xs12>
-            <v-toolbar-title>
-                <center>
-                    <v-text-field clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" outlined single-line class="widths rounded-lg pa-1"></v-text-field>
-                </center>
-            </v-toolbar-title>
-        </v-flex>
+    <v-container grid-list-xs>
+        <v-text-field clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" solo outlined single-line class="widths rounded-lg pa-1"></v-text-field>
+    </v-container> 
 
-        <v-flex xs12 row wrap>
-            <v-flex xs12>
-                <v-card-text>
-                    <v-flex xs12>
-                        <div class="d-flex flex-no-wrap">
-                            <div class="ma-3">
-                                <h4>รายละเอียดผู้ดูแลระบบ</h4>
-                            </div>
-                            <v-spacer></v-spacer>
-                            <div class="col-ml-6 ">
-                                <div class="ml-auto text-right">
-                                    <v-btn text class="rounded-lg " color="teal" outlined @click="$router.push('/adminDetail')">
-                                        <v-icon>mdi-pencil</v-icon>
-                                    </v-btn>
-                                    <v-btn text class="rounded-lg " color="red" outlined @click="dialog1=false">
-                                        <v-icon>mdi-delete</v-icon>
-                                    </v-btn>
+    <v-container grid-list-xs class="pd-2">
+        <v-card class="rounded-lg">
+            <v-flex xs12 row wrap>
+                <v-flex xs12>
+                    <v-card-text>
+                        <v-flex xs12>
+                            <div class="d-flex flex-no-wrap">
+                                <div class="ma-3">
+                                    <h4>ผู้ดูแลระบบ</h4>
+                                </div>
+                                <v-spacer></v-spacer>
+                                <div class="col-ml-6">
+                                    <div class="ml-auto text-right">
+                                        <v-btn text class="rounded-lg " color="green" outlined @click="$router.push('/adminDetail')">
+                                            แก้ไข<v-icon>mdi-pencil</v-icon>
+                                        </v-btn>
+                                        <v-btn text class="rounded-lg " color="red" outlined @click="dialog1=false">
+                                            ลบ<v-icon>mdi-delete</v-icon>
+                                        </v-btn>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <v-spacer></v-spacer>
-                        <div class="d-flex flex-no-wrap ">
-                            <div class="ma-3">
-                                <h4>ชื่อ : นายแดง แดงแดง </h4>
-                                <h4>อีเมล์ : dang@gmail.com </h4>
-                                <h4>ชื่อผู้ใช้งาน : admin </h4>
-                                <h4>สิทธิ์ : ผู้ดูแลระบบ</h4>
+                            <div class="d-flex flex-no-wrap">
+                                <div class="ma-3">
+                                    <h3>ชื่อ : นายแดง แดงแดง </h3>
+                                    <h3>อีเมล์ : dang@gmail.com </h3>
+                                    <h3>ชื่อผู้ใช้งาน : admin </h3>
+                                    <h3>สิทธิ์ : ผู้ดูแลระบบ</h3>
+                                </div>
                             </div>
+                        </v-flex>
+                    </v-card-text>
+                </v-flex>
 
-                        </div>
-                        <hr>
-                    </v-flex>
-                </v-card-text>
             </v-flex>
 
-        </v-flex>
-
-    </v-card><br><br><br><br><br><br><br><br><br>
-    <NavigationAdmin />
+        </v-card>
+    </v-container>
 </div>
 </template>
 
@@ -100,6 +95,12 @@ export default {
 }
 </script>
 
-<style  scoped>
-
+<style scoped>
+.bg {
+    background: rgba(242, 243, 244);
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
 </style>

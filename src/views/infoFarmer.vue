@@ -1,6 +1,8 @@
 <template>
-<div>
-    <NavbarAdmin icon=" " name="บัญชีผู้ใช้" />
+<div class="bg">
+    <!-- <NavbarAdmin icon=" " name="บัญชีผู้ใช้" /> -->
+    <Navigation name="บัญชีผู้ใช้" />
+    <br>
     <v-card class="mx-auto rounded-lg elevation-10" max-width="200">
         <v-img height="220" src="https://www.siamzone.com/music/news/2015/07381.jpg">
         </v-img>
@@ -8,8 +10,10 @@
     <br>
     <center>
         <h3> นายแดง เชิดชู </h3><br>
-        <v-btn class="rounded-lg " color="teal" outlined @click="$router.push('/setPasswordDetail')">ตั้งค่ารหัสผ่าน<v-icon>mdi-account-key</v-icon></v-btn>
-    </center> <br>
+    </center>
+<v-container >
+    
+</v-container>
 
     <v-card class="rounded-lg pa-2">
         <v-tabs grow>
@@ -23,36 +27,41 @@
             </v-tab>
 
             <v-tab-item>
-                <v-flex xs12 row wrap>
-                    <v-flex xs12>
-                        <v-card-text>
-                            <div class="d-flex grow flex-wrap">
-                                <h5>ข้อมูลผู้ใช้</h5>
-                                <v-spacer></v-spacer>
-                                <div class="col-ml-6 ">
-                                    <div class="ml-auto text-right">
-                                        <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
-                                        </v-btn>
+                <center>
+                    <v-flex xs12 row wrap>
+                        <v-flex xs12>
+                            <v-card-text>
+                                <!-- <div class="d-flex grow flex-wrap"> -->
+                                <div>
+                                    <v-spacer></v-spacer>
+                                    <div class="col-ml-6 ">
+                                        <div class="ml-auto text-right">
+                                            <v-btn class="rounded-lg mb-2" color="error" outlined @click="$router.push('/setPassFarmer')">ตั้งค่ารหัสผ่าน<v-icon>mdi-account-key</v-icon>
+                                            </v-btn>
+                                        </div>
+                                        <div class="ml-auto text-right">
+                                            <v-btn class="rounded-lg" color="green" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                            </v-btn>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <br>
-                            <v-flex xs12>
-                                <div v-for="item in informationfarmer" :key="item.name">
-                                    <v-text-field outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
-                                </div>
-                                <div>
-                                    <center>
-                                        <h6>ภาพถ่ายบัตรประจำตัวประชาชน</h6>
-                                        <v-img class="rounded-lg elevation-5" height="200" width="350" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
-                                    </center>
-                                </div>
-                            </v-flex>
-                        </v-card-text>
+                                <br>
+                                <v-flex xs12>
+                                    <div v-for="item in informationfarmer" :key="item.name">
+                                        <v-text-field class="rounded-lg" outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
+                                    </div>
+                                    <div>
+                                        <center>
+                                            <h6>ภาพถ่ายบัตรประจำตัวประชาชน</h6>
+                                            <v-img class="rounded-lg elevation-5" height="200" width="350" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
+                                        </center>
+                                    </div>
+                                </v-flex>
+                            </v-card-text>
+                        </v-flex>
+
                     </v-flex>
-
-                </v-flex>
-
+                </center>
             </v-tab-item>
 
             <v-tab-item>
@@ -60,18 +69,18 @@
                     <v-flex xs12>
                         <v-card-text>
                             <div class="d-flex grow flex-wrap">
-                                <h5>ข้อมูลฟาร์ม</h5>
+                                 
                                 <v-spacer></v-spacer>
                                 <div class="col-ml-6 ">
                                     <div class="ml-auto text-right">
-                                        <v-btn class="rounded-lg " color="teal" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                        <v-btn class="rounded-lg " color="green" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                         </v-btn>
                                     </div>
                                 </div>
                             </div>
 
                             <div>
-                                <h6>สภาพฟาร์ม</h6>
+                                <h4>สภาพฟาร์ม</h4>
                                 <center>
                                     <v-img class="rounded-lg elevation-5" height="200" width="auto" src="https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
                                     </v-img>
@@ -80,7 +89,7 @@
                             <br>
                             <v-flex xs12>
                                 <div v-for="item in informationfarm1" :key="item.name">
-                                    <v-text-field outlined :readonly="dialog1" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
+                                    <v-text-field class="rounded-lg" outlined :readonly="dialog1" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
                                 </div>
 
                             </v-flex>
@@ -91,11 +100,10 @@
 
         </v-tabs>
     </v-card>
-<Navigation/>
+
 </div>
 </template>
 
-    
 <script>
 export default {
     name: 'Root',
@@ -285,6 +293,21 @@ export default {
 }
 </script>
 
-<style  scoped>
+<style scoped>
+.bg {
+    /* background: rgba(0, 128, 0, 0.1); */
+    /* background: rgba(242, 243, 244);
+    background-size: cover; */
 
+    background: rgba(242, 243, 244);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat;
+    background-size: cover;
+    /* background-size:100% 100%; */
+}
 </style>

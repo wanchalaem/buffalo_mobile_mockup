@@ -2,30 +2,32 @@
 <v-app id="inspire">
     <v-main class="bg">
         <v-container class="fill-height" fluid>
-            <v-row align="center" justify="center">
+            <v-row class="mt-14" align="center" justify="center">
                 <v-col cols="10" sm="8" md="4">
-                    <div class=" text-center logo">
+                    <div class=" text-center">
                         <img style="width:65%;" src="https://www.img.in.th/images/baec9e10112fc5b2253841c3099c9e42.png" alt="">
+                        <h2 class="fcw">ยินดีต้อนรับเข้าสู่ระบบ</h2>
                     </div>
-                    <div class="form">
-                        <v-text-field dark outlined label="เข้าสู่ระบบ" name="login" prepend-inner-icon="mdi-account" type="text"></v-text-field>
-                        <v-text-field dark outlined id="password" label="รหัสผ่าน" name="password" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
+                    <div class="mt-6">
+                        <v-text-field class="rounded-lg" solo label="เข้าสู่ระบบ" name="login" prepend-inner-icon="mdi-account" type="text"></v-text-field>
+                        <v-text-field class="rounded-lg" solo id="password" label="รหัสผ่าน" name="password" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
                         <v-spacer></v-spacer>
-                        <v-btn class="width" outlined @click="$router.push('dashFarmer')" large color="green">เข้าสู่ระบบ</v-btn>
+                        <v-btn class="width rounded-lg" dark @click="$router.push('dashFarmer')" large color="green">เข้าสู่ระบบ</v-btn>
                     </div>
                     <div>
-                        <v-btn text @click="$router.push('/forgotPassword')" color="white">ลืมรหัสผ่าน</v-btn>
-                    </div>
-                    <div class="mt">
-                        <hr>
+                        <v-btn text @click="$router.push('forgotPassword')" color="white">ลืมรหัสผ่าน</v-btn>
                     </div>
 
                 </v-col>
             </v-row>
-            <div class="my-2 mr" text-color="white">
-                <p style="color:white;">คุณไม่มีบัญชีผู้ใช้ใช่หรือไม่? <v-btn outlined @click="$router.push('register')" color="yellow darken-1">สมัครสมาชิก</v-btn>
-                </p>
-            </div>
+            <v-container>
+                <hr class="ma-6">
+                <v-row align="center" justify="center">
+                    <p class="f16">คุณไม่มีบัญชีผู้ใช้ใช่หรือไม่? <v-btn outlined @click="$router.push('register')" color="white">สมัครสมาชิก</v-btn>
+                    </p>
+                </v-row>
+            </v-container>
+
         </v-container>
     </v-main>
 </v-app>
@@ -88,18 +90,12 @@ export default {
     width: 100%;
 }
 
-.mt {
-    margin-top: 45%;
+.fcw{
+    color: white;
 }
 
-.logo {
-    margin-top: 25%;
-}
-
-.form {
-    margin-top: 5%;
-}
-.mr {
-    margin-left: 5%;
+.f16 {
+    font-size: 14px;
+    color: white;
 }
 </style>

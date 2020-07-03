@@ -1,23 +1,16 @@
 <template>
-<div>
-
-    <Navbar icon="" name="ข้อมูลควาย" />
-    <div class="pa-4">
+<div class="bg">
+    <!-- <Navbar icon="" name="ข้อมูลควาย" /> -->
+    <NavigationAdmin name="ข้อมูลควาย"/>
+    <div>
         <v-layout row wrap>
-            <v-flex xs12 class="ma-2">
-                <div class="d-flex flex-no-wrap ">
-                    <div class="ma-3">
-                        <v-btn @click="$router.push('/addBuf')" color="teal" class="rounded-lg" outlined large dark>
-                            <h3>เพิ่มควาย</h3>
-                        </v-btn>
-                    </div>
-                    <v-spacer></v-spacer>
-                    <v-flex xs7>
-                        <div class="ml-auto text-right ma-3">
-                            <v-select class="rounded-lg" dense :items="items" label="มีชีวิตหรือไม่มีชีวิต" outlined></v-select>
-                        </div>
-                    </v-flex>
+            <v-flex xs12 class="ma-8">
+                <div>
+                    <v-select block large class="rounded-lg" :items="items" label="มีชีวิตหรือไม่มีชีวิต" solo></v-select>
                 </div>
+                <v-btn @click="$router.push('/addBufAdmin')" color="green" class="rounded-lg" large block solo medium dark>
+                    <h3>เพิ่มควาย</h3>
+                </v-btn> 
             </v-flex>
         </v-layout>
     </div>
@@ -32,11 +25,9 @@
             ตัวเมีย
         </v-tab>
 
-        <v-tab-item>
-
-            <v-card flat>
-                <v-card-text  @click="$router.push('/infoBuffDetail')">
-                    <v-card class="mx-auto rounded-lg" max-width="auto">
+        <v-tab-item> 
+                <v-card-text>
+                    <v-card @click="$router.push('/infoBuffDetail')" class="mx-auto rounded-lg" max-width="auto">
                         <h3 class="pa-3">ชื่อหรือหมายเลขควาย: พ่อเปี้ย</h3>
                         <h3 class="pa-3">หมายเลข : NID</h3>
                         <h3 class="pa-3">เพศ : ผู้</h3>
@@ -44,7 +35,7 @@
                 </v-card-text>
 
                 <v-card-text>
-                    <v-card class="mx-auto rounded-lg" max-width="auto">
+                    <v-card @click="$router.push('/infoBuffDetail')" class="mx-auto rounded-lg" max-width="auto">
                         <h3 class="pa-3">ชื่อหรือหมายเลขควาย : พ่อเปี้ย</h3>
                         <h3 class="pa-3">หมายเลข : NID</h3>
                         <h3 class="pa-3">เพศ : ผู้</h3>
@@ -52,19 +43,18 @@
                 </v-card-text>
 
                 <v-card-text>
-                    <v-card class="mx-auto rounded-lg" max-width="auto">
+                    <v-card @click="$router.push('/infoBuffDetail')" class="mx-auto rounded-lg" max-width="auto">
                         <h3 class="pa-3">ชื่อหรือหมายเลขควาย : พ่อเปี้ย</h3>
                         <h3 class="pa-3">หมายเลข : NID</h3>
                         <h3 class="pa-3">เพศ : ผู้</h3>
                     </v-card>
-                </v-card-text>
-            </v-card>
+                </v-card-text> 
         </v-tab-item>
 
         <v-tab-item>
             <v-card flat>
                 <v-card-text>
-                    <v-card class="mx-auto rounded-lg" max-width="auto">
+                    <v-card @click="$router.push('/infoBuffDetail')" class="mx-auto rounded-lg" max-width="auto">
                         <h3 class="pa-3">ชื่อหรือหมายเลขควาย : แม่เปี้ย</h3>
                         <h3 class="pa-3">หมายเลข : NID</h3>
                         <h3 class="pa-3">เพศ : เมีย</h3>
@@ -72,7 +62,7 @@
                 </v-card-text>
 
                 <v-card-text>
-                    <v-card class="mx-auto rounded-lg" max-width="auto">
+                    <v-card @click="$router.push('/infoBuffDetail')" class="mx-auto rounded-lg" max-width="auto">
                         <h3 class="pa-3">ชื่อหรือหมายเลขควาย : แม่เปี้ย</h3>
                         <h3 class="pa-3">หมายเลข : NID</h3>
                         <h3 class="pa-3">เพศ : เมีย</h3>
@@ -80,7 +70,7 @@
                 </v-card-text>
 
                 <v-card-text>
-                    <v-card class="mx-auto rounded-lg" max-width="auto">
+                    <v-card @click="$router.push('/infoBuffDetail')" class="mx-auto rounded-lg" max-width="auto">
                         <h3 class="pa-3">ชื่อหรือหมายเลขควาย : แม่เปี้ย</h3>
                         <h3 class="pa-3">หมายเลข : NID</h3>
                         <h3 class="pa-3">เพศ : เมีย</h3>
@@ -90,14 +80,14 @@
         </v-tab-item>
 
     </v-tabs>
-    <Navigation />
+
 </div>
 </template>
 
 <script>
 export default {
     data: () => ({
-        items: ['มีชีวิต', 'ไม่มีชีวิต', ],
+        items: ['มีชีวิต', 'ไม่มีชีวิต' ],
         dialog1: true,
 
     }),
@@ -106,5 +96,20 @@ export default {
 </script>
 
 <style>
+.bg {
+    /* background: rgba(0, 128, 0, 0.1); */
+    /* background: rgba(242, 243, 244);
+    background-size: cover; */
 
+    background: rgba(242, 243, 244);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat;
+    background-size: cover;
+    /* background-size:100% 100%; */
+}
 </style>
