@@ -1,7 +1,7 @@
 <template>
 <div> 
     <NavigationAdmin name="ข้อมูลควาย"/>
-    <v-tabs grow>
+    <v-tabs grow color="green">
         <v-tab>
             <v-icon left>mdi-file-document-outline</v-icon>
             พันธุ์ประวัติ
