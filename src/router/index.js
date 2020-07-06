@@ -103,16 +103,16 @@ function view(name){
     name: 'reportSystem',
     component: view('admin/reportSystem')
   },
-  {
-    path: '/menuFarmer',
-    name: 'menuFarmer',
-    component: view('admin/menuFarmer')
-  },
-  {
-    path: '/setFarmer',
-    name: 'setFarmer',
-    component: view('admin/setFarmer')
-  },
+  // {
+  //   path: '/menuFarmer',
+  //   name: 'menuFarmer',
+  //   component: view('admin/menuFarmer')
+  // },
+  // {
+  //   path: '/setFarmer',
+  //   name: 'setFarmer',
+  //   component: view('admin/setFarmer')
+  // },
   {
     path: '/setPasswordDetail',
     name: 'setPasswordDetail',
