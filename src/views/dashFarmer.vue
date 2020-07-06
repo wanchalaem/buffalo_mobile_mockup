@@ -21,7 +21,7 @@
             </v-flex>
 
         </v-layout>
-        <v-card class="mt-3">
+        <v-card class="mt-3 pa-4">
             <column-chart :colors="['#339933']" :data="chartData"></column-chart>
             <v-btn @click="$router.push('/sumReport')" block dark text color="green">ดูข้อมูลเพิ่มเติม</v-btn>
         </v-card>
@@ -35,12 +35,12 @@
 export default {
     data: () => ({
         chartData: {
-            '1/7/2020': 40,
-            '2/7/2020': 40,
+            '1/7/2020': 20,
+            '2/7/2020': 30,
             '3/7/2020': 40,
-            '4/7/2020': 42,
-            '5/7/2020': 42,
-            '6/7/2020': 45,
+            '4/7/2020': 52,
+            '5/7/2020': 62,
+            '6/7/2020': 75,
         },
         value: [
             423,

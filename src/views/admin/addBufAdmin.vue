@@ -63,10 +63,10 @@
 
             </v-flex>
         </center>
-
-        
+<br>
+        <v-btn @click="$router.push('/infoBufAdmin')" color="green" dark large block>บันทึก</v-btn>
     </v-container>
-    <v-btn @click="$router.push('/infoBufAdmin')" color="green" dark large block>บันทึก</v-btn>
+    
 
 </div>
 </template>

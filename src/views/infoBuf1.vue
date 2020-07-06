@@ -111,99 +111,65 @@
 
         <v-tab-item class="bg">
             <v-card flat>
-                <div class="d-flex flex-no-wrap">
-                    <div class="ml-auto text-right" style="margin-top:4px; margin-right:4px;">
-                        <div class="pa-3">
-                            <v-btn  @click="$router.push('/addAgeBuff')" class="rounded-lg" solo color="green" dark>
-                                เพิ่มข้อมูลอายุ
-                            </v-btn>
+                <v-layout row wrap>
+                    <v-flex xs12 class="ml-7 mr-7 mt-3"> 
+                        <v-btn large block @click="$router.push('/addAgeBuff')" class="rounded-lg" solo color="green" dark>
+                            <h3>เพิ่มข้อมูลอายุ</h3>
+                        </v-btn>
+                    </v-flex>
+                </v-layout> 
 
-                        </div>
-                    </div>
-                </div>
-
-                <v-card-text>
+                 <v-card-text>
                     <v-card class="elevation-5 rounded-lg pa-2">
                         <div class="d-flex flex-no-wrap">
-                            <h5 style="margin-bottom:13px;">อายุ 240 วัน</h5>
-                            <div class="ml-auto text-right" style="margin-right: 4px;">
-                                <h5 class="body-3 grey--text font-weight-light">
-                                    <!-- <v-btn outlined color="green" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
-                                    </v-btn> -->
-                                    <div class="col-ml-6 ">
-                                        <div class="ml-auto text-right">
-                                            <v-btn class="rounded-lg mr-2" color="green" outlined @click="dialog1=false">
-                                                แก้ไข<v-icon>mdi-pencil</v-icon>
-                                            </v-btn>
-                                            <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">
-                                                ลบ<v-icon>mdi-delete</v-icon>
-                                            </v-btn>
-                                        </div>
-                                    </div>
-                                </h5>
-                            </div>
+                            <h3 style="margin-bottom:13px;">อายุ 240 วัน</h3>
                         </div><br>
 
                         <div v-for="item in desserts1" :key="item.name">
                             <v-text-field class="rounded-lg" outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
                         </div>
+                        <v-btn block large dark class="rounded-lg" color="green" @click="dialog1=false">
+                            แก้ไข<v-icon>mdi-pencil</v-icon>
+                        </v-btn>
+                        <v-btn block large dark class="rounded-lg" color="red" @click="dialog1=false">
+                            ลบ<v-icon>mdi-delete</v-icon>
+                        </v-btn>
                     </v-card>
                 </v-card-text>
 
                 <v-card-text>
                     <v-card class="elevation-5 rounded-lg pa-2">
                         <div class="d-flex flex-no-wrap">
-                            <h5 style="margin-bottom:16px;">อายุ 400 วัน</h5>
-                            <div class="ml-auto text-right" style="margin-right: 4px;">
-                                <h5 class="body-3 grey--text font-weight-light">
-                                    <!-- <v-btn outlined color="green" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
-                                    </v-btn> -->
-                                    <div class="col-ml-6 ">
-                                        <div class="ml-auto text-right">
-                                            <v-btn class="rounded-lg " color="green" outlined @click="dialog1=false">
-                                                <v-icon>mdi-pencil</v-icon>
-                                            </v-btn>
-                                            <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">
-                                                <v-icon>mdi-delete</v-icon>
-                                            </v-btn>
-                                        </div>
-                                    </div>
-                                </h5>
-                            </div>
-                        </div>
+                            <h3 style="margin-bottom:13px;">อายุ 400 วัน</h3>
+                        </div><br>
 
                         <div v-for="item in desserts1" :key="item.name">
-                            <v-text-field outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
+                            <v-text-field class="rounded-lg" outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
                         </div>
+                        <v-btn block large dark class="rounded-lg" color="green" @click="dialog1=false">
+                            แก้ไข<v-icon>mdi-pencil</v-icon>
+                        </v-btn>
+                        <v-btn block large dark class="rounded-lg" color="red" @click="dialog1=false">
+                            ลบ<v-icon>mdi-delete</v-icon>
+                        </v-btn>
                     </v-card>
                 </v-card-text>
 
                 <v-card-text>
                     <v-card class="elevation-5 rounded-lg pa-2">
                         <div class="d-flex flex-no-wrap">
-                            <!-- <h5 style="margin-bottom:20px;">ข้อมูลการเจริญเติบโต อายุ 600 วัน</h5> -->
-                            <h5 style="margin-bottom:20px;">อายุ 600 วัน</h5>
-                            <div class="ml-auto text-right" style="margin-right: 4px;">
-                                <h5 class="body-3 grey--text font-weight-light">
-                                    <!-- <v-btn outlined color="green" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
-                                    </v-btn> -->
-                                    <div class="col-ml-6 ">
-                                        <div class="ml-auto text-right">
-                                            <v-btn class="rounded-lg " color="green" outlined @click="dialog1=false">
-                                                <v-icon>mdi-pencil</v-icon>
-                                            </v-btn>
-                                            <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">
-                                                <v-icon>mdi-delete</v-icon>
-                                            </v-btn>
-                                        </div>
-                                    </div>
-                                </h5>
-                            </div>
-                        </div>
+                            <h3 style="margin-bottom:13px;">อายุ 600 วัน</h3>
+                        </div><br>
 
                         <div v-for="item in desserts1" :key="item.name">
-                            <v-text-field outlined v-model="item.calories1" :label="item.describe1" ></v-text-field>
+                            <v-text-field class="rounded-lg" outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
                         </div>
+                        <v-btn block large dark class="rounded-lg" color="green" @click="dialog1=false">
+                            แก้ไข<v-icon>mdi-pencil</v-icon>
+                        </v-btn>
+                        <v-btn block large dark class="rounded-lg" color="red" @click="dialog1=false">
+                            ลบ<v-icon>mdi-delete</v-icon>
+                        </v-btn>
                     </v-card>
                 </v-card-text>
 

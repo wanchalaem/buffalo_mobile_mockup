@@ -64,14 +64,14 @@
     </div>
 
     <div class="pa-4">
-        <v-card class="mt-3">
+        <v-card class="mt-3 pa-4">
             <v-card-title>
                 จำนวนสมาชิกในเดือนนี้
             </v-card-title>
             <column-chart :colors="['#339933']" :data="chartData"></column-chart> 
         </v-card>
 
-        <v-card class="mt-3">
+        <v-card class="mt-3 pa-4">
             <v-card-title>
                 จำนวนควายทั้งหมด
             </v-card-title>
@@ -88,11 +88,11 @@ export default {
     data: () => ({
         chartData: {
             '1/7/2020': 40,
-            '2/7/2020': 40,
-            '3/7/2020': 40,
-            '4/7/2020': 42,
-            '5/7/2020': 42,
-            '6/7/2020': 45,
+            '2/7/2020': 20,
+            '3/7/2020': 80,
+            '4/7/2020': 12,
+            '5/7/2020': 32,
+            '6/7/2020': 60,
         },
         value: [
             423,

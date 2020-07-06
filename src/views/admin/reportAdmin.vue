@@ -11,7 +11,7 @@
 
                             <v-card :elevation="hover ? 16 : 2  " @click="$router.push('/reportBuffalo')" class="mx-auto pa-3 rounded-lg">
                                 <div class="d-flex grow flex-wrap">
-                                    <v-icon dark large class=" info pa-5 rounded-lg" style="max-height: 50px; width: 50px;">mdi-account-multiple</v-icon>
+                                    <v-icon dark large class=" info pa-5 rounded-lg" style="max-height: 50px; width: 50px;">mdi-cow</v-icon>
                                     <v-spacer></v-spacer>
                                     <div class="col-ml-6 ">
                                         <div class="ml-auto text-right">
@@ -35,7 +35,7 @@
                             <v-card @click="$router.push('/reportMap')" :elevation="hover ? 16 : 2  " class="mx-auto pa-3 rounded-lg">
                                 <!-- <div class="v-card--material pa-3 v-card--material-stats v-card v-sheet theme--light v-card--material--has-heading"> -->
                                 <div class="d-flex grow flex-wrap">
-                                    <v-icon dark large class=" indigo pa-5 rounded-lg" style="max-height: 50px; width: 50px;">mdi-account-clock</v-icon>
+                                    <v-icon dark large class=" indigo pa-5 rounded-lg" style="max-height: 50px; width: 50px;">mdi-map</v-icon>
                                     <v-spacer></v-spacer>
                                     <div class="col-ml-6 ">
                                         <div class="ml-auto text-right">
@@ -57,7 +57,7 @@
                             <v-card @click="$router.push('/reportSystem')" :elevation="hover ? 16 : 2  " class="mx-auto pa-3 rounded-lg">
                                 <!-- <div class="v-card--material pa-3 v-card--material-stats v-card v-sheet theme--light v-card--material--has-heading"> -->
                                 <div class="d-flex grow flex-wrap">
-                                    <v-icon dark large class=" success pa-5 rounded-lg" style="max-height: 50px; width: 50px;">mdi-cow</v-icon>
+                                    <v-icon dark large class=" success pa-5 rounded-lg" style="max-height: 50px; width: 50px;">mdi-clipboard-flow-outline</v-icon>
                                     <v-spacer></v-spacer>
                                     <div class="col-ml-6 ">
                                         <div class="ml-auto text-right">

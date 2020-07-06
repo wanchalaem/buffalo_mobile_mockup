@@ -6,42 +6,36 @@
     <v-container>
         <v-text-field class="rounded-lg pt-3" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" solo outlined single-line></v-text-field>
     </v-container>
-    <div class="pa-6"> 
-        <v-layout row wrap>
-            <v-flex xs12>
-                <v-card class="rounded-lg pa-2"> 
+
+    <v-container>
+        <v-card class="rounded-lg pa-2">
+            <v-flex xs12 row wrap>
+                <v-flex xs12>
                     <div class="d-flex flex-no-wrap">
-                            <div class="ma-3">
-                                <h4>ข้อมูลเกษตรกร</h4>
-                            </div>
-                            <v-spacer></v-spacer>
-                            <div class="col-ml-6 ">
-                                <div class="ml-auto text-right">
-                                    <v-btn text class="rounded-lg " color="green" outlined @click="$router.push('/setDetail')">
-                                        แก้ไข<v-icon>mdi-pencil</v-icon>
-                                    </v-btn>
-                                    <v-btn text class="rounded-lg " color="red" outlined @click="dialog1=false">
-                                        ลบ<v-icon>mdi-delete</v-icon>
-                                    </v-btn>
-                                </div>
-                            </div>
+                        <div class="ml-6 ma-2s">
+                            <h3>ข้อมูลเกษตรกร</h3>
                         </div>
-
-                    <v-spacer></v-spacer>
-
-                    <div class="d-flex flex-no-wrap ">
-                        <div class="ma-3">
-                            <h4>ชื่อ : นายแดง แดงแดง </h4>
-                            <h4>อีเมล์ : dang@gmail.com </h4>
-                            <h4>กลุ่มผู้ใช้ : แม่ใจ </h4>
-                        </div>
-
                     </div>
-                </v-card>
-            </v-flex>
+                </v-flex>
 
-        </v-layout>
-    </div>  
+                <div class="d-flex flex-no-wrap">
+                    <div class="ml-9">
+                        <h3>ชื่อ : นายแดง แดงแดง </h3>
+                            <h3>อีเมล์ : dang@gmail.com </h3>
+                            <h3>กลุ่มผู้ใช้ : แม่ใจ </h3>
+                        <br>
+                    </div>
+                </div>
+                <v-btn block dark class="ml-3 rounded-lg" medium color="green" @click="$router.push('/setDetail')">
+                    <h4>แก้ไข</h4><v-icon>mdi-pencil</v-icon>
+                </v-btn>
+                <v-btn block dark class="ml-3 rounded-lg" medium color="red" @click="dialog1=false">
+                    <h4>ลบ</h4><v-icon>mdi-delete</v-icon>
+                </v-btn>
+            </v-flex>
+        </v-card>
+
+    </v-container>
 </div>
 </template>
 

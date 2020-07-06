@@ -11,7 +11,7 @@
     </v-container>
  
     <div class="pa-4"> 
-        <v-card class="mt-3">
+        <v-card class="mt-3 pa-4 rounded-lg">
             <v-card-title>
                 จำนวนการกรอกข้อมูลในแต่ละเดือน
             </v-card-title>

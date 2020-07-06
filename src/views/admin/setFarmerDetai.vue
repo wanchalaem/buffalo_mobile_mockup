@@ -10,9 +10,9 @@
         <br>
         <center>
             <h3> นายแดง เชิดชู </h3><br>
-            <v-btn class="rounded-lg ma-2" dark color="indigo" @click="$router.push('/infoBufAdmin')">ข้อมูลควาย<v-icon>mdi-cow</v-icon>
+            <v-btn medium class="rounded-lg ma-2" dark color="indigo" @click="$router.push('/infoBufAdmin')">ข้อมูลควาย<v-icon>mdi-cow</v-icon>
             </v-btn>
-            <v-btn class="rounded-lg ma-2" dark color="green" @click="$router.push('/setPasswordDetail')">ตั้งค่ารหัสผ่าน<v-icon>mdi-account-key</v-icon>
+            <v-btn medium class="rounded-lg ma-2" dark color="green" @click="$router.push('/setPasswordDetail')">ตั้งค่ารหัสผ่าน<v-icon>mdi-account-key</v-icon>
             </v-btn>
         </center>
     </v-container>
@@ -69,7 +69,7 @@
                                 <v-spacer></v-spacer>
                                 <div class="col-ml-6 ">
                                     <div class="ml-auto text-right">
-                                        <v-btn class="rounded-lg " color="green" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                        <v-btn class="rounded-lg mr-2" color="green" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                         </v-btn>
                                         <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
                                         </v-btn>
@@ -78,7 +78,7 @@
                             </div>
 
                             <div>
-                                <h6>สภาพฟาร์ม</h6>
+                                <h3>สภาพฟาร์ม</h3>
                                 <center>
                                     <v-img class="rounded-lg elevation-5" height="200" width="auto" src="https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
                                     </v-img>

@@ -18,16 +18,16 @@
                     </v-date-picker>
                 </v-menu>
 
-                <v-card class="rounded-lg">
+                <v-card class="rounded-lg pa-2">
                     <div class="d-flex flex-no-wrap ">
                         <div class="ma-3">
-                            <h4>ชื่อ-นามสกุล : นายแดง แม่ใจ </h4>
-                            <h4>เบอร์โทร : 0123123123 </h4>
+                            <h3>ชื่อ-นามสกุล : นายแดง แม่ใจ </h3>
+                            <h3>เบอร์โทร : 0123123123 </h3>
                             
                         </div>
 
                     </div>
-                    <v-btn @click="$router.push('/setDetail')" class="widths" text color="success">ดูข้อมูล</v-btn>
+                    <v-btn dark medium @click="$router.push('/setDetail')" class="widths" color="success"><h4>ดูข้อมูล</h4></v-btn>
                 </v-card>
             </v-flex>
 
