@@ -9,8 +9,9 @@
         </div>
         <v-card class="ma-4 pa-4 rounded-lg">
             <v-text-field class="rounded-lg" outlined name="name" label="ชื่อฟาร์ม" id="id"></v-text-field>
-            <v-text-field class="rounded-lg" outlined name="name" label="ใบพันธุ์ประวัติสำหรับอ้างอิง" id="id"></v-text-field>
-            <v-text-field class="rounded-lg" outlined name="name" label="ใบพันธุ์ประวัติทางการ" id="id"></v-text-field>
+            <v-text-field class="rounded-lg" outlined name="name" label="จำนวนควายอายุ 240 วัน" id="id"></v-text-field>
+            <v-text-field class="rounded-lg" outlined name="name" label="จำนวนควายอายุ 400 วัน" id="id"></v-text-field>
+            <v-text-field class="rounded-lg" outlined name="name" label="จำนวนควายอายุ 600 วัน" id="id"></v-text-field>
         </v-card>
 
     </v-container>

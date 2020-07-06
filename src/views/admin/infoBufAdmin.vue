@@ -15,7 +15,7 @@
         </v-layout>
     </div>
 
-    <v-tabs grow>
+    <v-tabs grow color="green">
         <v-tab>
             <v-icon left>mdi-gender-male</v-icon>
             ตัวผู้

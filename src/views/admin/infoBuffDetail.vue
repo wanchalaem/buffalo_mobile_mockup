@@ -158,11 +158,11 @@
                                     </v-btn> -->
                                     <div class="col-ml-6 ">
                                         <div class="ml-auto text-right">
-                                            <v-btn class="rounded-lg " color="green" outlined @click="dialog1=false">
-                                                <v-icon>mdi-pencil</v-icon>
+                                            <v-btn class="rounded-lg mr-2" color="green" outlined @click="dialog1=false">
+                                                แก้ไข<v-icon>mdi-pencil</v-icon>
                                             </v-btn>
                                             <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">
-                                                <v-icon>mdi-delete</v-icon>
+                                                ลบ<v-icon>mdi-delete</v-icon>
                                             </v-btn>
                                         </div>
                                     </div>
@@ -187,11 +187,11 @@
                                     </v-btn> -->
                                     <div class="col-ml-6 ">
                                         <div class="ml-auto text-right">
-                                            <v-btn class="rounded-lg " color="green" outlined @click="dialog1=false">
-                                                <v-icon>mdi-pencil</v-icon>
+                                            <v-btn class="rounded-lg mr-2" color="green" outlined @click="dialog1=false">
+                                                แก้ไข<v-icon>mdi-pencil</v-icon>
                                             </v-btn>
                                             <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">
-                                                <v-icon>mdi-delete</v-icon>
+                                                ลบ<v-icon>mdi-delete</v-icon>
                                             </v-btn>
                                         </div>
                                     </div>

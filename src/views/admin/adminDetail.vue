@@ -14,7 +14,7 @@
     </v-container>
 
     <v-card class="rounded-lg pa-2">
-        <v-tabs grow>
+        <v-tabs grow color="green">
             <v-tab>
                 <v-icon>mdi-account-outline</v-icon>
                 <h5>ข้อมูลผู้ดูแลระบบ</h5>

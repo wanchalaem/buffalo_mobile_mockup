@@ -3,7 +3,7 @@
 
     <!-- <Navbar icon="mdi-chevron-left" name="ข้อมูลควาย" /> -->
     <Navigation name="ข้อมูลควาย" />
-    <v-tabs grow>
+    <v-tabs grow color="green">
         <v-tab>
             <v-icon left>mdi-file-document-outline</v-icon>
             พันธุ์ประวัติ
