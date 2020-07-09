@@ -1,18 +1,21 @@
 <template>
 <div class="bg">
     <!-- <Navbar icon="mdi-chevron-left" name="ตั้งค่ารหัสผ่าน" /> -->
-    <NavigationAdmin name="ตั้งค่ารหัสผ่าน"/>
+    <NavigationAdmin name="ตั้งค่ารหัสผ่าน" />
     <div class="pa-6">
         <v-layout row wrap>
             <v-flex xs12>
+                <v-btn small fab @click="$router.push('/admin/userprofiledetail')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+                
                 <v-toolbar-title>
+                    <br>
                     <center>
-                        <v-text-field clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class="widths rounded-lg pa-1"></v-text-field>
-                        <v-text-field clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class="widths rounded-lg pa-1"></v-text-field>
+                        <v-text-field clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
+                        <v-text-field clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class=" rounded-lg"></v-text-field>
                     </center><br>
                     <!-- <div class="col-ml-6 "> -->
                         <div class="ml-auto text-center">
-                            <v-btn dark large class="widths rounded-lg " color="green" @click="$router.push('/setPassword')">ตกลง
+                            <v-btn block dark large class="rounded-lg " color="green" @click="$router.push('/admin/userprofiledetail')">ตกลง
                             </v-btn>
                         </div>
                     <!-- </div> -->

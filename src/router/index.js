@@ -18,91 +18,140 @@ function view(name){
     component: view('register')
   },
   {
-    path: '/dashFarmer',
+    path: '/user/home',
     name: 'dashFarmer',
     component: view('dashFarmer')
   },
   {
-    path: '/infoBuf',
-    name: 'infoBuf',
-    component: view('infoBuf')
-  },
-  {
-    path: '/infoBuf1',
-    name: 'infoBuf1',
-    component: view('infoBuf1')
-  }, 
-  {
-    path: '/addBuf',
-    name: 'addBuf',
-    component: view('addBuf')
-  }, 
-  {
-    path: '/infoFarmer',
+    path: '/user/profile',
     name: 'infoFarmer',
     component: view('infoFarmer')
   },
   {
-    path: '/report',
+    path: '/user/buffalo',
+    name: 'infoBuf',
+    component: view('infoBuf')
+  },
+  {
+    path: '/user/buffaloinformation',
+    name: 'infoBuf1',
+    component: view('infoBuf1')
+  },
+  {
+    path: '/user/buffaloage',
+    name: 'addAgeBuff',
+    component: view('addAgeBuff') 
+  },
+  {
+    path: '/user/buffaloadd',
+    name: 'addBuf',
+    component: view('addBuf')
+  }, 
+  
+  {
+    path: '/user/report',
     name: 'report',
     component: view('report')
   },
   {
-    path: '/sumReport',
+    path: '/user/reportsum',
     name: 'sumReport',
     component: view('sumReport')
   },
   {
-    path: '/growReport',
+    path: '/user/reportgrow',
     name: 'growReport',
     component: view('growReport')
   },
   {
-    path: '/addAgeBuff',
-    name: 'addAgeBuff',
-    component: view('addAgeBuff')
-    
+    path: '/user/resetpassword',
+    name: 'setPassFarmer',
+    component: view('setPassFarmer')
   },
+  
   {
-    path: '/homeAdmin',
+    path: '/admin/home',
     name: 'homeAdmin',
     component: view('admin/homeAdmin')
   },
   {
-    path: '/reportAdmin',
-    name: 'reportAdmin',
-    component: view('admin/reportAdmin')
-  },
-  {
-    path: '/checkUser',
+    path: '/admin/adminedit',
     name: 'checkUser',
     component: view('admin/checkUser')
   },
   {
-    path: '/setPassword',
+    path: '/admin/admindetail',
+    name: 'adminDetail',
+    component: view('admin/adminDetail')
+  },
+  {
+    path: '/admin/addadmin',
+    name: 'addAdmin',
+    component: view('admin/addAdmin')
+  },
+  {
+    path: '/admin/userprofile',
     name: 'setPassword',
     component: view('admin/setPassword')
   },
   {
-    path: '/setDetail',
-    name: 'setPasswordDetail',
+    path: '/admin/userprofiledetail',
+    name: 'setFarmerDetai',
     component: view('admin/setFarmerDetai')
   },
   {
-    path: '/reportBuffalo',
+    path: '/admin/resetpassword',
+    name: 'setPasswordDetail',
+    component: view('admin/setPasswordDetail')
+  },
+  {
+    path: '/admin/buffalo',
+    name: 'infoBufAdmin',
+    component: view('admin/infoBufAdmin')
+  },
+  {
+    path: '/admin/buffaloadd',
+    name: 'addBufAdmin',
+    component: view('admin/addBufAdmin')
+  },
+  {
+    path: '/admin/buffaloinformation',
+    name: 'infoBuffDetail',
+    component: view('admin/infoBuffDetail')
+  },
+  {
+    path: '/admin/buffaloage',
+    name: 'ageBuffAdmin',
+    component: view('admin/ageBuffAdmin')
+  },
+  {
+    path: '/admin/password',
+    name: 'askPassword',
+    component: view('admin/askPassword')
+  },
+
+  {
+    path: '/admin/report',
+    name: 'reportAdmin',
+    component: view('admin/reportAdmin')
+  }, 
+  {
+    path: '/admin/reportbuffalo',
     name: 'reportBuffalo',
     component: view('admin/reportBuffalo')
   },
   {
-    path: '/reportMap',
+    path: '/admin/reportmap',
     name: 'reportMap',
     component: view('admin/reportMap')
   },
   {
-    path: '/reportSystem',
+    path: '/admin/reportsystem',
     name: 'reportSystem',
     component: view('admin/reportSystem')
   },
+ 
+
   // {
   //   path: '/menuFarmer',
   //   name: 'menuFarmer',
@@ -113,51 +162,13 @@ function view(name){
   //   name: 'setFarmer',
   //   component: view('admin/setFarmer')
   // },
-  {
-    path: '/setPasswordDetail',
-    name: 'setPasswordDetail',
-    component: view('admin/setPasswordDetail')
-  },
-  {
-    path: '/adminDetail',
-    name: 'adminDetail',
-    component: view('admin/adminDetail')
-  },
-  {
-    path: '/infoBufAdmin',
-    name: 'infoBufAdmin',
-    component: view('admin/infoBufAdmin')
-  },
-  {
-    path: '/infoBuffDetail',
-    name: 'infoBuffDetail',
-    component: view('admin/infoBuffDetail')
-  },
-  {
-    path: '/ageBuffAdmin',
-    name: 'ageBuffAdmin',
-    component: view('admin/ageBuffAdmin')
-  },
+  
   {
     path: '/forgotPassword',
     name: 'forgotPassword',
     component: view('forgotPassword')
   },
-  {
-    path: '/askPassword',
-    name: 'askPassword',
-    component: view('admin/askPassword')
-  },
-  {
-    path: '/addBufAdmin',
-    name: 'addBufAdmin',
-    component: view('admin/addBufAdmin')
-  },
-  {
-    path: '/setPassFarmer',
-    name: 'setPassFarmer',
-    component: view('setPassFarmer')
-  },
+   
   
 ]
 

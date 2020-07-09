@@ -1,11 +1,14 @@
 <template>
 <div class="bg">
     <!-- <Navbar name="ผู้ใช้ทั่วไป" /> -->
+    <v-container grid-list-xs>
+        
+   
     <navigation name="ผู้ใช้ทั่วไป" />
-    <div class="pa-4">
+    <!-- <div class="pa-4"> -->
         <v-layout row wrap>
             <v-flex xs12>
-                <v-card @click="$router.push('/sumReport')" class="ma-2 rounded-lg">
+                <v-card @click="$router.push('/user/reportsum')" class=" rounded-lg">
                     <div class="d-flex flex-no-wrap ">
                         <div class="ma-3">
                             <v-btn color="info" fab dark>
@@ -23,12 +26,12 @@
         </v-layout>
         <v-card class="mt-3 pa-4">
             <column-chart :colors="['#339933']" :data="chartData"></column-chart>
-            <v-btn @click="$router.push('/sumReport')" block dark text color="green">ดูข้อมูลเพิ่มเติม</v-btn>
+            <v-btn @click="$router.push('/user/reportsum')" block dark text color="green">ดูข้อมูลเพิ่มเติม</v-btn>
         </v-card>
-
+ </v-container>
     </div>
 
-</div>
+<!-- </div> -->
 </template>
 
 <script>

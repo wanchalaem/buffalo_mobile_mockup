@@ -3,6 +3,9 @@
     <!-- <NavbarAdmin icon="mdi-chevron-left" name="รายงานสรุปจำนวนควายที่มีชีวิต" /> -->
     <NavigationAdmin name="รายงานเชิงแผนที่" />
     <v-container>
+        <v-btn class="mb-6" fab @click="$router.push('/admin/report')" small>
+            <v-icon class="icon">mdi-chevron-left</v-icon>
+        </v-btn>
         <v-select solo outlined class="rounded-lg mt-2 mb-2" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
         <v-select solo outlined class="rounded-lg mb-2" :items="district" label="กรุณาเลือกอำเภอ" hide-details></v-select>
         <v-select solo outlined class="rounded-lg mb-2" :items="place" label="กรุณาเลือกตำบล" hide-details></v-select>

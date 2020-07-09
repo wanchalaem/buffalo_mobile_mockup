@@ -3,17 +3,19 @@
 
     <!-- <Navbar icon="mdi-chevron-left" name="เพิ่มข้อมูลอายุควาย" /> -->
     <Navigation name="เพิ่มข้อมูลอายุควาย" />
+    
     <v-container grid-list-xs>
-            <v-card-text>
-                <v-container>
+        <v-btn class="mb-6" fab @click="$router.push('/user/buffaloinformation')" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+            <!-- <v-card-text> -->
+                <!-- <v-container> -->
                     <v-text-field class="rounded-lg"  outlined label="น้ำหนัก (กิโลกรัม)"></v-text-field>
                     <v-text-field class="rounded-lg"  outlined label="ความกว้างรอบอก (เซนติเมตร)"></v-text-field>
                     <v-text-field class="rounded-lg"  outlined label="ความยาวลำตัว (เซนติเมตร)"></v-text-field>
                     <v-text-field class="rounded-lg"  outlined label="ความสูง (เซนติเมตร)"></v-text-field>
                     <v-select class="rounded-lg"  outlined :items="['240วัน', '400วัน', '600วัน']" label="อายุ"></v-select>
-                    <v-btn @click="$router.push('/infoBuf1')" class="rounded-lg" color="green" dark large block>บันทึก</v-btn>
-                </v-container>
-            </v-card-text> 
+                    <v-btn @click="$router.push('/user/buffaloinformation')" class="rounded-lg" color="green" dark large block>บันทึก</v-btn>
+                <!-- </v-container> -->
+            <!-- </v-card-text>  -->
 
     </v-container>
     

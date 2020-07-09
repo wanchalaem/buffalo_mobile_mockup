@@ -2,9 +2,10 @@
 <v-app id="inspire">
     <v-main class="bg">
         <v-container class="fill-height" fluid>
+            <v-btn fab @click="$router.push('/')" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
             <v-row align="center" justify="center">
                 <v-col cols="10" sm="8" md="4">
-                    <v-icon class="icon" dark @click="$router.push('/')">mdi-chevron-left</v-icon>
+                    
                     <div class="text-center">
                         <!-- <img style="width:50%;" src="https://www.img.in.th/images/baec9e10112fc5b2253841c3099c9e42.png" alt=""> -->
                         <h2 class="fcw">สมัครสมาชิก</h2>
@@ -16,15 +17,9 @@
                     <v-form>
                         <v-text-field class="rounded-lg" solo label="ชื่อผู้ใช้งาน" prepend-inner-icon="mdi-account-star"></v-text-field>
                         <v-text-field class="rounded-lg" solo label="รหัสผ่าน" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
+                        <v-text-field class="rounded-lg" solo label="ยืนยันรหัสผ่าน" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
                         <v-text-field class="rounded-lg" solo label="ชื่อ" prepend-inner-icon="mdi-account" type="text"></v-text-field>
-                        <v-text-field class="rounded-lg" solo label="นามสกุล" prepend-inner-icon="mdi-account"></v-text-field>
-                        <v-select solo :items="province" label="กรุณาเลือกจังหวัด" prepend-inner-icon="mdi-home-group" hide-details class="rounded-lg" outlined></v-select><br>
-                        <v-select solo :items="district" label="กรุณาเลือกอำเภอ" prepend-inner-icon="mdi-home-flood" hide-details class="rounded-lg" outlined></v-select><br>
-                        <v-select solo :items="place" label="กรุณาเลือกตำบล" prepend-inner-icon="mdi-home" hide-details class="rounded-lg" outlined></v-select><br>
-                        <!-- <v-overflow-btn solo :items="province" dark label="กรุณาเลือกจังหวัด" prepend-inner-icon="mdi-home-group" hide-details class="pa-0" outlined></v-overflow-btn><br> -->
-                        <!-- <v-overflow-btn solo :items="district" dark label="กรุณาเลือกอำเภอ" prepend-inner-icon="mdi-home-flood" hide-details class="pa-0" outlined></v-overflow-btn><br> -->
-                        <!-- <v-overflow-btn solo :items="place" dark label="กรุณาเลือกตำบล" prepend-inner-icon="mdi-home" hide-details class="pa-0" outlined></v-overflow-btn><br> -->
-                        <v-text-field class="rounded-lg" solo outlined label="รหัสไปษณีย์" prepend-inner-icon="mdi-home-city"></v-text-field>
+                        <v-text-field class="rounded-lg" solo label="นามสกุล" prepend-inner-icon="mdi-account"></v-text-field> 
                     </v-form>
 
                     <v-spacer></v-spacer>

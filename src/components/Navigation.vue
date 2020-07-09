@@ -7,7 +7,7 @@
 
     <v-btn>
         <span>ข้อมูลส่วนตัว</span>
-        <v-icon @click="$router.push('/infoFarmer')">mdi-account-cog</v-icon>
+        <v-icon @click="$router.push('//user/personal')">mdi-account-cog</v-icon>
     </v-btn>
 
     <v-btn>
@@ -17,7 +17,7 @@
 
     <v-btn>
         <span>รายงาน</span>
-        <v-icon @click="$router.push('/report')">mdi-clipboard-text</v-icon>
+        <v-icon @click="$router.push('/user/report')">mdi-clipboard-text</v-icon>
     </v-btn>
 </v-bottom-navigation> -->
 
@@ -40,7 +40,8 @@
                 </v-list-item-content>
             </v-list-item>
             <v-divider></v-divider>
-            <v-list-item-group v-model="item" color="green">
+            <!-- <v-list-item-group v-model="item" color="green"> -->
+             <v-list-item-group color="green">
                 <v-list-item v-for="(item, i) in items" :key="i" @click="$router.push(`${item.router}`) ">
                     <v-list-item-icon>
                         <v-icon>{{ item.icon }}</v-icon>
@@ -55,7 +56,7 @@
 
     </v-navigation-drawer>
 
-    <v-app-bar hide-on-scroll color="white" app clipped-left>
+    <v-app-bar color="white" app clipped-left>
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <h3>
             &nbsp;{{name}}
@@ -96,22 +97,22 @@ export default {
         items: [{
                     text: "หน้าหลัก",
                     icon: "mdi-view-dashboard-outline",
-                    router: "/dashFarmer"
+                    router: "/user/home"
                 },
                 {
                     text: "ข้อมูลส่วนตัว",
                     icon: "mdi-account-cog",
-                    router: "/infoFarmer"
+                    router: "/user/profile"
                 },
                 {
                     text: "ข้อมูลควาย",
                     icon: "mdi-cow",
-                    router: "/infoBuf"
+                    router: "/user/buffalo"
                 }, 
                 {
                     text: "รายงาน",
                     icon: "mdi-clipboard-text",
-                    router: "/report"
+                    router: "/user/report"
                 },
                 {
                     text: "ออกจากระบบ",

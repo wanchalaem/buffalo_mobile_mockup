@@ -20,14 +20,18 @@
 
                 <v-card class="rounded-lg pa-2">
                     <div class="d-flex flex-no-wrap ">
-                        <div class="ma-3">
-                            <h3>ชื่อ-นามสกุล : นายแดง แม่ใจ </h3>
-                            <h3>เบอร์โทร : 0123123123 </h3>
-                            
+                        <div class="">
+                            <h4>ชื่อ-นามสกุล : นายแดง แม่ใจ </h4>
+                            <h4>เบอร์โทร : 0123123123 </h4>
+                            <h4>สถานะ : <v-select :items="items" outlined label="สถานะ" dense></v-select></h4>
                         </div>
+                        
 
                     </div>
-                    <v-btn dark medium @click="$router.push('/setDetail')" class="widths" color="success"><h4>ดูข้อมูล</h4></v-btn>
+                    
+                    <v-btn outlined dark @click="$router.push('/admin/userprofiledetail')" class="widths rounded-lg" color="success">
+                        <h4>ดูข้อมูล</h4>
+                    </v-btn>
                 </v-card>
             </v-flex>
 
@@ -52,6 +56,7 @@ export default {
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
+            items: ['แก้ไขรหัสผ่านแล้ว', 'ยังไม่ได้แก้ไขรหัสผ่าน'],
 
             txt: 'Hello World',
 
@@ -63,10 +68,9 @@ export default {
         };
     },
     /*------------------------- สิ่งทที่อยู่ในนี้จะถูกรัยเมื่อโหลด ------------------------------------------*/
-    mounted: async function () {
-        /**** เรียกใช้ methods ชื่อ load() */
-        await this.load();
-    },
+    // mounted: async function () { 
+    //     await this.load();
+    // },
     /*------------------------- กระทำการตอน router ถูกโหลดเข้ามา------------------------------------------*/
     async beforeRouteEnter(to, from, next) {
         next()

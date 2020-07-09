@@ -1,38 +1,35 @@
 <template>
 <div class="bg">
     <!-- <Navbar icon="mdi-account-key" name="เกี่ยวกับเกษตรกร" /> -->
-    <NavigationAdmin name="เกษตรกร"/>
+    <NavigationAdmin name="เกษตรกร" />
 
     <v-container>
         <v-text-field class="rounded-lg pt-3" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" solo outlined single-line></v-text-field>
-    </v-container>
+        <br>
+        
+        <v-card class="elevation-5 rounded-lg pa-3">
+            <div class="d-flex flex-no-wrap">
+                <h4>ข้อมูลเกษตรกร</h4>
+            </div>
+            <h4>ชื่อ : นายแดง แดงแดง </h4>
+            <h4>อีเมล์ : dang@gmail.com </h4>
+            <h4>กลุ่มผู้ใช้ : แม่ใจ </h4>
+            <br>
 
-    <v-container>
-        <v-card class="rounded-lg pa-2">
-            <v-flex xs12 row wrap>
-                <v-flex xs12>
-                    <div class="d-flex flex-no-wrap">
-                        <div class="ml-6 ma-2s">
-                            <h3>ข้อมูลเกษตรกร</h3>
-                        </div>
-                    </div>
+            <center>
+                <v-flex xs12 row wrap>
+                    <v-flex xs6>
+                        <v-btn outlined  dark class="rounded-l-lg width " color="green" @click="$router.push('/admin/userprofiledetail')">
+                            <v-icon>mdi-pencil</v-icon>แก้ไข
+                        </v-btn>
+                    </v-flex>
+                    <v-flex xs6>
+                        <v-btn outlined  dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                            <v-icon>mdi-delete</v-icon>ลบ
+                        </v-btn>
+                    </v-flex>
                 </v-flex>
-
-                <div class="d-flex flex-no-wrap">
-                    <div class="ml-9">
-                        <h3>ชื่อ : นายแดง แดงแดง </h3>
-                            <h3>อีเมล์ : dang@gmail.com </h3>
-                            <h3>กลุ่มผู้ใช้ : แม่ใจ </h3>
-                        <br>
-                    </div>
-                </div>
-                <v-btn block dark class="ml-3 rounded-lg" medium color="green" @click="$router.push('/setDetail')">
-                    <h4>แก้ไข</h4><v-icon>mdi-pencil</v-icon>
-                </v-btn>
-                <v-btn block dark class="ml-3 rounded-lg" medium color="red" @click="dialog1=false">
-                    <h4>ลบ</h4><v-icon>mdi-delete</v-icon>
-                </v-btn>
-            </v-flex>
+            </center>
         </v-card>
 
     </v-container>
@@ -79,12 +76,16 @@ export default {
 }
 </script>
 
-<style scoped> 
+<style scoped>
 .bg {
     background: rgba(242, 243, 244);
     height: 100%;
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
+}
+
+.width {
+    width: 95%;
 }
 </style>

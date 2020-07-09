@@ -12,7 +12,7 @@
                         <v-text-field class="rounded-lg" solo label="เข้าสู่ระบบ" name="login" prepend-inner-icon="mdi-account" type="text"></v-text-field>
                         <v-text-field class="rounded-lg" solo id="password" label="รหัสผ่าน" name="password" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
                         <v-spacer></v-spacer>
-                        <v-btn class="width rounded-lg" dark @click="$router.push('dashFarmer')" large color="green">เข้าสู่ระบบ</v-btn>
+                        <v-btn class="width rounded-lg" dark @click="$router.push('/user/home')" large color="green">เข้าสู่ระบบ</v-btn>
                     </div>
                     <div>
                         <v-btn text @click="$router.push('forgotPassword')" color="white">ลืมรหัสผ่าน</v-btn>

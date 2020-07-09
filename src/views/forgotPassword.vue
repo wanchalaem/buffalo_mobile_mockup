@@ -1,8 +1,9 @@
 <template>
  
     <v-main class="bg">
-        <v-icon class="icon ma-6" dark @click="$router.push('/')">mdi-chevron-left</v-icon>
+         
         <v-container>
+            <v-btn fab @click="$router.push('/')" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
             <v-row align="center" justify="center">
                 <v-col cols="10" sm="8" md="4">
                     <div class="text-center">

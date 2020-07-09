@@ -4,6 +4,9 @@
     <NavigationAdmin name="รายงานความเคลื่อไหนการใช้งาน" />
      
     <v-container>
+        <v-btn class="mb-6" fab @click="$router.push('/admin/report')" small>
+            <v-icon class="icon">mdi-chevron-left</v-icon>
+        </v-btn>
         <h3>จำนวนการกรอกข้อมูลในแต่ละเดือน</h3>
         <v-select solo outlined class="rounded-lg mt-2 mb-2" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
         <v-select solo outlined class="rounded-lg mb-2" :items="district" label="กรุณาเลือกอำเภอ" hide-details></v-select>

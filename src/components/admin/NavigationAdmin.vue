@@ -2,17 +2,17 @@
 <!-- <v-bottom-navigation >
     <v-btn>
         <span>หน้าหลัก</span>
-        <v-icon @click="$router.push('/homeAdmin')">mdi-home</v-icon>
+        <v-icon @click="$router.push('/admin/home')">mdi-home</v-icon>
     </v-btn>
 
     <v-btn>
         <span>สิทธิ์การใช้งาน</span>
-        <v-icon @click="$router.push('/checkUser')">mdi-account-cog</v-icon>
+        <v-icon @click="$router.push('/admin/adminedit')">mdi-account-cog</v-icon>
     </v-btn>
 
     <v-btn>
         <span>เกษตรกร</span>
-        <v-icon @click="$router.push('/setPassword')">mdi-account-group</v-icon>
+        <v-icon @click="$router.push('/admin/admindetail')">mdi-account-group</v-icon>
     </v-btn>
     <v-btn>
         <span>คำขอรหัสผ่าน</span>
@@ -42,7 +42,8 @@
                 </v-list-item-content>
             </v-list-item>
             <v-divider></v-divider>
-            <v-list-item-group v-model="item" color="green">
+            <!-- <v-list-item-group v-model="item" color="green"> -->
+                <v-list-item-group color="green">
                 <v-list-item v-for="(item, i) in items" :key="i" @click="$router.push(`${item.router}`) ">
                     <v-list-item-icon>
                         <v-icon>{{ item.icon }}</v-icon>
@@ -57,7 +58,7 @@
 
     </v-navigation-drawer>
 
-    <v-app-bar hide-on-scroll color="white" app clipped-left>
+    <v-app-bar color="white" app clipped-left>
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <h3>
             &nbsp;{{name}}
@@ -102,27 +103,27 @@ export default {
             items: [{
                     text: "หน้าหลัก",
                     icon: "mdi-view-dashboard-outline",
-                    router: "/homeAdmin"
+                    router: "/admin/home"
                 },
                 {
-                    text: "สิทธิ์การใช้งาน",
+                    text: "จัดการผู้ดูแลระบบ",
                     icon: "mdi-account-cog",
-                    router: "/checkUser"
+                    router: "/admin/adminedit"
                 },
                 {
-                    text: "เกษตรกร",
+                    text: "จัดการเกษตรกร",
                     icon: "mdi-account-group",
-                    router: "/setPassword"
+                    router: "/admin/userprofile"
                 }, 
                 {
                     text: "คำขอรหัสผ่าน",
                     icon: "mdi-account-key",
-                    router: "/askPassword"
+                    router: "/admin/password"
                 },
                 {
                     text: "รายงาน",
                     icon: "mdi-clipboard-text",
-                    router: "/reportAdmin"
+                    router: "/admin/report"
                 }, 
                 {
                     text: "ออกจากระบบ",
