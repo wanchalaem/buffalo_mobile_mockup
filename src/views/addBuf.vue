@@ -3,9 +3,23 @@
     <!-- <Navbar icon="mdi-chevron-left" name="เพิ่มควาย" /> -->
     <Navigation name="เพิ่มควาย" />
     <v-container grid-list-xs>
-        <v-btn class="mb-6" fab @click="$router.push('/user/buffalo')" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+        <v-btn class="mb-6" fab @click="$router.push('/user/buffalo')" small>
+            <v-icon class="icon">mdi-chevron-left</v-icon>
+        </v-btn>
         <div v-for="item in desserts" :key="item.name" class="">
-            <v-text-field class="rounded-lg" outlined v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
+            <v-text-field class="rounded-lg" color="green" outlined v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
+        </div>
+        <div>
+            <v-menu ref="menu" v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y min-width="290px">
+                <template v-slot:activator="{ on, attrs }">
+                    <v-text-field outlined color="green" v-model="date" class="rounded-lg" label="วัน/เดือน/ปีเกิด" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                </template>
+                <v-date-picker :readonly="dialog" color="green" ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
+            </v-menu>
+            <v-select outlined color="green" class="rounded-lg" label="เพศ"></v-select>
+            <v-select outlined color="green" class="rounded-lg" label="สี"></v-select>
+            <v-select outlined color="green" class="rounded-lg" label="แหล่งที่มา"></v-select>
+            <v-select outlined color="green" class="rounded-lg" label="สถานะ"></v-select>
         </div>
         <center>
             <v-flex xs12 row wrap>
@@ -74,10 +88,13 @@
 <script>
 export default {
     data: () => ({
-        desserts: [{
-                describe: 'หมายเลขบัตรประชาชนเกษตรกร',
-                calories: '',
-            },
+        date: null,
+        menu: false,
+        desserts: [
+            // {
+            //     describe: 'หมายเลขบัตรประชาชนเกษตรกร',
+            //     calories: '',
+            // },
             {
                 describe: 'ชื่อหรือหมายเลขควาย',
                 calories: '',
@@ -90,34 +107,34 @@ export default {
                 describe: 'หมายเลขไมโครชิป',
                 calories: ' ',
             },
-            {
-                describe: 'วัน/เดือน/ปี เกิด',
-                calories: ' ',
-            },
-            {
-                describe: 'เพศ',
-                calories: '',
-            },
+            // {
+            //     describe: 'วัน/เดือน/ปี เกิด',
+            //     calories: ' ',
+            // },
+            // {
+            //     describe: 'เพศ',
+            //     calories: '',
+            // },
             {
                 describe: 'อายุ (..ปี..เดือน) ',
                 calories: '',
             },
-            {
-                describe: 'สี',
-                calories: '',
-            },
-            {
-                describe: 'แหล่งที่มา ',
-                calories: '',
-            },
+            // {
+            //     describe: 'สี',
+            //     calories: '',
+            // },
+            // {
+            //     describe: 'แหล่งที่มา ',
+            //     calories: '',
+            // },
             {
                 describe: 'ราคา',
                 calories: '',
             },
-            {
-                describe: 'สถานะควาย',
-                calories: '',
-            },
+            // {
+            //     describe: 'สถานะควาย',
+            //     calories: '',
+            // },
             {
                 describe: 'ชื่อหรือหมายเลขพ่อ',
                 calories: ' ',
@@ -159,6 +176,18 @@ export default {
                 calories: '',
             },
         ],
+        watch: {
+            menu(val) {
+                val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
+            },
+        },
+        /*-------------------------Methods------------------------------------------*/
+        methods: {
+            load: async function () {},
+            save1(date) {
+                this.$refs.menu.save(date)
+            },
+        },
 
     }),
 

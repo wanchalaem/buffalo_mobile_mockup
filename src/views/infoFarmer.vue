@@ -18,7 +18,7 @@
     <v-container>
         <center>
             <h3> นายแดง เชิดชู </h3><br>
-            <v-flex xs12 row wrap> 
+            <v-flex xs12 row wrap>
                 <v-flex xs6>
                     <v-btn class="rounded-lg pr-1" color="success">
                         <v-icon>mdi-upload</v-icon>อัพโหลดรูปภาพ
@@ -70,15 +70,35 @@
                             </div>
                             <br>
                             <v-flex xs12>
-                                <div v-for="item in informationfarmer" :key="item.name">
-                                    <v-text-field class="rounded-lg" outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
+                                <div>
+                                    <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="คำนำหน้า"></v-select>
+                                    <v-text-field class="rounded-lg" color="green" outlined :readonly="dialog1" :items="items" label="ชื่อ"></v-text-field>
+                                    <v-text-field class="rounded-lg" color="green" outlined :readonly="dialog1" :items="items" label="นามสกุล"></v-text-field>
+                                    <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="เพศ"></v-select>
                                 </div>
+                                <div v-for="item in informationfarmer" :key="item.name">
+                                    <v-text-field class="rounded-lg" color="green" outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
+                                </div>
+                                
                                 <div>
                                     <center>
                                         <h3>ภาพถ่ายบัตรประจำตัวประชาชน</h3>
-                                        <v-img class="rounded-lg elevation-5" height="200" width="350" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
+                                        <v-img class="rounded-lg elevation-5 pb-4"  height="200" width="350" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
                                     </center>
                                 </div>
+                                <br>
+                                <!-- <div>
+                                    <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="ตำบล"></v-select>
+                                </div>
+                                <div>
+                                    <v-select class="rounded-lg" color="green" outlined :readonly="dialog1" :items="items" label="อำเภอ"></v-select>
+                                </div>
+                                <div>
+                                    <v-select class="rounded-lg" color="green" outlined :readonly="dialog1" :items="items" label="จังหวัด"></v-select>
+                                </div>
+                                <div>
+                                    <v-select class="rounded-lg" color="green" outlined :readonly="dialog1" :items="items" label="รหัสไปรณีย์"></v-select>
+                                </div> -->
                             </v-flex>
 
                             <v-btn large class="rounded-lg mt-6" disabled block color="success">บันทึก</v-btn>
@@ -150,7 +170,7 @@
             </v-tab-item> -->
 
     </v-tabs>
-    <!-- </v-card> -->  
+    <!-- </v-card> -->
 </div>
 </template>
 
@@ -173,7 +193,7 @@ export default {
         dialog: false,
 
         items: [
-            'ข้อมูลเกษตกร', 'ข้อมูลควาย','ตั้งค่า'
+            'ข้อมูลเกษตกร', 'ข้อมูลควาย', 'ตั้งค่า'
         ],
         headers: [{
                 text: 'รหัสผ่าน',
@@ -217,44 +237,57 @@ export default {
                 describe: 'อีเมล',
                 calories: 'dang',
             },
-            {
-                describe: 'คำนำหน้า',
-                calories: 'นาย',
-            },
-            {
-                describe: 'ชื่อ',
-                calories: 'เชิดชู',
-            },
-            {
-                describe: 'นามสกุล',
-                calories: 'แก้วบุญเรือง',
-            },
+            // {
+            //     describe: 'คำนำหน้า',
+            //     calories: 'นาย',
+            // },
+            // {
+            //     describe: 'ชื่อ',
+            //     calories: 'เชิดชู',
+            // },
+            // {
+            //     describe: 'นามสกุล',
+            //     calories: 'แก้วบุญเรือง',
+            // },
 
-            {
-                describe: 'เพศ',
-                calories: 'ชาย',
-            },
+            // {
+            //     describe: 'เพศ',
+            //     calories: 'ชาย',
+            // },
             {
                 describe: 'อายุ',
                 calories: '58',
             },
-            {
-                describe: 'ที่อยู่ตามทะเบียนบ้าน',
-                calories: '4 หมู่ 7 ต.เจริญราษฎร์ อ.แม่ใจ จ.พะเยา 56130',
-            },
+           
             {
                 describe: 'เบอร์โทรศัพท์',
                 calories: '0861800385',
+            },
+             {
+                describe: 'บ้านเลขที่/ถนน/ซอย',
+                calories: '123/123 ถนน 123 ซอย123',
+            },
+            {
+                describe: 'ตำบล',
+                calories: 'เจริญราษฎร์',
+            },
+            {
+                describe: 'อำเภอ',
+                calories: 'แม่กา',
+            },
+            {
+                describe: 'จังหวัด',
+                calories: 'พะเยา',
+            },
+            {
+                describs: 'ไปรษณีย์',
+                calories: '56000',
             },
         ],
         informationfarm1: [{
                 describe1: 'ชื่อฟาร์ม',
                 calories1: 'ฟาร์มพ่อหร่วน',
-            },
-            {
-                describe1: 'บ้านเลขที่ ถนน ซอย',
-                calories1: 'เชิดชู',
-            },
+            }, 
             {
                 describe1: 'พิกัดฟาร์มตามระบบ GPS (ละติจูด)',
                 calories1: '19.391271',
@@ -266,6 +299,10 @@ export default {
             {
                 describe1: 'จำนวนควายทั้งหมด',
                 calories1: '40',
+            },
+            {
+                describe1: 'บ้านเลขที่ ถนน ซอย',
+                calories1: '123/123 ถนน123 ซอย123',
             },
             {
                 describe1: 'กลุ่มเกษตรกร',

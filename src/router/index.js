@@ -100,6 +100,11 @@ function view(name){
     component: view('admin/setFarmerDetai')
   },
   {
+    path: '/admin/addfarmer',
+    name: 'addFarmer',
+    component: view('admin/addFarmer')
+  },
+  {
     path: '/admin/resetpassword',
     name: 'setPasswordDetail',
     component: view('admin/setPasswordDetail')

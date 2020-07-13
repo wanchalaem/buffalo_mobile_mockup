@@ -12,7 +12,8 @@
         </v-card>
         <br>
         <center>
-            <h3> นายแดง เชิดชู </h3>
+            <h3 class="pb-2"> นายแดง เชิดชู </h3>
+            <v-btn class="rounded-lg" color="success">อัพโหลดรูปภาพ</v-btn>
         </center>
     </v-container>
 
@@ -42,7 +43,7 @@
                         <br>
                         <v-flex xs12>
                             <div v-for="item in informationfarmer" :key="item.name">
-                                <v-text-field color="green" outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
+                                <v-text-field class="rounded-lg" color="green" outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
                             </div>
                             <v-btn large class="rounded-lg" disabled block color="success">บันทึก</v-btn>
                         </v-flex>

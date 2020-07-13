@@ -6,8 +6,9 @@
     <v-container>
         <v-text-field class="rounded-lg pt-3" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" solo outlined single-line></v-text-field>
         <br>
-        
-        <v-card class="elevation-5 rounded-lg pa-3">
+        <v-btn @click="$router.push('/admin/addfarmer')" block class="rounded-lg" color="success"><v-icon>mdi-plus</v-icon>เพิ่มเกษตรกร</v-btn>
+
+        <v-card class="elevation-5 rounded-lg pa-3 mt-3">
             <div class="d-flex flex-no-wrap">
                 <h4>ข้อมูลเกษตรกร</h4>
             </div>
@@ -19,12 +20,12 @@
             <center>
                 <v-flex xs12 row wrap>
                     <v-flex xs6>
-                        <v-btn outlined  dark class="rounded-l-lg width " color="green" @click="$router.push('/admin/userprofiledetail')">
+                        <v-btn outlined dark class="rounded-l-lg width " color="green" @click="$router.push('/admin/userprofiledetail')">
                             <v-icon>mdi-pencil</v-icon>แก้ไข
                         </v-btn>
                     </v-flex>
                     <v-flex xs6>
-                        <v-btn outlined  dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                        <v-btn outlined dark class="rounded-r-lg width" color="red" @click="dialog1=false">
                             <v-icon>mdi-delete</v-icon>ลบ
                         </v-btn>
                     </v-flex>
@@ -63,7 +64,7 @@ export default {
     /*------------------------- กระทำการตอน router ถูกโหลดเข้ามา------------------------------------------*/
     async beforeRouteEnter(to, from, next) {
         next()
-    },
+    },  
     /*-------------------------ใช้จัดการ operation  หรือ คำนวณค่าต่างๆ (คล้าย methods)------------------------------------------*/
     computed: {
 
@@ -72,7 +73,8 @@ export default {
     methods: {
         /******* Methods default run ******/
         load: async function () {}
-    },
+    }, 
+
 }
 </script>
 
