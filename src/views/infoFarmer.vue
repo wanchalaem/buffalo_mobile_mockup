@@ -80,25 +80,22 @@
                                     <v-text-field class="rounded-lg" color="green" outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
                                 </div>
                                 
+
                                 <div>
                                     <center>
                                         <h3>ภาพถ่ายบัตรประจำตัวประชาชน</h3>
-                                        <v-img class="rounded-lg elevation-5 pb-4"  height="200" width="350" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
+                                        <v-img class="rounded-lg elevation-5 pb-4" height="200" width="350" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
+                                        <v-btn class="rounded-lg" color="success">
+                                            <v-icon>mdi-upload</v-icon>อัพโหลดภาพถ่ายบัตรประชาชน
+                                        </v-btn>
                                     </center>
-                                </div>
-                                <br>
-                                <!-- <div>
+                                </div> 
+                                <div class="pt-6">
                                     <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="ตำบล"></v-select>
+                                    <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="อำเภอ"></v-select>
+                                    <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="จังหวัด"></v-select>
+                                    <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="รหัสไปรษณีย์"></v-select>
                                 </div>
-                                <div>
-                                    <v-select class="rounded-lg" color="green" outlined :readonly="dialog1" :items="items" label="อำเภอ"></v-select>
-                                </div>
-                                <div>
-                                    <v-select class="rounded-lg" color="green" outlined :readonly="dialog1" :items="items" label="จังหวัด"></v-select>
-                                </div>
-                                <div>
-                                    <v-select class="rounded-lg" color="green" outlined :readonly="dialog1" :items="items" label="รหัสไปรณีย์"></v-select>
-                                </div> -->
                             </v-flex>
 
                             <v-btn large class="rounded-lg mt-6" disabled block color="success">บันทึก</v-btn>
@@ -131,12 +128,21 @@
                             <center>
                                 <v-img class="rounded-lg elevation-5" height="200" width="auto" src="https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
                                 </v-img>
+                                <v-btn class="rounded-lg" color="success">
+                                    <v-icon>mdi-upload</v-icon>อัพโหลดภาพถ่ายฟาร์ม
+                                </v-btn>
                             </center>
                         </div>
                         <br>
                         <v-flex xs12>
                             <div v-for="item in informationfarm1" :key="item.name">
-                                <v-text-field class="rounded-lg" outlined :readonly="dialog1" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
+                                <v-text-field class="rounded-lg" color="green" outlined :readonly="dialog1" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
+                            </div>
+                            <div>
+                                <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="ตำบล"></v-select>
+                                <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="อำเภอ"></v-select>
+                                <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="จังหวัด"></v-select>
+                                <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="รหัสไปรษณีย์"></v-select>
                             </div>
 
                         </v-flex>
@@ -146,31 +152,7 @@
             </v-card>
         </v-tab-item>
 
-        <!-- <v-tab-item>
-                <v-card flat background-color="transparent" color="basil">
-                    <v-flex xs12>
-                        <v-card-text>
-                            <h3>
-                                <p>ตั้งค่ารหัสผ่าน</p>
-                            </h3>
-                            <center>
-                                <v-text-field clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
-                                <v-text-field clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class=" rounded-lg"></v-text-field>
-                            </center><br>
-                            <div class="col-ml-6 ">
-                            <div class="ml-auto text-center">
-                                <v-btn block dark large class="rounded-lg " color="green" @click="$router.push('/user/personal')">ตกลง
-                                </v-btn>
-                                <v-btn block dark large class="rounded-lg " color="green">ตกลง
-                                </v-btn>
-                            </div>
-                        </v-card-text>
-                    </v-flex>
-                </v-card>
-            </v-tab-item> -->
-
     </v-tabs>
-    <!-- </v-card> -->
 </div>
 </template>
 
@@ -249,7 +231,6 @@ export default {
             //     describe: 'นามสกุล',
             //     calories: 'แก้วบุญเรือง',
             // },
-
             // {
             //     describe: 'เพศ',
             //     calories: 'ชาย',
@@ -258,36 +239,36 @@ export default {
                 describe: 'อายุ',
                 calories: '58',
             },
-           
+
             {
                 describe: 'เบอร์โทรศัพท์',
                 calories: '0861800385',
             },
-             {
+            {
                 describe: 'บ้านเลขที่/ถนน/ซอย',
                 calories: '123/123 ถนน 123 ซอย123',
             },
-            {
-                describe: 'ตำบล',
-                calories: 'เจริญราษฎร์',
-            },
-            {
-                describe: 'อำเภอ',
-                calories: 'แม่กา',
-            },
-            {
-                describe: 'จังหวัด',
-                calories: 'พะเยา',
-            },
-            {
-                describs: 'ไปรษณีย์',
-                calories: '56000',
-            },
+            // {
+            //     describe: 'ตำบล',
+            //     calories: 'เจริญราษฎร์',
+            // },
+            // {
+            //     describe: 'อำเภอ',
+            //     calories: 'แม่กา',
+            // },
+            // {
+            //     describe: 'จังหวัด',
+            //     calories: 'พะเยา',
+            // },
+            // {
+            //     describs: 'ไปรษณีย์',
+            //     calories: '56000',
+            // },
         ],
         informationfarm1: [{
                 describe1: 'ชื่อฟาร์ม',
                 calories1: 'ฟาร์มพ่อหร่วน',
-            }, 
+            },
             {
                 describe1: 'พิกัดฟาร์มตามระบบ GPS (ละติจูด)',
                 calories1: '19.391271',
@@ -308,22 +289,22 @@ export default {
                 describe1: 'กลุ่มเกษตรกร',
                 calories1: 'กลุ่มแม่ใจ',
             },
-            {
-                describe1: 'ตำบล',
-                calories1: 'เจริญราษฎร์',
-            },
-            {
-                describe1: 'อำเภอ',
-                calories1: 'แม่กา',
-            },
-            {
-                describe1: 'จังหวัด',
-                calories1: 'พะเยา',
-            },
-            {
-                describe1: 'ไปรษณีย์',
-                calories1: '56000',
-            },
+            // {
+            //     describe1: 'ตำบล',
+            //     calories1: 'เจริญราษฎร์',
+            // },
+            // {
+            //     describe1: 'อำเภอ',
+            //     calories1: 'แม่กา',
+            // },
+            // {
+            //     describe1: 'จังหวัด',
+            //     calories1: 'พะเยา',
+            // },
+            // {
+            //     describe1: 'ไปรษณีย์',
+            //     calories1: '56000',
+            // },
         ],
         desserts: [],
         editedIndex: -1,
@@ -383,20 +364,11 @@ export default {
 
 <style scoped>
 .bg {
-    /* background: rgba(0, 128, 0, 0.1); */
-    /* background: rgba(242, 243, 244);
-    background-size: cover; */
-
     background: rgba(242, 243, 244);
-    /* Full height */
     height: 100%;
-
-    /* Center and scale the image nicely */
     background-position: center;
-    /* background-repeat: no-repeat; */
     background-repeat: repeat;
     background-size: cover;
-    /* background-size:100% 100%; */
 }
 
 .width {

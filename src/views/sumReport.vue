@@ -2,8 +2,8 @@
 <div class="bg">
     <Navigation name="รายงานสรุป" />
     <v-container id="dropdown-example-1">
-        <v-btn class="mb-6" fab @click="$router.push('/user/report')" small>
-            <v-icon class="icon">mdi-chevron-left</v-icon>
+        <!-- <v-btn class="mb-6" fab @click="$router.push('/user/report')" small> -->
+        <v-btn class="mb-6" fab @click="$router.go(-1)" small><v-icon class="icon">mdi-chevron-left</v-icon>
         </v-btn>
         <v-select large solo class="my-2 rounded-lg" :items="dropdown_font" label="ยอดรวมควายทั้งหมด" target="#dropdown-example-1"></v-select>
 

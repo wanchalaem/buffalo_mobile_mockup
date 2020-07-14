@@ -6,15 +6,22 @@
     <v-container>
         <v-text-field class="rounded-lg pt-3" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" solo outlined single-line></v-text-field>
         <br>
-        <v-btn @click="$router.push('/admin/addfarmer')" block class="rounded-lg" color="success"><v-icon>mdi-plus</v-icon>เพิ่มเกษตรกร</v-btn>
+        <v-btn @click="$router.push('/admin/addfarmer')" block class="rounded-lg" color="success">
+            <v-icon>mdi-plus</v-icon>เพิ่มเกษตรกร
+        </v-btn>
 
-        <v-card class="elevation-5 rounded-lg pa-3 mt-3">
+        <v-card v-for="item in 5" class="elevation-5 rounded-lg pa-3 mt-3">
             <div class="d-flex flex-no-wrap">
                 <h4>ข้อมูลเกษตรกร</h4>
             </div>
-            <h4>ชื่อ : นายแดง แดงแดง </h4>
-            <h4>อีเมล์ : dang@gmail.com </h4>
-            <h4>กลุ่มผู้ใช้ : แม่ใจ </h4>
+            <h4>เลขบัตรประชาชน : 1234567890123 </h4>
+            <h4>ชื่อ : นายแดง แดงดำ </h4>
+            <h4>เบอร์โทรศัพท์ : 0123456789 </h4>
+            <h4>ตำบล : แม่กา </h4>
+            <h4>อำเภอ : เมือง </h4>
+            <h4>จังหวัด : พะเยา </h4>
+            <h4>ฟาร์ม : นายแดง </h4>
+            <h4>กลุ่มเกษตกร : กลุ่มแม่กา </h4>
             <br>
 
             <center>
@@ -32,6 +39,10 @@
                 </v-flex>
             </center>
         </v-card>
+
+        <div class="text-center pt-4">
+            <v-pagination color="green" v-model="page" :length="4" prev-icon="mdi-menu-left" next-icon="mdi-menu-right"></v-pagination>
+        </div>
 
     </v-container>
 </div>
@@ -51,7 +62,7 @@ export default {
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
-
+            page: 1,
             txt: 'Hello World'
 
         };
@@ -64,7 +75,7 @@ export default {
     /*------------------------- กระทำการตอน router ถูกโหลดเข้ามา------------------------------------------*/
     async beforeRouteEnter(to, from, next) {
         next()
-    },  
+    },
     /*-------------------------ใช้จัดการ operation  หรือ คำนวณค่าต่างๆ (คล้าย methods)------------------------------------------*/
     computed: {
 
@@ -73,7 +84,7 @@ export default {
     methods: {
         /******* Methods default run ******/
         load: async function () {}
-    }, 
+    },
 
 }
 </script>

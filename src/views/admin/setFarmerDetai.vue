@@ -13,7 +13,8 @@
         <br>
         <center>
             <h3> นายแดง เชิดชู </h3><br>
-            <v-btn medium class="rounded-lg ma-2" dark color="indigo" @click="$router.push('/admin/buffalo')"><v-icon>mdi-cow</v-icon>ข้อมูลควาย
+            <v-btn medium class="rounded-lg ma-2" dark color="indigo" @click="$router.push('/admin/buffalo')">
+                <v-icon>mdi-cow</v-icon>ข้อมูลควาย
             </v-btn>
             <v-flex xs12 row wrap class="pt-2">
                 <v-flex xs6>
@@ -69,6 +70,9 @@
                             <center>
                                 <h3 class="mb-1">ภาพถ่ายบัตรประจำตัวประชาชน</h3>
                                 <v-img class="rounded-lg elevation-5" height="200" width="350" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
+                                <v-btn class="rounded-lg pt-1" color="success">
+                                    <v-icon>mdi-upload</v-icon>อัพโหลดภาพถ่ายบัตรประชาชน
+                                </v-btn>
                             </center>
                         </div>
                         <v-select class="rounded-lg pt-3" prepend-inner-icon="mdi-map-marker-multiple-outline" color="green" outlined label="ตำบล"></v-select>
@@ -104,6 +108,9 @@
                             <center>
                                 <v-img class="rounded-lg elevation-5" height="200" width="auto" src="https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
                                 </v-img>
+                                <v-btn class="rounded-lg pt-1" color="success">
+                                    <v-icon>mdi-upload</v-icon>อัพโหลดภาพถ่ายฟาร์ม
+                                </v-btn>
                             </center>
                         </div>
                         <br>

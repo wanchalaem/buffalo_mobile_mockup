@@ -14,7 +14,7 @@
         <!-- <v-container> -->
         <!-- <v-card flat class="rounded-lg"> -->
         <!-- <v-card-text> -->
-        <v-card class="elevation-5 rounded-lg pa-3">
+        <v-card v-for="item in 5" class="elevation-5 rounded-lg pa-3 mt-3">
             <div class="d-flex flex-no-wrap">
                 <h4>ผู้ดูแลระบบ</h4>
             </div>
@@ -26,7 +26,7 @@
             <center>
                 <v-flex xs12 row wrap>
                     <v-flex xs6>
-                        <v-btn outlined  dark class="rounded-l-lg width " color="green" @click="$router.push('/admin/admindetail')">
+                        <v-btn outlined  dark class="rounded-l-lg width " color="green" @click="$router.push('/admin/editadmin')">
                             <v-icon>mdi-pencil</v-icon>แก้ไข
                         </v-btn>
                     </v-flex>
@@ -39,6 +39,9 @@
             </center>
         </v-card>
 
+        <div class="text-center pt-4">
+            <v-pagination v-model="page" color="green" :length="4" prev-icon="mdi-menu-left" next-icon="mdi-menu-right"></v-pagination>
+        </div>
     </v-container>
     <!-- </v-card-text>  -->
 </div>
@@ -58,6 +61,7 @@ export default {
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
+            page: 1,
             dialog: false,
             value: [
                 423,

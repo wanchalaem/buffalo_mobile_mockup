@@ -1,21 +1,25 @@
 <template>
 <div class="bg">
     <!-- <Navbar icon="mdi-chevron-left" name="ตั้งค่ารหัสผ่าน" /> -->
-    <Navigation name="ตั้งค่ารหัสผ่าน" />
+    <NavigationAdmin name="แก้ไขข้อมูลผู้ดูแลระบบ" />
     <div class="pa-6">
         <v-layout row wrap>
             <v-flex xs12>
-                <!-- <v-btn small fab @click="$router.push('/user/profile')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
-                <v-btn class="mb-6" fab @click="$router.go(-1)" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+                <!-- <v-btn small fab @click="$router.push('/admin/userprofiledetail')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
+                <v-btn small fab @click="$router.go(-1)"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>                
                 <v-toolbar-title>
                     <br>
                     <center>
-                        <v-text-field clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
-                        <v-text-field clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class=" rounded-lg"></v-text-field>
+                        <v-text-field color="green" clearable flat hide-details label="ชื่อ" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
+                        <v-text-field color="green" clearable flat hide-details label="นามสกุล" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
+                        <v-text-field color="green" clearable flat hide-details label="ชื่อผู้ใช้" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
+                        <v-text-field color="green" clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
+                        <v-text-field color="green" clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
+                        <v-text-field color="green" clearable flat hide-details label="อีเมล" solo outlined single-line class=" rounded-lg"></v-text-field>
                     </center><br>
                     <!-- <div class="col-ml-6 "> -->
                         <div class="ml-auto text-center">
-                            <v-btn block dark large class="rounded-lg " color="green" @click="$router.push('/user/profile')">ตกลง
+                            <v-btn block dark large class="rounded-lg " color="green" @click="$router.push('/admin/adminedit')">ตกลง
                             </v-btn>
                         </div>
                     <!-- </div> -->
@@ -75,20 +79,11 @@ export default {
     width: 80%;
 }
 
-.bg {
-    /* background: rgba(0, 128, 0, 0.1); */
-    /* background: rgba(242, 243, 244);
-    background-size: cover; */
-
-    background: rgba(242, 243, 244);
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    /* background-repeat: no-repeat; */
+.bg { 
+    background: rgba(242, 243, 244); 
+    height: 100%; 
+    background-position: center; 
     background-repeat: repeat;
-    background-size: cover;
-    /* background-size:100% 100%; */
+    background-size: cover; 
 }
 </style>

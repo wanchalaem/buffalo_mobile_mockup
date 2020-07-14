@@ -4,9 +4,10 @@
     <!-- <Navbar icon="mdi-chevron-left" name="รายงานการเติบโต" /> -->
     <Navigation name="รายงานการเติบโต" />
     <v-container>
-        <v-btn class="mb-6" fab @click="$router.push('/user/report')" small>
+        <!-- <v-btn class="mb-6" fab @click="$router.push('/user/report')" small>
             <v-icon class="icon">mdi-chevron-left</v-icon>
-        </v-btn>
+        </v-btn> -->
+        <v-btn class="mb-6" fab @click="$router.go(-1)" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
         <div class="mb-3">
             <h3>การเจริญเติบโตพันธุ์ประวัติรายฟาร์ม</h3>
         </div>
@@ -32,20 +33,11 @@ export default {
 </script>
 
 <style>
-.bg {
-    /* background: rgba(0, 128, 0, 0.1); */
-    /* background: rgba(242, 243, 244);
-    background-size: cover; */
-
-    background: rgba(242, 243, 244);
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    /* background-repeat: no-repeat; */
+.bg { 
+    background: rgba(242, 243, 244); 
+    height: 100%; 
+    background-position: center; 
     background-repeat: repeat;
-    background-size: cover;
-    /* background-size:100% 100%; */
+    background-size: cover; 
 }
 </style>

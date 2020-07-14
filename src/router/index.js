@@ -80,6 +80,11 @@ function view(name){
     component: view('admin/checkUser')
   },
   {
+    path: '/admin/editadmin',
+    name: 'editAdmin',
+    component: view('admin/editAdmin')
+  },
+  {
     path: '/admin/admindetail',
     name: 'adminDetail',
     component: view('admin/adminDetail')

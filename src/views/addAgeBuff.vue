@@ -5,7 +5,8 @@
     <Navigation name="เพิ่มข้อมูลอายุควาย" />
     
     <v-container grid-list-xs>
-        <v-btn class="mb-6" fab @click="$router.push('/user/buffaloinformation')" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+        <!-- <v-btn class="mb-6" fab @click="$router.push('/user/buffaloinformation')" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
+            <v-btn class="mb-6" fab @click="$router.go(-1)" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
             <!-- <v-card-text> -->
                 <!-- <v-container> -->
                     <v-text-field class="rounded-lg"  outlined label="น้ำหนัก (กิโลกรัม)"></v-text-field>

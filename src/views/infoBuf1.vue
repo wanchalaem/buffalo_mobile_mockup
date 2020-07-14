@@ -1,8 +1,14 @@
 <template>
-<div>
+<div class="bg">
 
     <!-- <Navbar icon="mdi-chevron-left" name="ข้อมูลควาย" /> -->
     <Navigation name="ข้อมูลควาย" />
+    <v-container>
+        <v-btn class="mb-6" fab @click="$router.go(-1)" small>
+            <v-icon class="icon">mdi-chevron-left</v-icon>
+        </v-btn>
+    </v-container>
+
     <v-tabs grow color="green">
         <v-tab>
             <v-icon left>mdi-file-document-outline</v-icon>
@@ -108,9 +114,9 @@
                     <div>
                         <v-menu ref="menu" v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y min-width="290px">
                             <template v-slot:activator="{ on, attrs }">
-                                <v-text-field outlined color="green" v-model="date" class="rounded-lg" label="วัน/เดือน/ปีเกิด" prepend-inner-icon="mdi-calendar"  v-bind="attrs" v-on="on"></v-text-field>
+                                <v-text-field outlined color="green" v-model="date" class="rounded-lg" label="วัน/เดือน/ปีเกิด" prepend-inner-icon="mdi-calendar" v-bind="attrs" v-on="on"></v-text-field>
                             </template>
-                            <v-date-picker  color="green" ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
+                            <v-date-picker color="green" ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
                         </v-menu>
                         <v-select outlined color="green" class="rounded-lg" label="เพศ"></v-select>
                         <v-select outlined color="green" class="rounded-lg" label="สี"></v-select>
@@ -124,7 +130,7 @@
             </v-card>
         </v-tab-item>
 
-        <v-tab-item class="bg">
+        <v-tab-item class="">
             <v-container grid-list-xs>
                 <!-- <v-card flat>  -->
                 <v-btn large block @click="$router.push('/user/buffaloage')" class="rounded-lg" color="green" dark>
@@ -346,19 +352,19 @@ export default {
             },
 
         ],
-        
+
     }),
-     watch: { 
-        menu (val) {
-        val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
-      },
+    watch: {
+        menu(val) {
+            val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
+        },
     },
     /*-------------------------Methods------------------------------------------*/
-    methods: { 
+    methods: {
         load: async function () {},
-        save1 (date) {
-        this.$refs.menu.save(date)
-      },
+        save1(date) {
+            this.$refs.menu.save(date)
+        },
     },
 
 }
@@ -368,4 +374,12 @@ export default {
 .width {
     width: 95%;
 }
+.bg {
+    background: rgba(242, 243, 244);
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
 </style>

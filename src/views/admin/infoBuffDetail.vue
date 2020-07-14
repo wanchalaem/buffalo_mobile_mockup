@@ -1,10 +1,11 @@
 
     
 <template>
-<div>
+<div class="bg">
 <NavigationAdmin name="ข้อมูลควาย" />
     <v-container grid-list-xs>
-        <v-btn  small fab @click="$router.push('/admin/buffalo')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+        <!-- <v-btn  small fab @click="$router.push('/admin/buffalo')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
+    <v-btn class="mb-6" fab @click="$router.go(-1)" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
     </v-container>
     <v-tabs grow color="green">
         <v-tab>
@@ -127,7 +128,7 @@
             </v-card>
         </v-tab-item>
 
-        <v-tab-item class="bg">
+        <v-tab-item class="">
             <v-container grid-list-xs>
                 <!-- <v-card flat>  -->
                 <v-btn medium block @click="$router.push('/user/buffaloage')" class="rounded-lg" color="green" dark>
@@ -139,7 +140,7 @@
                         <h3>อายุ 240 วัน</h3>
                     </div><br>
                     <div v-for="item in desserts1" :key="item.name">
-                        <v-text-field class="rounded-lg" outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
+                        <v-text-field color="green" class="rounded-lg" outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
                     </div>
                     <!-- <div class="d-flex flex-no-wrap"> -->
                     <center>
@@ -170,7 +171,7 @@
                         <h3>อายุ 400 วัน</h3>
                     </div><br>
                     <div v-for="item in desserts1" :key="item.name">
-                        <v-text-field class="rounded-lg" outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
+                        <v-text-field color="green" class="rounded-lg" outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
                     </div>
                     <!-- <div class="d-flex flex-no-wrap"> -->
                     <center>
@@ -201,7 +202,7 @@
                         <h3>อายุ 600 วัน</h3>
                     </div><br>
                     <div v-for="item in desserts1" :key="item.name">
-                        <v-text-field class="rounded-lg" outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
+                        <v-text-field color="green" class="rounded-lg" outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
                     </div>
                     <!-- <div class="d-flex flex-no-wrap"> -->
                     <center>

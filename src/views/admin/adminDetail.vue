@@ -1,11 +1,11 @@
 <template>
 <div class="bg">
-    <NavigationAdmin name="แก้ไขข้อมูลผู้ดูแลระบบ" />
+    <NavigationAdmin name="ผู้ดูแลระบบ" />
     <!-- <NavbarAdmin icon="mdi-chevron-left" name="แก้ไขข้อมูลผู้ดูแลระบบ" /> -->
     <v-container grid-list-xs>
-        <v-btn class="mb-6" fab @click="$router.push('/admin/adminedit')" small>
+        <!-- <v-btn class="mb-6" fab @click="$router.push('/admin/adminedit')" small>
             <v-icon class="icon">mdi-chevron-left</v-icon>
-        </v-btn>
+        </v-btn> -->
         <v-card class="mx-auto rounded-lg elevation-10" max-width="140">
             <v-img height="160" src="https://cdn-th.tunwalai.net/files/member/139588/1601081451-member.jpg">
             </v-img>

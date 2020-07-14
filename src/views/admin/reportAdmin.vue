@@ -2,7 +2,7 @@
 <div class="bg">
     <!-- <Navbar icon="mdi-clipboard-text" name="รายงาน" /> -->
     <NavigationAdmin name="รายงาน" />
-    <v-container grid-list-xs>
+    <!-- <v-container grid-list-xs> -->
         <center>
             <v-flex xs12 row wrap>
                 <v-flex xs12 row wrap class="ma-3">
@@ -86,7 +86,7 @@
 
             </v-flex>
         </center>
-    </v-container>
+    <!-- </v-container> -->
 </div>
 </template>
 

@@ -5,13 +5,13 @@
     <div class="pa-6">
         <v-layout row wrap>
             <v-flex xs12>
-                <v-btn small fab @click="$router.push('/admin/userprofiledetail')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
-                
+                <!-- <v-btn small fab @click="$router.push('/admin/userprofiledetail')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
+                <v-btn small fab @click="$router.go(-1)"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>                
                 <v-toolbar-title>
                     <br>
                     <center>
-                        <v-text-field clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
-                        <v-text-field clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class=" rounded-lg"></v-text-field>
+                        <v-text-field color="green" clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
+                        <v-text-field color="green" clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class=" rounded-lg"></v-text-field>
                     </center><br>
                     <!-- <div class="col-ml-6 "> -->
                         <div class="ml-auto text-center">

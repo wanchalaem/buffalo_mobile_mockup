@@ -7,6 +7,22 @@
     <navigation name="ผู้ใช้ทั่วไป" />
     <!-- <div class="pa-4"> -->
         <v-layout row wrap>
+            <v-flex xs12 md4>
+                <v-hover v-slot:default="{ hover }" close-delay="200">
+                    <v-card class="pa-3 rounded-lg mb-2" flat :elevation="hover ? 16 : 2  ">
+                        <v-img style="height:160px" src="https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                            <!-- <v-row class="pa-2">  -->
+                                <center>
+                                <v-avatar class="rounded-lg pt-3 elevation-5" size="120">
+                                    <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
+                                </v-avatar> 
+                                    <v-list-item-title class="title body-3 white--text font-weight-light" ><h5>นายแดง สุขใจ (เกษตกร)</h5></v-list-item-title>
+                                </center> 
+                        </v-img>
+                    </v-card>
+                </v-hover>
+            </v-flex>
+
             <v-flex xs12>
                 <v-card @click="$router.push('/user/reportsum')" class=" rounded-lg">
                     <div class="d-flex flex-no-wrap ">
@@ -21,6 +37,14 @@
                         </div>
                     </div>
                 </v-card>
+            </v-flex>
+
+            <v-flex xs12 md4>
+                <v-hover v-slot:default="{ hover }" close-delay="200">
+                    <v-card class="pa-3 rounded-lg mt-2" flat :elevation="hover ? 16 : 2  ">
+                        <v-img style="height:160px" src="https://images.pexels.com/photos/46188/bison-buffalo-american-animal-46188.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></v-img>
+                    </v-card>
+                </v-hover>
             </v-flex>
 
         </v-layout>

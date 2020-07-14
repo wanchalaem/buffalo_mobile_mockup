@@ -1,28 +1,4 @@
 <template>
-<!-- <v-bottom-navigation >
-    <v-btn>
-        <span>หน้าหลัก</span>
-        <v-icon @click="$router.push('/admin/home')">mdi-home</v-icon>
-    </v-btn>
-
-    <v-btn>
-        <span>สิทธิ์การใช้งาน</span>
-        <v-icon @click="$router.push('/admin/adminedit')">mdi-account-cog</v-icon>
-    </v-btn>
-
-    <v-btn>
-        <span>เกษตรกร</span>
-        <v-icon @click="$router.push('/admin/admindetail')">mdi-account-group</v-icon>
-    </v-btn>
-    <v-btn>
-        <span>คำขอรหัสผ่าน</span>
-        <v-icon @click="$router.push('/askPassword')">mdi-account-key</v-icon>
-    </v-btn>
-    <v-btn>
-        <span>รายงาน</span>
-        <v-icon @click="$router.push('/reportAdmin')">mdi-clipboard-text</v-icon>
-    </v-btn>
-</v-bottom-navigation> -->
 <div>
     <!-- <v-navigation-drawer v-model="drawer" app clipped class="dr-bg"> -->
     <v-navigation-drawer dense color="white" v-model="drawer" app clipped>
@@ -63,23 +39,6 @@
         <h3>
             &nbsp;{{name}}
         </h3>
-
-        <!-- <v-menu bottom offset-y>
-            <template v-slot:activator="{ on, attrs }">
-                <v-btn-icon class="ma-2" v-bind="attrs" v-on="on">
-                    <v-avatar>
-                        <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John">
-                    </v-avatar>
-                </v-btn-icon>
-            </template>
-            <v-list>
-                <v-list-item v-for="(item, i) in items1" :key="i" @click="() => {}">
-                    <v-list-item-title>
-                        {{ item.title }}</v-list-item-title>
-                </v-list-item>
-            </v-list>
-        </v-menu> -->
-
     </v-app-bar>
 
 </div>
@@ -88,33 +47,36 @@
 <script>
 export default {
     name: 'Root',
-    /*-------------------------ประกาศ components ---------------------------------------*/
     components: {
 
     },
-    /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
     props: {
 
     },
-    /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
             drawer: null,
-            items: [{
+            items: [
+                {
                     text: "หน้าหลัก",
                     icon: "mdi-view-dashboard-outline",
                     router: "/admin/home"
                 },
                 {
-                    text: "จัดการผู้ดูแลระบบ",
-                    icon: "mdi-account-cog",
-                    router: "/admin/adminedit"
+                    text: "ข้อมูลส่วนตัว",
+                    icon: "mdi-account",
+                    router: "/admin/admindetail"
                 },
                 {
                     text: "จัดการเกษตรกร",
                     icon: "mdi-account-group",
                     router: "/admin/userprofile"
                 }, 
+                {
+                    text: "จัดการผู้ดูแลระบบ",
+                    icon: "mdi-account-cog",
+                    router: "/admin/adminedit"
+                },
                 {
                     text: "คำขอรหัสผ่าน",
                     icon: "mdi-account-key",
@@ -145,22 +107,16 @@ export default {
             default: 'Menu',
         }
     },
-    /*------------------------- สิ่งทที่อยู่ในนี้จะถูกรัยเมื่อโหลด ------------------------------------------*/
     mounted: async function () {
-        /**** เรียกใช้ methods ชื่อ load() */
         await this.load();
     },
-    /*------------------------- กระทำการตอน router ถูกโหลดเข้ามา------------------------------------------*/
     async beforeRouteEnter(to, from, next) {
         next()
     },
-    /*-------------------------ใช้จัดการ operation  หรือ คำนวณค่าต่างๆ (คล้าย methods)------------------------------------------*/
     computed: {
 
     },
-    /*-------------------------Methods------------------------------------------*/
-    methods: {
-        /******* Methods default run ******/
+     methods: {
         load: async function () {}
     },
 }

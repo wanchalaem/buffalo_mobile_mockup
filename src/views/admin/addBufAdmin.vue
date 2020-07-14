@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="">
 <NavigationAdmin name="เพิ่มควาย" />
     <v-container grid-list-xs>
         <v-btn  small fab @click="$router.push('/admin/buffalo')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
@@ -85,7 +85,7 @@
                         <v-select outlined color="green" class="rounded-lg" label="สถานะ"></v-select>
                     </div>
                     <!-- </v-card> -->
-                    <v-btn class="rounded-lg" block  medium color="success">บันทึก</v-btn>
+                    <v-btn @click="$router.push('/admin/buffalo')" class="rounded-lg" block  medium color="success">บันทึก</v-btn>
                 </v-card-text> 
             </v-card> 
  
@@ -227,5 +227,12 @@ export default {
 <style>
 .width {
     width: 95%;
+}
+.bg { 
+    background: rgba(242, 243, 244); 
+    height: 100%; 
+    background-position: center; 
+    background-repeat: repeat;
+    background-size: cover; 
 }
 </style>
