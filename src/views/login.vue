@@ -2,10 +2,10 @@
 <v-app id="inspire">
     <v-main class="bg">
         <v-container class="fill-height" fluid>
-            <v-row class="mt-14" align="center" justify="center">
+            <v-row class="" align="center" justify="center">
                 <v-col cols="10" sm="8" md="4">
                     <div class=" text-center">
-                        <img style="width:65%;" src="https://www.img.in.th/images/baec9e10112fc5b2253841c3099c9e42.png" alt="">
+                        <img class="imglogin" src="https://www.img.in.th/images/baec9e10112fc5b2253841c3099c9e42.png" alt="">
                         <h2 class="fcw">ยินดีต้อนรับเข้าสู่ระบบ</h2>
                     </div>
                     <div class="mt-6">
@@ -97,5 +97,8 @@ export default {
 .f16 {
     font-size: 14px;
     color: white;
+}
+.imglogin{
+    width:65%;
 }
 </style>
