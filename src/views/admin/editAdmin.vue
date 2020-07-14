@@ -1,5 +1,5 @@
 <template>
-<div class="bg">
+<div class="">
     <!-- <Navbar icon="mdi-chevron-left" name="ตั้งค่ารหัสผ่าน" /> -->
     <NavigationAdmin name="แก้ไขข้อมูลผู้ดูแลระบบ" />
     <div class="pa-6">
@@ -10,12 +10,12 @@
                 <v-toolbar-title>
                     <br>
                     <center>
-                        <v-text-field color="green" clearable flat hide-details label="ชื่อ" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
-                        <v-text-field color="green" clearable flat hide-details label="นามสกุล" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
-                        <v-text-field color="green" clearable flat hide-details label="ชื่อผู้ใช้" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
-                        <v-text-field color="green" clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
-                        <v-text-field color="green" clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
-                        <v-text-field color="green" clearable flat hide-details label="อีเมล" solo outlined single-line class=" rounded-lg"></v-text-field>
+                        <v-text-field color="green" clearable label="ชื่อ" prepend-inner-icon="mdi-card-account-details-outline" outlined class=" rounded-lg"></v-text-field>
+                        <v-text-field color="green" clearable label="นามสกุล" prepend-inner-icon="mdi-card-account-details-outline" outlined class=" rounded-lg"></v-text-field>
+                        <v-text-field color="green" clearable label="ชื่อผู้ใช้" prepend-inner-icon="mdi-account" outlined class=" rounded-lg"></v-text-field>
+                        <v-text-field color="green" clearable label="รหัสผ่านใหม่" prepend-inner-icon="mdi-lock" outlined class=" rounded-lg"></v-text-field>
+                        <v-text-field color="green" clearable label="ยืนยันรหัสผ่านใหม่" prepend-inner-icon="mdi-lock" outlined class=" rounded-lg"></v-text-field>
+                        <v-text-field color="green" clearable label="อีเมล" prepend-inner-icon="mdi-email" outlined class=" rounded-lg"></v-text-field>
                     </center><br>
                     <!-- <div class="col-ml-6 "> -->
                         <div class="ml-auto text-center">

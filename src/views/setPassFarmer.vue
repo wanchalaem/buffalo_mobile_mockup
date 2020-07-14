@@ -1,17 +1,17 @@
 <template>
-<div class="bg">
+<div class="">
     <!-- <Navbar icon="mdi-chevron-left" name="ตั้งค่ารหัสผ่าน" /> -->
     <Navigation name="ตั้งค่ารหัสผ่าน" />
     <div class="pa-6">
         <v-layout row wrap>
             <v-flex xs12>
                 <!-- <v-btn small fab @click="$router.push('/user/profile')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
-                <v-btn class="mb-6" fab @click="$router.go(-1)" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+                <v-btn class="" fab @click="$router.go(-1)" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
                 <v-toolbar-title>
                     <br>
                     <center>
-                        <v-text-field clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
-                        <v-text-field clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class=" rounded-lg"></v-text-field>
+                        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
+                        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class=" rounded-lg"></v-text-field>
                     </center><br>
                     <!-- <div class="col-ml-6 "> -->
                         <div class="ml-auto text-center">

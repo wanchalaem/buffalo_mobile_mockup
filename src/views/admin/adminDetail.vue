@@ -42,9 +42,13 @@
                         </div>
                         <br>
                         <v-flex xs12>
-                            <div v-for="item in informationfarmer" :key="item.name">
+                            <!-- <div v-for="item in informationfarmer" :key="item.name">
                                 <v-text-field class="rounded-lg" color="green" outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
-                            </div>
+                            </div> -->
+                            <v-text-field outlined   class="rounded-lg" prepend-inner-icon="mdi-card-account-details-outline" color="green" label="ชื่อ-นามสกุล"></v-text-field>
+                        <v-text-field outlined   class="rounded-lg" prepend-inner-icon="mdi-account" color="green" label="ชื่อผู้ใช้งาน"></v-text-field>
+                        <v-text-field outlined   class="rounded-lg" prepend-inner-icon="mdi-lock" color="green" label="รหัสผ่าน"></v-text-field>
+                        <v-text-field outlined   class="rounded-lg" prepend-inner-icon="mdi-email" color="green" label="อีเมล"></v-text-field>
                             <v-btn large class="rounded-lg" disabled block color="success">บันทึก</v-btn>
                         </v-flex>
                     </v-card-text>

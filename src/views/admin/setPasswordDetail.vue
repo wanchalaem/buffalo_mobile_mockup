@@ -1,5 +1,5 @@
 <template>
-<div class="bg">
+<div class="">
     <!-- <Navbar icon="mdi-chevron-left" name="ตั้งค่ารหัสผ่าน" /> -->
     <NavigationAdmin name="ตั้งค่ารหัสผ่าน" />
     <div class="pa-6">
@@ -10,8 +10,8 @@
                 <v-toolbar-title>
                     <br>
                     <center>
-                        <v-text-field color="green" clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line class=" rounded-lg pb-4"></v-text-field>
-                        <v-text-field color="green" clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line class=" rounded-lg"></v-text-field>
+                        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details label="รหัสผ่านใหม่"  outlined single-line class=" rounded-lg pb-4"></v-text-field>
+                        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details label="ยืนยันรหัสผ่านใหม่"  outlined single-line class=" rounded-lg"></v-text-field>
                     </center><br>
                     <!-- <div class="col-ml-6 "> -->
                         <div class="ml-auto text-center">

@@ -1,6 +1,5 @@
 <template>
 <div class="bg">
-    <!-- <NavbarAdmin icon=" " name="บัญชีผู้ใช้" /> -->
     <Navigation name="เกษตกร" />
     <br>
     <v-card class="mx-auto rounded-lg elevation-10" max-width="140">
@@ -8,13 +7,6 @@
         </v-img>
     </v-card>
     <br>
-    <!-- <center>
-        <h3> นายแดง เชิดชู </h3><br>
-        <v-btn class="rounded-lg" color="success" >อัพโหลดรูปภาพ<v-icon>mdi-upload</v-icon>
-        </v-btn>
-        <v-btn class="rounded-lg" color="error" @click="$router.push('/user/resetpassword')">ตั้งค่ารหัสผ่าน<v-icon>mdi-account-key</v-icon>
-        </v-btn>
-    </center> -->
     <v-container>
         <center>
             <h3> นายแดง เชิดชู </h3><br>
@@ -71,17 +63,29 @@
                             <br>
                             <v-flex xs12>
                                 <div>
-                                    <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="คำนำหน้า"></v-select>
-                                    <v-text-field class="rounded-lg" color="green" outlined :readonly="dialog1" :items="items" label="ชื่อ"></v-text-field>
-                                    <v-text-field class="rounded-lg" color="green" outlined :readonly="dialog1" :items="items" label="นามสกุล"></v-text-field>
-                                    <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="เพศ"></v-select>
+                                    <v-select class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-human-male-female" color="green" id="id" label="คำนำหน้า"></v-select>
+                                    <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-card-account-details-outline" color="green" id="id" label="ชื่อ"></v-text-field>
+                                    <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-card-account-details-outline" color="green" id="id" label="นามสกุล"></v-text-field>
+                                    <v-select class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-human-male-female" color="green" id="id" label="เพศ"></v-select>
+                                    <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-card-account-details-outline" color="green" id="id" label="หมายเลขบัตร"></v-text-field>
+                                    <div>
+                                        <center class="pb-6">
+                                            <h6>ภาพถ่ายบัตรประจำตัวประชาชน</h6>
+                                            <v-img class="rounded-lg elevation-5" height="200" width="350" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
+                                            <v-btn class="rounded-lg" color="success">
+                                                <v-icon>mdi-upload</v-icon>อัพโหลดบัตรประชาชน
+                                            </v-btn>
+                                        </center>
+                                    </div>
+                                    <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-account-clock-outline" color="green" id="id" label="อายุ"></v-text-field>
+                                    <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-home" color="green" id="id" label="ที่อยู่"></v-text-field>
+                                    <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-phone" color="green" id="id" label="เบอร์โทรศัพท์"></v-text-field>
                                 </div>
-                                <div v-for="item in informationfarmer" :key="item.name">
+                                <!-- <div v-for="item in informationfarmer" :key="item.name">
                                     <v-text-field class="rounded-lg" color="green" outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
-                                </div>
-                                
+                                </div> -->
 
-                                <div>
+                                <!-- <div>
                                     <center>
                                         <h3>ภาพถ่ายบัตรประจำตัวประชาชน</h3>
                                         <v-img class="rounded-lg elevation-5 pb-4" height="200" width="350" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
@@ -89,13 +93,13 @@
                                             <v-icon>mdi-upload</v-icon>อัพโหลดภาพถ่ายบัตรประชาชน
                                         </v-btn>
                                     </center>
-                                </div> 
-                                <div class="pt-6">
+                                </div>  -->
+                                <!-- <div class="pt-6">
                                     <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="ตำบล"></v-select>
                                     <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="อำเภอ"></v-select>
                                     <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="จังหวัด"></v-select>
                                     <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="รหัสไปรษณีย์"></v-select>
-                                </div>
+                                </div> -->
                             </v-flex>
 
                             <v-btn large class="rounded-lg mt-6" disabled block color="success">บันทึก</v-btn>
@@ -135,7 +139,7 @@
                         </div>
                         <br>
                         <v-flex xs12>
-                            <div v-for="item in informationfarm1" :key="item.name">
+                            <!-- <div v-for="item in informationfarm1" :key="item.name">
                                 <v-text-field class="rounded-lg" color="green" outlined :readonly="dialog1" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
                             </div>
                             <div>
@@ -143,7 +147,18 @@
                                 <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="อำเภอ"></v-select>
                                 <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="จังหวัด"></v-select>
                                 <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="รหัสไปรษณีย์"></v-select>
-                            </div>
+                                <v-select class="rounded-lg " color="green" outlined :readonly="dialog1" :items="items" label="กลุ่มเกษตกร"></v-select>
+                            </div> -->
+                            <v-text-field  class="rounded-lg" prepend-inner-icon="mdi-home-outline" color="green" outlined v-model="editedItem.status" label="ชื่อฟาร์ม"></v-text-field>
+                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-home" color="green" outlined v-model="editedItem.nonf" label="ที่อยู่ฟาร์ม"></v-text-field>
+                            <v-select class="rounded-lg" prepend-inner-icon="mdi-map-marker-multiple-outline" color="green" outlined v-model="editedItem.nidf" label="ตำบล"></v-select>
+                            <v-select class="rounded-lg" prepend-inner-icon="mdi-map-marker-multiple-outline" color="green" outlined v-model="editedItem.nmif" label="อำเภอ"></v-select>
+                            <v-select class="rounded-lg" prepend-inner-icon="mdi-map-marker-multiple-outline" color="green" outlined v-model="editedItem.nmim" label="จังหวัด"></v-select>
+                            <v-select class="rounded-lg" prepend-inner-icon="mdi-postage-stamp" color="green" outlined v-model="editedItem.nidm" label="รหัสไปรษณีย์"></v-select>
+                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-map-marker-radius-outline" color="green" outlined v-model="editedItem.mim" label="พิกัดฟาร์มตามระบบ GPS (ละติจูด)"></v-text-field>
+                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-map-marker-radius-outline" color="green" outlined v-model="editedItem.weight" label="พิกัดฟาร์มตามระบบ GPS (ลองติจูด)"></v-text-field>
+                            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined v-model="editedItem.cwidth" label="จำนวนกระบือทั้งหมด"></v-text-field>
+                            <v-select class="rounded-lg" prepend-inner-icon="mdi-account-group-outline" color="green" outlined v-model="editedItem.blength" label="กลุ่มเกษตรกร"></v-select>
 
                         </v-flex>
                         <v-btn large class="rounded-lg" disabled block color="success">บันทึก</v-btn>
@@ -211,14 +226,15 @@ export default {
                 // sortable: false
             },
         ],
-        informationfarmer: [{
-                describe: 'หมายเลขบัตรประจำตัวประชาชน',
-                calories: '3560700347135',
-            },
-            {
-                describe: 'อีเมล',
-                calories: 'dang',
-            },
+        informationfarmer: [
+            // {
+            //     describe: 'หมายเลขบัตรประจำตัวประชาชน',
+            //     calories: '3560700347135',
+            // },
+            // {
+            //     describe: 'อีเมล',
+            //     calories: 'dang',
+            // },
             // {
             //     describe: 'คำนำหน้า',
             //     calories: 'นาย',
@@ -235,19 +251,20 @@ export default {
             //     describe: 'เพศ',
             //     calories: 'ชาย',
             // },
-            {
-                describe: 'อายุ',
-                calories: '58',
-            },
+            // {
+            //     describe: 'อายุ',
+            //     calories: '58',
+                
+            // },
+            // {
+            //     describe: 'ที่อยู่',
+            //     calories: '123/123 ถนน 123 ซอย123',
+            // },
+            // {
+            //     describe: 'เบอร์โทรศัพท์',
+            //     calories: '0861800385',
+            // },
 
-            {
-                describe: 'เบอร์โทรศัพท์',
-                calories: '0861800385',
-            },
-            {
-                describe: 'บ้านเลขที่/ถนน/ซอย',
-                calories: '123/123 ถนน 123 ซอย123',
-            },
             // {
             //     describe: 'ตำบล',
             //     calories: 'เจริญราษฎร์',
@@ -282,13 +299,13 @@ export default {
                 calories1: '40',
             },
             {
-                describe1: 'บ้านเลขที่ ถนน ซอย',
+                describe1: 'ที่อยู่ฟาร์ม',
                 calories1: '123/123 ถนน123 ซอย123',
             },
-            {
-                describe1: 'กลุ่มเกษตรกร',
-                calories1: 'กลุ่มแม่ใจ',
-            },
+            // {
+            //     describe1: 'กลุ่มเกษตรกร',
+            //     calories1: 'กลุ่มแม่ใจ',
+            // },
             // {
             //     describe1: 'ตำบล',
             //     calories1: 'เจริญราษฎร์',

@@ -31,45 +31,26 @@
                 <h3>เพิ่มควาย</h3>
             </v-btn>
 
-            <v-card @click="$router.push('/user/buffaloinformation')" class="mx-auto rounded-lg mt-4" max-width="auto">
-                <h4 class="pl-4 pt-1">เจ้าของควาย : นายแดง สุขใจ</h4>
+            <v-card v-for="item in 5" class="elevation-5 rounded-lg pa-3 mt-3" max-width="auto">
+                <!-- <h4 class="pl-4 pt-1">เจ้าของควาย : นายแดง สุขใจ</h4> -->
                 <h4 class="pl-4 pt-1">ชื่อหรือหมายเลขควาย : พ่อเปี้ย</h4>
                 <h4 class="pl-4 pt-1">เบอร์หู : 123</h4>
-                <h4 class="pl-4 pt-1">พันธุ์ : พื้นเมือง</h4>
                 <h4 class="pl-4 pt-1">อายุ : 4ปี</h4>
                 <h4 class="pl-4 pt-1 pb-1">เพศ : ผู้</h4>
-            </v-card>
-            <v-card @click="$router.push('/user/buffaloinformation')" class="mx-auto rounded-lg mt-4" max-width="auto">
-                <h4 class="pl-4 pt-1">เจ้าของควาย : นายแดง สุขใจ</h4>
-                <h4 class="pl-4 pt-1">ชื่อหรือหมายเลขควาย : พ่อเปี้ย</h4>
-                <h4 class="pl-4 pt-1">เบอร์หู : 123</h4>
-                <h4 class="pl-4 pt-1">พันธุ์ : พื้นเมือง</h4>
-                <h4 class="pl-4 pt-1">อายุ : 4ปี</h4>
-                <h4 class="pl-4 pt-1 pb-1">เพศ : ผู้</h4>
-            </v-card>
-            <v-card @click="$router.push('/user/buffaloinformation')" class="mx-auto rounded-lg mt-4" max-width="auto">
-                <h4 class="pl-4 pt-1">เจ้าของควาย : นายแดง สุขใจ</h4>
-                <h4 class="pl-4 pt-1">ชื่อหรือหมายเลขควาย : พ่อเปี้ย</h4>
-                <h4 class="pl-4 pt-1">เบอร์หู : 123</h4>
-                <h4 class="pl-4 pt-1">พันธุ์ : พื้นเมือง</h4>
-                <h4 class="pl-4 pt-1">อายุ : 4ปี</h4>
-                <h4 class="pl-4 pt-1 pb-1">เพศ : ผู้</h4>
-            </v-card>
-            <v-card @click="$router.push('/user/buffaloinformation')" class="mx-auto rounded-lg mt-4" max-width="auto">
-                <h4 class="pl-4 pt-1">เจ้าของควาย : นายแดง สุขใจ</h4>
-                <h4 class="pl-4 pt-1">ชื่อหรือหมายเลขควาย : พ่อเปี้ย</h4>
-                <h4 class="pl-4 pt-1">เบอร์หู : 123</h4>
-                <h4 class="pl-4 pt-1">พันธุ์ : พื้นเมือง</h4>
-                <h4 class="pl-4 pt-1">อายุ : 4ปี</h4>
-                <h4 class="pl-4 pt-1 pb-1">เพศ : ผู้</h4>
-            </v-card>
-            <v-card @click="$router.push('/user/buffaloinformation')" class="mx-auto rounded-lg mt-4" max-width="auto">
-                <h4 class="pl-4 pt-1">เจ้าของควาย : นายแดง สุขใจ</h4>
-                <h4 class="pl-4 pt-1">ชื่อหรือหมายเลขควาย : พ่อเปี้ย</h4>
-                <h4 class="pl-4 pt-1">เบอร์หู : 123</h4>
-                <h4 class="pl-4 pt-1">พันธุ์ : พื้นเมือง</h4>
-                <h4 class="pl-4 pt-1">อายุ : 4ปี</h4>
-                <h4 class="pl-4 pt-1 pb-1">เพศ : ผู้</h4>
+                <center>
+                    <v-flex xs12 row wrap>
+                        <v-flex xs6>
+                            <v-btn outlined dark class="rounded-l-lg width " color="green" @click="$router.push('/user/buffaloinformation')">
+                                <v-icon>mdi-pencil</v-icon>แก้ไข
+                            </v-btn>
+                        </v-flex>
+                        <v-flex xs6>
+                            <v-btn outlined dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                                <v-icon>mdi-delete</v-icon>ลบ
+                            </v-btn>
+                        </v-flex>
+                    </v-flex>
+                </center>
             </v-card>
 
             <div class="text-center pt-4">
@@ -77,76 +58,7 @@
             </div>
 
         </v-container>
-        <!-- </v-flex> -->
-        <!-- </v-layout> -->
     </div>
-
-    <!-- <v-tabs grow color="green">
-        <v-tab>
-            <v-icon left>mdi-gender-male</v-icon>
-            ตัวผู้
-        </v-tab>
-        <v-tab>
-            <v-icon left>mdi-gender-female</v-icon>
-            ตัวเมีย
-        </v-tab>
-
-        <v-tab-item>
-            <v-card-text>
-                <v-card @click="$router.push('/user/buffaloinformation')" class="mx-auto rounded-lg" max-width="auto">
-                    <h3 class="pa-3">ชื่อหรือหมายเลขควาย: พ่อเปี้ย</h3>
-                    <h3 class="pa-3">หมายเลข : NID</h3>
-                    <h3 class="pa-3">เพศ : ผู้</h3>
-                </v-card>
-            </v-card-text>
-
-            <v-card-text>
-                <v-card @click="$router.push('/user/buffaloinformation')" class="mx-auto rounded-lg" max-width="auto">
-                    <h3 class="pa-3">ชื่อหรือหมายเลขควาย : พ่อเปี้ย</h3>
-                    <h3 class="pa-3">หมายเลข : NID</h3>
-                    <h3 class="pa-3">เพศ : ผู้</h3>
-                </v-card>
-            </v-card-text>
-
-            <v-card-text>
-                <v-card @click="$router.push('/user/buffaloinformation')" class="mx-auto rounded-lg" max-width="auto">
-                    <h3 class="pa-3">ชื่อหรือหมายเลขควาย : พ่อเปี้ย</h3>
-                    <h3 class="pa-3">หมายเลข : NID</h3>
-                    <h3 class="pa-3">เพศ : ผู้</h3>
-                </v-card>
-            </v-card-text>
-        </v-tab-item>
-
-        <v-tab-item>
-            <v-card flat>
-                <v-card-text>
-                    <v-card @click="$router.push('/user/buffaloinformation')" class="mx-auto rounded-lg" max-width="auto">
-                        <h3 class="pa-3">ชื่อหรือหมายเลขควาย : แม่เปี้ย</h3>
-                        <h3 class="pa-3">หมายเลข : NID</h3>
-                        <h3 class="pa-3">เพศ : เมีย</h3>
-                    </v-card>
-                </v-card-text>
-
-                <v-card-text>
-                    <v-card @click="$router.push('/user/buffaloinformation')" class="mx-auto rounded-lg" max-width="auto">
-                        <h3 class="pa-3">ชื่อหรือหมายเลขควาย : แม่เปี้ย</h3>
-                        <h3 class="pa-3">หมายเลข : NID</h3>
-                        <h3 class="pa-3">เพศ : เมีย</h3>
-                    </v-card>
-                </v-card-text>
-
-                <v-card-text>
-                    <v-card @click="$router.push('/user/buffaloinformation')" class="mx-auto rounded-lg" max-width="auto">
-                        <h3 class="pa-3">ชื่อหรือหมายเลขควาย : แม่เปี้ย</h3>
-                        <h3 class="pa-3">หมายเลข : NID</h3>
-                        <h3 class="pa-3">เพศ : เมีย</h3>
-                    </v-card>
-                </v-card-text>
-            </v-card>
-        </v-tab-item>
-
-    </v-tabs> -->
-
 </div>
 </template>
 
@@ -162,7 +74,7 @@ export default {
         checkbox2: false,
         radioGroup: 1,
         switch1: true,
-        page:1
+        page: 1
 
     }),
 
@@ -171,19 +83,13 @@ export default {
 
 <style>
 .bg {
-    /* background: rgba(0, 128, 0, 0.1); */
-    /* background: rgba(242, 243, 244);
-    background-size: cover; */
-
     background: rgba(242, 243, 244);
-    /* Full height */
     height: 100%;
-
-    /* Center and scale the image nicely */
     background-position: center;
-    /* background-repeat: no-repeat; */
     background-repeat: repeat;
     background-size: cover;
-    /* background-size:100% 100%; */
+}
+.width {
+    width: 95%;
 }
 </style>
