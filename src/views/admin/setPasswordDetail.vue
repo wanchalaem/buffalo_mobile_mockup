@@ -10,8 +10,8 @@
                 <v-toolbar-title>
                     <br>
                     <center>
-                        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details label="รหัสผ่านใหม่"  outlined single-line class=" rounded-lg pb-4"></v-text-field>
-                        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details label="ยืนยันรหัสผ่านใหม่"  outlined single-line class=" rounded-lg"></v-text-field>
+                        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details type="password" label="รหัสผ่านใหม่"  outlined single-line class=" rounded-lg pb-4"></v-text-field>
+                        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details type="password" label="ยืนยันรหัสผ่านใหม่"  outlined single-line class=" rounded-lg"></v-text-field>
                     </center><br>
                     <!-- <div class="col-ml-6 "> -->
                         <div class="ml-auto text-center">

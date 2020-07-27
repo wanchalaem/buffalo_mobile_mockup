@@ -47,7 +47,7 @@
                             </div> -->
                             <v-text-field outlined   class="rounded-lg" prepend-inner-icon="mdi-card-account-details-outline" color="green" label="ชื่อ-นามสกุล"></v-text-field>
                         <v-text-field outlined   class="rounded-lg" prepend-inner-icon="mdi-account" color="green" label="ชื่อผู้ใช้งาน"></v-text-field>
-                        <v-text-field outlined   class="rounded-lg" prepend-inner-icon="mdi-lock" color="green" label="รหัสผ่าน"></v-text-field>
+                        <v-text-field outlined   class="rounded-lg" prepend-inner-icon="mdi-lock" color="green" type="password" label="รหัสผ่าน"></v-text-field>
                         <v-text-field outlined   class="rounded-lg" prepend-inner-icon="mdi-email" color="green" label="อีเมล"></v-text-field>
                             <v-btn large class="rounded-lg" disabled block color="success">บันทึก</v-btn>
                         </v-flex>

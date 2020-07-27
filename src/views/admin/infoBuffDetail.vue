@@ -1,7 +1,7 @@
 
     
 <template>
-<div class="bg">
+<div class="">
 <NavigationAdmin name="ข้อมูลควาย" />
     <v-container grid-list-xs>
         <!-- <v-btn  small fab @click="$router.push('/admin/buffalo')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
@@ -32,10 +32,10 @@
                                     <v-icon>mdi-delete</v-icon> -->
                                 <div class="col-ml-4 ">
                                     <div class="ml-auto text-right">
-                                        <v-btn class="rounded-lg pa-1 mr-1" color="green" outlined @click="dialog1=false">
+                                        <v-btn class="rounded-lg pa-1 mr-1" color="green" outlined @click="dialog=false">
                                             <v-icon>mdi-pencil</v-icon>แก้ไข
                                         </v-btn>
-                                        <v-btn class="rounded-lg pa-1 ml-1" color="red" outlined @click="dialog1=false">
+                                        <v-btn class="rounded-lg pa-1 ml-1" color="red" outlined @click="dialog=false">
                                             <v-icon>mdi-delete</v-icon>ลบ
                                         </v-btn>
                                     </div>
@@ -122,8 +122,8 @@
                         <v-select outlined color="green" class="rounded-lg" label="สถานะ"></v-select>
                     </div> -->
                     <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขควาย"></v-text-field>
-                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined label="หมายเลข NID"></v-text-field>
-                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined label="หมายเลขไมโครซิป"></v-text-field>
+                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID"></v-text-field>
+                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครซิป"></v-text-field>
                     <v-menu ref="menu" v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y min-width="290px">
                         <template v-slot:activator="{ on, attrs }">
                             <v-text-field outlined  color="green" v-model="date" class="rounded-lg" label="วัน/เดือน/ปีเกิด" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
@@ -131,21 +131,21 @@
                         <v-date-picker :readonly="dialog" color="green" ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
                     </v-menu>
                     <v-select :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-gender-male-female" color="green" outlined label="เพศ"></v-select>
-                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-calendar-clock" color="green" outlined label="อายุ"></v-text-field>
+                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-calendar-clock" color="green" outlined type="number" label="อายุ"></v-text-field>
                     <v-select :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-invert-colors" color="green" outlined label="สี"></v-select>
                     <v-select :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-import" color="green" outlined label="แหล่งที่มา"></v-select>
-                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined label="ราคา"></v-text-field>
+                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-tag-outline" color="green" outlined type="number" label="ราคา"></v-text-field>
                     <v-select :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-post-outline" color="green" outlined label="สถานะ"></v-select>
                     <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขพ่อ"></v-text-field>
-                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined label="หมายเลข NID พ่อ"></v-text-field>
-                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined label="หมายเลขไมโครชิปพ่อ"></v-text-field>
+                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" type="number" outlined label="หมายเลข NID พ่อ"></v-text-field>
+                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" type="number" outlined label="หมายเลขไมโครชิปพ่อ"></v-text-field>
                     <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขแม่"></v-text-field>
-                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined label="หมายเลข NID แม่"></v-text-field>
-                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined label="หมายเลขไมโครชิปแม่"></v-text-field>
-                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-weight-kilogram" color="green" outlined label="น้ำหนัก(กิโลกรัม)"></v-text-field>
-                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" color="green" outlined label="ความกว้างรอบอก(เซนติเมตร)"></v-text-field>
-                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" color="green" outlined label="ความยาวรอบลำตัว(เซนติเมตร)"></v-text-field>
-                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-human-male-height-variant" color="green" outlined label="ความสูง(เซนติเมตร)"></v-text-field>
+                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" type="number" outlined label="หมายเลข NID แม่"></v-text-field>
+                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" type="number" outlined label="หมายเลขไมโครชิปแม่"></v-text-field>
+                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-weight-kilogram" color="green" type="number" outlined label="น้ำหนัก(กิโลกรัม)"></v-text-field>
+                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" color="green" type="number" outlined label="ความกว้างรอบอก(เซนติเมตร)"></v-text-field>
+                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" color="green" type="number" outlined label="ความยาวรอบลำตัว(เซนติเมตร)"></v-text-field>
+                    <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-human-male-height-variant" color="green" type="number" outlined label="ความสูง(เซนติเมตร)"></v-text-field>
 
                     <!-- </v-card> -->
                     <v-btn class="rounded-lg" block disabled medium color="success">บันทึก</v-btn>
@@ -157,7 +157,7 @@
         <v-tab-item class="">
             <v-container grid-list-xs>
                 <!-- <v-card flat>  -->
-                <v-btn medium block @click="$router.push('/user/buffaloage')" class="rounded-lg" color="green" dark>
+                <v-btn medium block @click="$router.push('/admin/buffaloage')" class="rounded-lg" color="green" dark>
                     <h3>เพิ่มข้อมูลอายุ</h3>
                 </v-btn>
 

@@ -2,21 +2,19 @@
 <div>
 
     <!-- <Navbar icon="mdi-chevron-left" name="เพิ่มข้อมูลอายุควาย" /> -->
-    <NavigationAdmin name="เพิ่มข้อมูลอายุควาย" />
-    
+    <NavigationAdmin name="เพิ่มข้อมูลอายุควาย" /> 
     <v-container grid-list-xs>
         <v-btn class="mb-6" fab @click="$router.push('/admin/buffaloinformation')" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
             <!-- <v-card-text> -->
                 <!-- <v-container> -->
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-weight-kilogram" outlined label="น้ำหนัก (กิโลกรัม)"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" outlined label="ความกว้างรอบอก (เซนติเมตร)"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" outlined label="ความยาวลำตัว (เซนติเมตร)"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-human-male-height-variant" outlined label="ความสูง (เซนติเมตร)"></v-text-field>
-                    <v-select class="rounded-lg" prepend-inner-icon="mdi-account-clock-outline" outlined :items="['240วัน', '400วัน', '600วัน']" label="อายุ"></v-select>
+                    <v-text-field color="green" type="number" class="rounded-lg" prepend-inner-icon="mdi-weight-kilogram" outlined label="น้ำหนัก (กิโลกรัม)"></v-text-field>
+                    <v-text-field color="green" type="number" class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" outlined label="ความกว้างรอบอก (เซนติเมตร)"></v-text-field>
+                    <v-text-field color="green" type="number" class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" outlined label="ความยาวลำตัว (เซนติเมตร)"></v-text-field>
+                    <v-text-field color="green" type="number" class="rounded-lg" prepend-inner-icon="mdi-human-male-height-variant" outlined label="ความสูง (เซนติเมตร)"></v-text-field>
+                    <v-select color="green" class="rounded-lg" prepend-inner-icon="mdi-account-clock-outline" outlined :items="['240วัน', '400วัน', '600วัน']" label="อายุ"></v-select>
                     <v-btn @click="$router.push('/admin/buffaloinformation')" class="rounded-lg" color="green" dark large block>บันทึก</v-btn>
                 <!-- </v-container> -->
-            <!-- </v-card-text>  -->
-
+            <!-- </v-card-text>  --> 
     </v-container>
     
 
