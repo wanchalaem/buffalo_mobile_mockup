@@ -16,10 +16,10 @@
                     </div>
                     <v-form>
                         <v-text-field class="rounded-lg" solo label="ชื่อผู้ใช้งาน" prepend-inner-icon="mdi-account-star"></v-text-field>
-                        <v-text-field class="rounded-lg" solo label="รหัสผ่าน" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
-                        <v-text-field class="rounded-lg" solo label="ยืนยันรหัสผ่าน" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
                         <v-text-field class="rounded-lg" solo label="ชื่อ" prepend-inner-icon="mdi-account" type="text"></v-text-field>
                         <v-text-field class="rounded-lg" solo label="นามสกุล" prepend-inner-icon="mdi-account"></v-text-field> 
+                        <v-text-field class="rounded-lg" solo label="รหัสผ่าน" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
+                        <v-text-field class="rounded-lg" solo label="ยืนยันรหัสผ่าน" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
                     </v-form>
 
                     <v-spacer></v-spacer>

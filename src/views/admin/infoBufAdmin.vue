@@ -1,16 +1,14 @@
 <template>
-<div class="bg">
-    <!-- <Navbar icon="" name="ข้อมูลควาย" /> -->
-    <NavigationAdmin name="ข้อมูลควาย" />
-    <div>
-        <!-- <v-layout row wrap> -->
-        <!-- <v-flex xs12 class="ma-8"> -->
-        <v-container>
-            <v-btn class="mb-4" small fab @click="$router.push('/admin/userprofiledetail')">
-                <v-icon class="icon">mdi-chevron-left</v-icon>
-            </v-btn>
-            <!-- <v-btn class="mb-6" fab @click="$router.go(-1)" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
-
+<div class="bg"> 
+    <!-- <NavigationAdmin name="ข้อมูลควาย" /> -->
+    <v-container>
+        <v-row class="d-flex flex-row ">
+            <v-btn depressed small fab @click="$router.push('/admin/userprofiledetail')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+            <h2>ข้อมูลควาย</h2>
+        </v-row>
+    </v-container> 
+    <div> 
+        <v-container>  
             <div>
                 <v-select block large class="rounded-lg" :items="items" label="มีชีวิตหรือไม่มีชีวิต" solo></v-select>
             </div>
@@ -45,7 +43,7 @@
                 <center>
                     <v-flex xs12 row wrap>
                         <v-flex xs6>
-                            <v-btn outlined dark class="rounded-l-lg width " color="green" @click="$router.push('/admin/buffaloinformation')">
+                            <v-btn outlined dark class="rounded-l-lg width " color="warning" @click="$router.push('/admin/buffaloinformation')">
                                 <v-icon>mdi-pencil</v-icon>แก้ไข
                             </v-btn>
                         </v-flex>

@@ -1,11 +1,13 @@
 <template>
-<div class="bg">
-    <!-- <NavbarAdmin icon=" " name="บัญชีผู้ใช้" /> -->
-    <NavigationAdmin name="ข้อมูลเกษตกร" />
-    <v-container class="mt-1">
-        <v-btn class="mb-6" fab @click="$router.push('/admin/userprofile')" small>
-            <v-icon class="icon">mdi-chevron-left</v-icon>
-        </v-btn>
+<div class="bg"> 
+    <!-- <NavigationAdmin name="ข้อมูลเกษตกร" /> -->
+    <v-container>
+        <v-row class="d-flex flex-row ">
+            <v-btn depressed small fab @click="$router.push('/admin/userprofile')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+            <h2>ข้อมูลเกษตกร</h2>
+        </v-row>
+    </v-container> 
+    <v-container class="mt-1"> 
         <v-card class="mx-auto rounded-lg elevation-10" max-width="140">
             <v-img height="160" src="https://www.siamzone.com/music/news/2015/07381.jpg">
             </v-img>
@@ -50,7 +52,7 @@
                         <v-spacer></v-spacer>
                         <div class="col-ml-6 ">
                             <div class="ml-auto text-right">
-                                <v-btn class="rounded-lg mr-2" color="green" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                <v-btn class="rounded-lg mr-2" color="warning" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                 </v-btn>
                                 <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
                                 </v-btn>
@@ -117,7 +119,7 @@
                             <v-spacer></v-spacer>
                             <div class="col-ml-6 ">
                                 <div class="ml-auto text-right">
-                                    <v-btn class="rounded-lg mr-2" color="green" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                    <v-btn class="rounded-lg mr-2" color="warning" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
                                     </v-btn>
                                     <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
                                     </v-btn>

@@ -1,32 +1,22 @@
 <template>
 <div class="">
     <!-- <Navbar icon="mdi-chevron-left" name="ตั้งค่ารหัสผ่าน" /> -->
-    <NavigationAdmin name="ตั้งค่ารหัสผ่าน" />
-    <div class="pa-6">
-        <v-layout row wrap>
-            <v-flex xs12>
-                <!-- <v-btn small fab @click="$router.push('/admin/userprofiledetail')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
-                <v-btn small fab @click="$router.go(-1)"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>                
-                <v-toolbar-title>
-                    <br>
-                    <center>
-                        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details type="password" label="รหัสผ่านใหม่"  outlined single-line class=" rounded-lg pb-4"></v-text-field>
-                        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details type="password" label="ยืนยันรหัสผ่านใหม่"  outlined single-line class=" rounded-lg"></v-text-field>
-                    </center><br>
-                    <!-- <div class="col-ml-6 "> -->
-                        <div class="ml-auto text-center">
-                            <v-btn block dark large class="rounded-lg " color="green" @click="$router.push('/admin/userprofiledetail')">ตกลง
-                            </v-btn>
-                        </div>
-                    <!-- </div> -->
-
-                </v-toolbar-title>
-                <v-spacer></v-spacer>
-
-            </v-flex>
-
-        </v-layout>
-    </div>   
+    <!-- <NavigationAdmin name="ตั้งค่ารหัสผ่าน" /> -->
+    <v-container>
+        <v-row class="d-flex flex-row ">
+            <v-btn depressed color="white" small fab @click="$router.go(-1)">
+                <v-icon class="icon">mdi-chevron-left</v-icon>
+            </v-btn>
+            <h2>ตั้งค่ารหัสผ่าน</h2>
+        </v-row>
+    </v-container>
+    <v-container grid-list-xs>
+        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details type="password" label="รหัสผ่านใหม่" outlined single-line class=" rounded-lg pb-4"></v-text-field>
+        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details type="password" label="ยืนยันรหัสผ่านใหม่" outlined single-line class=" rounded-lg"></v-text-field>
+        <br>
+        <v-btn block dark large class="rounded-lg " color="green" @click="$router.push('/admin/userprofiledetail')">ตกลง
+        </v-btn>
+    </v-container>
 </div>
 </template>
 

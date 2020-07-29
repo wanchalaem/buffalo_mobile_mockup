@@ -1,104 +1,107 @@
 <template>
 <div class="">
-<Navigation name="เพิ่มควาย" />
-    <v-container grid-list-xs>
-        <v-btn  small fab @click="$router.go(-1)"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
-        
+    <!-- <Navigation name="" /> -->
+    <v-container>
+        <v-row class="d-flex flex-row ">
+            <v-btn color="white" depressed fab @click="$router.go(-1)" small>
+                <v-icon class="icon">mdi-chevron-left</v-icon>
+            </v-btn>
+            <h2>เพิ่มควาย</h2>
+        </v-row>
     </v-container>
- 
-            <v-card flat>
-                <v-card-text> 
-                    <center>
-                        <v-flex xs12 row wrap>
-                            <v-flex xs6 class="pr-2 pb-4">
-                                <v-card class="elevation-5 rounded-lg">
-                                    <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="1.7"></v-img>
-                                    <v-list two-line>
-                                        <center>
-                                            <h5>ภาพด้านข้าง</h5>
-                                        </center>
-                                    </v-list>
-                                    <v-btn block color="success">อัพโหลด</v-btn>
-                                </v-card>
-                            </v-flex>
-                            <v-flex xs6 class="pl-2 pb-2">
-                                <v-card class="elevation-5 rounded-lg ">
-                                    <v-img src="https://images.pexels.com/photos/2261770/pexels-photo-2261770.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="1.7"></v-img>
-                                    <v-list two-line>
-                                        <center>
-                                            <h5>ภาพด้านหลัง</h5>
-                                        </center>
 
-                                    </v-list>
-                                    <v-btn block color="success">อัพโหลด</v-btn>
-                                </v-card>
-                            </v-flex>
+    <v-card flat>
+        <v-card-text>
+            <center>
+                <v-flex xs12 row wrap>
+                    <v-flex xs6 class="pr-2 pb-4">
+                        <v-card class="elevation-5 rounded-lg">
+                            <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="1.7"></v-img>
+                            <v-list two-line>
+                                <center>
+                                    <h5>ภาพด้านข้าง</h5>
+                                </center>
+                            </v-list>
+                            <v-btn block color="success">อัพโหลด</v-btn>
+                        </v-card>
+                    </v-flex>
+                    <v-flex xs6 class="pl-2 pb-2">
+                        <v-card class="elevation-5 rounded-lg ">
+                            <v-img src="https://images.pexels.com/photos/2261770/pexels-photo-2261770.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="1.7"></v-img>
+                            <v-list two-line>
+                                <center>
+                                    <h5>ภาพด้านหลัง</h5>
+                                </center>
 
-                            <v-flex xs6 class="pr-2">
-                                <v-card class="elevation-5 rounded-lg ">
-                                    <div class="d-flex flex-no-wrap">
-                                        <div class="ma-3">
-                                            <v-icon dark medium class="elevation-6 error rounded-lg" style="max-height: auto; width: auto;">mdi-file-pdf-outline</v-icon>
-                                        </div>
-                                        <div class="ml-auto text-right " style="margin-right:4px; margin-top:8px;">
-                                            <h5>
-                                                ใบพันธุ์ประวัติอ้างอิง
-                                            </h5>
-                                        </div>
-                                    </div>
-                                    <v-btn block color="success">อัพโหลด</v-btn>
-                                </v-card>
-                            </v-flex>
+                            </v-list>
+                            <v-btn block color="success">อัพโหลด</v-btn>
+                        </v-card>
+                    </v-flex>
 
-                            <v-flex xs6 class="pl-2">
-                                <v-card class="elevation-5 rounded-lg ">
-                                    <div class="d-flex flex-no-wrap">
-                                        <div class="ma-3">
-                                            <v-icon dark medium class="elevation-6 error rounded-lg" style="max-height: auto; width: auto;">mdi-file-pdf-outline</v-icon>
-                                        </div>
-                                        <div class="ml-auto text-right " style="margin-right:4px; margin-top:8px;">
-                                            <h5>
-                                                ใบพันธุ์ประวัติทางการ
-                                            </h5>
-                                        </div>
-                                    </div>
-                                    <v-btn block color="success">อัพโหลด</v-btn>
-                                </v-card>
-                            </v-flex>
+                    <v-flex xs6 class="pr-2">
+                        <v-card class="elevation-5 rounded-lg ">
+                            <div class="d-flex flex-no-wrap">
+                                <div class="ma-3">
+                                    <v-icon dark medium class="elevation-6 error rounded-lg" style="max-height: auto; width: auto;">mdi-file-pdf-outline</v-icon>
+                                </div>
+                                <div class="ml-auto text-right " style="margin-right:4px; margin-top:8px;">
+                                    <h5>
+                                        ใบพันธุ์ประวัติอ้างอิง
+                                    </h5>
+                                </div>
+                            </div>
+                            <v-btn block color="success">อัพโหลด</v-btn>
+                        </v-card>
+                    </v-flex>
 
-                        </v-flex>
-                    </center>
-                    <br> 
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขควาย"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครซิป"></v-text-field>
-                    <v-menu ref="menu" v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y min-width="290px">
-                        <template v-slot:activator="{ on, attrs }">
-                            <v-text-field outlined  color="green" v-model="date" class="rounded-lg" label="วัน/เดือน/ปีเกิด" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
-                        </template>
-                        <v-date-picker color="green" ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
-                    </v-menu>
-                    <v-select class="rounded-lg" prepend-inner-icon="mdi-gender-male-female" color="green" outlined label="เพศ"></v-select>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-calendar-clock" color="green" outlined type="number" label="อายุ"></v-text-field>
-                    <v-select class="rounded-lg" prepend-inner-icon="mdi-invert-colors" color="green" outlined label="สี"></v-select>
-                    <v-select class="rounded-lg" prepend-inner-icon="mdi-import" color="green" outlined label="แหล่งที่มา"></v-select>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-tag-outline" color="green" outlined type="number" label="ราคา"></v-text-field>
-                    <v-select class="rounded-lg" prepend-inner-icon="mdi-post-outline" color="green" outlined label="สถานะ"></v-select>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขพ่อ"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID พ่อ"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครชิปพ่อ"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขแม่"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID แม่"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครชิปแม่"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-weight-kilogram" color="green" outlined type="number" label="น้ำหนัก(กิโลกรัม)"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" color="green" outlined type="number" label="ความกว้างรอบอก(เซนติเมตร)"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" color="green" outlined type="number" label="ความยาวรอบลำตัว(เซนติเมตร)"></v-text-field>
-                    <v-text-field class="rounded-lg" prepend-inner-icon="mdi-human-male-height-variant" color="green" outlined type="number" label="ความสูง(เซนติเมตร)"></v-text-field>
-                    <!-- </v-card> -->
-                    <v-btn @click="$router.push('/user/buffalo')" class="rounded-lg" block  medium color="success">บันทึก</v-btn>
-                </v-card-text> 
-            </v-card> 
- 
+                    <v-flex xs6 class="pl-2">
+                        <v-card class="elevation-5 rounded-lg ">
+                            <div class="d-flex flex-no-wrap">
+                                <div class="ma-3">
+                                    <v-icon dark medium class="elevation-6 error rounded-lg" style="max-height: auto; width: auto;">mdi-file-pdf-outline</v-icon>
+                                </div>
+                                <div class="ml-auto text-right " style="margin-right:4px; margin-top:8px;">
+                                    <h5>
+                                        ใบพันธุ์ประวัติทางการ
+                                    </h5>
+                                </div>
+                            </div>
+                            <v-btn block color="success">อัพโหลด</v-btn>
+                        </v-card>
+                    </v-flex>
+
+                </v-flex>
+            </center>
+            <br>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขควาย"></v-text-field>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID"></v-text-field>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครซิป"></v-text-field>
+            <v-menu ref="menu" v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y min-width="290px">
+                <template v-slot:activator="{ on, attrs }">
+                    <v-text-field outlined color="green" v-model="date" class="rounded-lg" label="วัน/เดือน/ปีเกิด" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                </template>
+                <v-date-picker color="green" ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
+            </v-menu>
+            <v-select class="rounded-lg" prepend-inner-icon="mdi-gender-male-female" color="green" outlined label="เพศ"></v-select>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-calendar-clock" color="green" outlined type="number" label="อายุ"></v-text-field>
+            <v-select class="rounded-lg" prepend-inner-icon="mdi-invert-colors" color="green" outlined label="สี"></v-select>
+            <v-select class="rounded-lg" prepend-inner-icon="mdi-import" color="green" outlined label="แหล่งที่มา"></v-select>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-tag-outline" color="green" outlined type="number" label="ราคา"></v-text-field>
+            <v-select class="rounded-lg" prepend-inner-icon="mdi-post-outline" color="green" outlined label="สถานะ"></v-select>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขพ่อ"></v-text-field>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID พ่อ"></v-text-field>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครชิปพ่อ"></v-text-field>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขแม่"></v-text-field>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID แม่"></v-text-field>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครชิปแม่"></v-text-field>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-weight-kilogram" color="green" outlined type="number" label="น้ำหนัก(กิโลกรัม)"></v-text-field>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" color="green" outlined type="number" label="ความกว้างรอบอก(เซนติเมตร)"></v-text-field>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" color="green" outlined type="number" label="ความยาวรอบลำตัว(เซนติเมตร)"></v-text-field>
+            <v-text-field class="rounded-lg" prepend-inner-icon="mdi-human-male-height-variant" color="green" outlined type="number" label="ความสูง(เซนติเมตร)"></v-text-field>
+            <!-- </v-card> -->
+            <v-btn @click="$router.push('/user/buffalo')" class="rounded-lg" block medium color="success">บันทึก</v-btn>
+        </v-card-text>
+    </v-card>
 
 </div>
 </template>
@@ -216,19 +219,19 @@ export default {
             },
 
         ],
-        
+
     }),
-     watch: { 
-        menu (val) {
-        val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
-      },
+    watch: {
+        menu(val) {
+            val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
+        },
     },
     /*-------------------------Methods------------------------------------------*/
-    methods: { 
+    methods: {
         load: async function () {},
-        save1 (date) {
-        this.$refs.menu.save(date)
-      },
+        save1(date) {
+            this.$refs.menu.save(date)
+        },
     },
 
 }
@@ -238,11 +241,12 @@ export default {
 .width {
     width: 95%;
 }
-.bg { 
-    background: rgba(242, 243, 244); 
-    height: 100%; 
-    background-position: center; 
+
+.bg {
+    background: rgba(242, 243, 244);
+    height: 100%;
+    background-position: center;
     background-repeat: repeat;
-    background-size: cover; 
+    background-size: cover;
 }
 </style>

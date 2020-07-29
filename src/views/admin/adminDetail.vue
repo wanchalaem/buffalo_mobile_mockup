@@ -33,7 +33,7 @@
                             <v-spacer></v-spacer>
                             <div class="col-ml-6 ">
                                 <div class="ml-auto text-right">
-                                    <v-btn class="rounded-lg mr-2" color="green" outlined @click="dialog1=false"><v-icon>mdi-pencil</v-icon>แก้ไข
+                                    <v-btn class="rounded-lg mr-2" color="warning" outlined @click="dialog1=false"><v-icon>mdi-pencil</v-icon>แก้ไข
                                     </v-btn>
                                     <!-- <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
                                         </v-btn> -->

@@ -1,12 +1,15 @@
 <template>
-<div class="bg">
+<div class="">
 
     <!-- <Navbar icon="mdi-chevron-left" name="ข้อมูลควาย" /> -->
-    <Navigation name="ข้อมูลควาย" />
+    <!-- <Navigation name="" /> -->
     <v-container>
-        <v-btn class="mb-6" fab @click="$router.go(-1)" small>
-            <v-icon class="icon">mdi-chevron-left</v-icon>
-        </v-btn>
+        <v-row class="d-flex flex-row ">
+            <v-btn color="white" depressed fab @click="$router.go(-1)" small>
+                <v-icon class="icon">mdi-chevron-left</v-icon>
+            </v-btn>
+            <h2>ข้อมูลควาย</h2>
+        </v-row>
     </v-container>
 
     <v-tabs grow color="green">
@@ -34,9 +37,9 @@
                                     <v-icon>mdi-delete</v-icon> -->
                                 <div class="col-ml-4 ">
                                     <div class="ml-auto text-right">
-                                        <v-btn class="rounded-lg pa-1 mr-1" color="green" outlined @click="dialog1=false">
+                                        <!-- <v-btn class="rounded-lg pa-1 mr-1" color="green" outlined @click="dialog1=false">
                                             <v-icon>mdi-pencil</v-icon>แก้ไข
-                                        </v-btn>
+                                        </v-btn> -->
                                         <v-btn class="rounded-lg pa-1 ml-1" color="red" outlined @click="dialog1=false">
                                             <v-icon>mdi-delete</v-icon>ลบ
                                         </v-btn>
@@ -123,12 +126,15 @@
                         <v-select outlined color="green" class="rounded-lg" label="แหล่งที่มา"></v-select>
                         <v-select outlined color="green" class="rounded-lg" label="สถานะ"></v-select>
                     </div>  -->
+                    <v-btn class="rounded-lg pa-6 mb-4" block medium color="warning" dark @click="dialog1=false">
+                        <v-icon>mdi-pencil</v-icon>แก้ไขข้อมูลควาย
+                    </v-btn>
                     <v-text-field :readonly="dialog1" class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขควาย"></v-text-field>
                     <v-text-field :readonly="dialog1" class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID"></v-text-field>
                     <v-text-field :readonly="dialog1" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครซิป"></v-text-field>
                     <v-menu ref="menu" v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y min-width="290px">
                         <template v-slot:activator="{ on, attrs }">
-                            <v-text-field outlined  color="green" v-model="date" class="rounded-lg" label="วัน/เดือน/ปีเกิด" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                            <v-text-field outlined color="green" v-model="date" class="rounded-lg" label="วัน/เดือน/ปีเกิด" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
                         </template>
                         <v-date-picker :readonly="dialog1" color="green" ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
                     </v-menu>
@@ -173,7 +179,7 @@
                     <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn outlined large dark class="rounded-l-lg width " color="green" @click="dialog1=false">
+                                <v-btn outlined large dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>

@@ -1,10 +1,14 @@
 <template>
-<div>
-
-    <!-- <Navbar icon="mdi-chevron-left" name="เพิ่มข้อมูลอายุควาย" /> -->
-    <NavigationAdmin name="เพิ่มข้อมูลอายุควาย" /> 
+<div> 
+    <!-- <NavigationAdmin name="เพิ่มข้อมูลอายุควาย" />  -->
+    <v-container> 
+        <v-row class="d-flex flex-row ">
+            <v-btn depressed color="white" small fab @click="$router.push('/admin/buffaloinformation')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+            <h2>เพิ่มข้อมูลอายุควาย</h2>
+        </v-row>
+    </v-container> 
     <v-container grid-list-xs>
-        <v-btn class="mb-6" fab @click="$router.push('/admin/buffaloinformation')" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+        <!-- <v-btn class="mb-6" fab @click="$router.push('/admin/buffaloinformation')" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
             <!-- <v-card-text> -->
                 <!-- <v-container> -->
                     <v-text-field color="green" type="number" class="rounded-lg" prepend-inner-icon="mdi-weight-kilogram" outlined label="น้ำหนัก (กิโลกรัม)"></v-text-field>

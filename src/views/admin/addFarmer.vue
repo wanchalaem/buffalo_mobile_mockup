@@ -1,9 +1,13 @@
 <template>
 <div class="">
-    <NavigationAdmin name="เพิ่มเกษตกร" />
-    <v-container grid-list-xs>
-        <v-btn  small fab @click="$router.go(-1)"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
-    </v-container>
+    <!-- <NavigationAdmin name="เพิ่มเกษตกร" /> -->
+    <v-container>
+        <!-- <v-btn  small fab @click="$router.go(-1)"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
+        <v-row class="d-flex flex-row ">
+            <v-btn depressed color="white" small fab @click="$router.go(-1)"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+            <h2>เพิ่มเกษตกร</h2>
+        </v-row>
+    </v-container> 
     <v-container grid-list-xs>
         
         <!-- <v-btn class="mb-6" fab @click="$router.push('/admin/userprofile')" small>

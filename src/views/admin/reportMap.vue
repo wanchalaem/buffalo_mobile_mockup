@@ -1,11 +1,19 @@
 <template>
 <div class="bg">
     <!-- <NavbarAdmin icon="mdi-chevron-left" name="รายงานสรุปจำนวนควายที่มีชีวิต" /> -->
-    <NavigationAdmin name="รายงานเชิงแผนที่" />
+    <!-- <NavigationAdmin name="รายงานเชิงแผนที่" />
+    <v-btn class="mb-6" fab @click="$router.push('/admin/report')" small>
+        <v-icon class="icon">mdi-chevron-left</v-icon>
+    </v-btn> -->
     <v-container>
-        <v-btn class="mb-6" fab @click="$router.push('/admin/report')" small>
-            <v-icon class="icon">mdi-chevron-left</v-icon>
-        </v-btn>
+        <v-row class="d-flex flex-row ">
+            <v-btn depressed fab @click="$router.go(-1)" small>
+                <v-icon class="icon">mdi-chevron-left</v-icon>
+            </v-btn>
+            <h2>รายงานเชิงแผนที่</h2>
+        </v-row>
+    </v-container>
+    <v-container>
         <v-select solo outlined class="rounded-lg mt-2 mb-2" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
         <v-select solo outlined class="rounded-lg mb-2" :items="district" label="กรุณาเลือกอำเภอ" hide-details></v-select>
         <v-select solo outlined class="rounded-lg mb-2" :items="place" label="กรุณาเลือกตำบล" hide-details></v-select>

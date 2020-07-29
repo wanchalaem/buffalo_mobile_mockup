@@ -2,11 +2,19 @@
 <div>
 
     <!-- <Navbar icon="mdi-chevron-left" name="เพิ่มข้อมูลอายุควาย" /> -->
-    <Navigation name="เพิ่มข้อมูลอายุควาย" />
+    <!-- <Navigation name="" /> -->
+    <v-container>
+        <v-row class="d-flex flex-row ">
+            <v-btn color="white" depressed fab @click="$router.go(-1)" small>
+                <v-icon class="icon">mdi-chevron-left</v-icon>
+            </v-btn>
+            <h2>เพิ่มข้อมูลอายุควาย</h2>
+        </v-row>
+    </v-container>
     
     <v-container grid-list-xs>
         <!-- <v-btn class="mb-6" fab @click="$router.push('/user/buffaloinformation')" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
-            <v-btn class="mb-6" fab @click="$router.go(-1)" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+            <!-- <v-btn class="mb-6" fab @click="$router.go(-1)" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
             <!-- <v-card-text> -->
                 <!-- <v-container> -->
                     <v-text-field color="green" type="number" class="rounded-lg" prepend-inner-icon="mdi-weight-kilogram" outlined label="น้ำหนัก (กิโลกรัม)"></v-text-field>

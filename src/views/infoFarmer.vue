@@ -54,8 +54,8 @@
 
                                     </div>
                                     <div class="ml-auto text-right">
-                                        <v-btn class="rounded-lg" color="green" outlined @click="dialog1=false">
-                                            <v-icon>mdi-pencil</v-icon>แก้ไข
+                                        <v-btn class="rounded-lg" color="warning" dark @click="dialog1=false">
+                                            <v-icon>mdi-pencil</v-icon>แก้ไขข้อมูลเกษตกร
                                         </v-btn>
                                     </div>
                                 </div>
@@ -120,8 +120,8 @@
                             <v-spacer></v-spacer>
                             <div class="col-ml-6 ">
                                 <div class="ml-auto text-right">
-                                    <v-btn class="rounded-lg " color="green" outlined @click="dialog1=false">
-                                        <v-icon>mdi-pencil</v-icon>แก้ไข
+                                    <v-btn class="rounded-lg " color="warning" dark @click="dialog1=false">
+                                        <v-icon>mdi-pencil</v-icon>แก้ไขข้อมูลฟาร์ม
                                     </v-btn>
                                 </div>
                             </div>

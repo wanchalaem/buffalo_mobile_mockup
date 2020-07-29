@@ -40,7 +40,7 @@
                 <center>
                     <v-flex xs12 row wrap>
                         <v-flex xs6>
-                            <v-btn outlined dark class="rounded-l-lg width " color="green" @click="$router.push('/user/buffaloinformation')">
+                            <v-btn outlined dark class="rounded-l-lg width " color="warning" @click="$router.push('/user/buffaloinformation')">
                                 <v-icon>mdi-pencil</v-icon>แก้ไข
                             </v-btn>
                         </v-flex>

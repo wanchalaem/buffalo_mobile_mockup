@@ -1,12 +1,19 @@
-
-    
 <template>
 <div class="">
-<NavigationAdmin name="ข้อมูลควาย" />
-    <v-container grid-list-xs>
-        <!-- <v-btn  small fab @click="$router.push('/admin/buffalo')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
-    <v-btn class="mb-6" fab @click="$router.go(-1)" small><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+    <!-- <NavigationAdmin name="ข้อมูลควาย" /> -->
+    <v-container> 
+        <v-row class="d-flex flex-row ">
+            <v-btn depressed color="white" small fab @click="$router.push('/admin/buffalo')">
+                <v-icon class="icon">mdi-chevron-left</v-icon>
+            </v-btn>
+            <h2>ข้อมูลควาย</h2>
+        </v-row>
     </v-container>
+    <!-- <v-container grid-list-xs>
+        <v-btn class="mb-6" fab @click="$router.go(-1)" small>
+            <v-icon class="icon">mdi-chevron-left</v-icon>
+        </v-btn>
+    </v-container> -->
     <v-tabs grow color="green">
         <v-tab>
             <v-icon left>mdi-file-document-outline</v-icon>
@@ -32,7 +39,7 @@
                                     <v-icon>mdi-delete</v-icon> -->
                                 <div class="col-ml-4 ">
                                     <div class="ml-auto text-right">
-                                        <v-btn class="rounded-lg pa-1 mr-1" color="green" outlined @click="dialog=false">
+                                        <v-btn class="rounded-lg pa-1 mr-1" color="warning" outlined @click="dialog=false">
                                             <v-icon>mdi-pencil</v-icon>แก้ไข
                                         </v-btn>
                                         <v-btn class="rounded-lg pa-1 ml-1" color="red" outlined @click="dialog=false">
@@ -126,7 +133,7 @@
                     <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครซิป"></v-text-field>
                     <v-menu ref="menu" v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y min-width="290px">
                         <template v-slot:activator="{ on, attrs }">
-                            <v-text-field outlined  color="green" v-model="date" class="rounded-lg" label="วัน/เดือน/ปีเกิด" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                            <v-text-field outlined color="green" v-model="date" class="rounded-lg" label="วัน/เดือน/ปีเกิด" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
                         </template>
                         <v-date-picker :readonly="dialog" color="green" ref="picker" v-model="date" :max="new Date().toISOString().substr(0, 10)" min="1950-01-01" @change="save1"></v-date-picker>
                     </v-menu>
@@ -172,7 +179,7 @@
                     <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn outlined medium dark class="rounded-l-lg width " color="green" @click="dialog1=false">
+                                <v-btn outlined medium dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>
@@ -203,7 +210,7 @@
                     <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn outlined medium dark class="rounded-l-lg width " color="green" @click="dialog1=false">
+                                <v-btn outlined medium dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>
@@ -234,7 +241,7 @@
                     <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn outlined medium dark class="rounded-l-lg width " color="green" @click="dialog1=false">
+                                <v-btn outlined medium dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>
@@ -377,19 +384,19 @@ export default {
             },
 
         ],
-        
+
     }),
-     watch: { 
-        menu (val) {
-        val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
-      },
+    watch: {
+        menu(val) {
+            val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
+        },
     },
     /*-------------------------Methods------------------------------------------*/
-    methods: { 
+    methods: {
         load: async function () {},
-        save1 (date) {
-        this.$refs.menu.save(date)
-      },
+        save1(date) {
+            this.$refs.menu.save(date)
+        },
     },
 
 }

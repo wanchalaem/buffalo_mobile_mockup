@@ -1,36 +1,38 @@
 <template>
 <div class="">
     <!-- <Navbar icon="mdi-chevron-left" name="ตั้งค่ารหัสผ่าน" /> -->
-    <NavigationAdmin name="แก้ไขข้อมูลผู้ดูแลระบบ" />
-    <div class="pa-6">
-        <v-layout row wrap>
+    <!-- <NavigationAdmin name="แก้ไขข้อมูลผู้ดูแลระบบ" /> -->
+    <v-container>
+        <v-row class="d-flex flex-row ">
+            <v-btn depressed color="white" small fab @click="$router.go(-1)">
+                <v-icon class="icon">mdi-chevron-left</v-icon>
+            </v-btn>
+            <h2>แก้ไขข้อมูลผู้ดูแลระบบ</h2>
+        </v-row>
+    </v-container>
+    <v-container grid-list-xs> 
+        <v-text-field color="green" clearable label="ชื่อ" prepend-inner-icon="mdi-card-account-details-outline" outlined class=" rounded-lg"></v-text-field>
+        <v-text-field color="green" clearable label="นามสกุล" prepend-inner-icon="mdi-card-account-details-outline" outlined class=" rounded-lg"></v-text-field>
+        <v-text-field color="green" clearable label="ชื่อผู้ใช้" prepend-inner-icon="mdi-account" outlined class=" rounded-lg"></v-text-field>
+        <v-text-field color="green" type="password" clearable label="รหัสผ่านใหม่" prepend-inner-icon="mdi-lock" outlined class=" rounded-lg"></v-text-field>
+        <v-text-field color="green" type="password" clearable label="ยืนยันรหัสผ่านใหม่" prepend-inner-icon="mdi-lock" outlined class=" rounded-lg"></v-text-field>
+        <v-text-field color="green" clearable label="อีเมล" prepend-inner-icon="mdi-email" outlined class=" rounded-lg"></v-text-field>
+
+        <v-btn block dark large class="rounded-lg " color="green" @click="$router.push('/admin/adminedit')">ตกลง
+        </v-btn>
+
+        <!-- <v-layout row wrap>
             <v-flex xs12>
-                <!-- <v-btn small fab @click="$router.push('/admin/userprofiledetail')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn> -->
-                <v-btn small fab @click="$router.go(-1)"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>                
                 <v-toolbar-title>
                     <br>
-                    <center>
-                        <v-text-field color="green" clearable label="ชื่อ" prepend-inner-icon="mdi-card-account-details-outline" outlined class=" rounded-lg"></v-text-field>
-                        <v-text-field color="green" clearable label="นามสกุล" prepend-inner-icon="mdi-card-account-details-outline" outlined class=" rounded-lg"></v-text-field>
-                        <v-text-field color="green" clearable label="ชื่อผู้ใช้" prepend-inner-icon="mdi-account" outlined class=" rounded-lg"></v-text-field>
-                        <v-text-field color="green" type="password" clearable label="รหัสผ่านใหม่" prepend-inner-icon="mdi-lock" outlined class=" rounded-lg"></v-text-field>
-                        <v-text-field color="green" type="password" clearable label="ยืนยันรหัสผ่านใหม่" prepend-inner-icon="mdi-lock" outlined class=" rounded-lg"></v-text-field>
-                        <v-text-field color="green" clearable label="อีเมล" prepend-inner-icon="mdi-email" outlined class=" rounded-lg"></v-text-field>
-                    </center><br>
-                    <!-- <div class="col-ml-6 "> -->
-                        <div class="ml-auto text-center">
-                            <v-btn block dark large class="rounded-lg " color="green" @click="$router.push('/admin/adminedit')">ตกลง
-                            </v-btn>
-                        </div>
-                    <!-- </div> -->
 
                 </v-toolbar-title>
                 <v-spacer></v-spacer>
 
             </v-flex>
 
-        </v-layout>
-    </div>   
+        </v-layout> -->
+    </v-container>
 </div>
 </template>
 
@@ -79,11 +81,11 @@ export default {
     width: 80%;
 }
 
-.bg { 
-    background: rgba(242, 243, 244); 
-    height: 100%; 
-    background-position: center; 
+.bg {
+    background: rgba(242, 243, 244);
+    height: 100%;
+    background-position: center;
     background-repeat: repeat;
-    background-size: cover; 
+    background-size: cover;
 }
 </style>

@@ -1,27 +1,36 @@
 <template>
 <div class="bg">
     <!-- <NavbarAdmin icon="mdi-chevron-left" name="รายงานสรุปจำนวนควายที่มีชีวิต" /> -->
-    <NavigationAdmin name="รายงานความเคลื่อไหนการใช้งาน" />
-     
-    <v-container>
-        <v-btn class="mb-6" fab @click="$router.push('/admin/report')" small>
+    <!-- <NavigationAdmin name="รายงานความเคลื่อไหนการใช้งาน" /> -->
+    <!-- <v-btn class="mb-6" fab @click="$router.push('/admin/report')" small>
             <v-icon class="icon">mdi-chevron-left</v-icon>
-        </v-btn>
+        </v-btn> -->
+    <v-container>
+        <v-row class="d-flex flex-row ">
+            <v-btn depressed fab @click="$router.go(-1)" small>
+                <v-icon class="icon">mdi-chevron-left</v-icon>
+            </v-btn>
+            <h2>รายงานความเคลื่อนไหว</h2>
+        </v-row>
+    </v-container>
+
+    <v-container>
+
         <h3>จำนวนการกรอกข้อมูลในแต่ละเดือน</h3>
         <v-select solo outlined class="rounded-lg mt-2 mb-2" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
         <v-select solo outlined class="rounded-lg mb-2" :items="district" label="กรุณาเลือกอำเภอ" hide-details></v-select>
         <v-select solo outlined class="rounded-lg mb-2" :items="place" label="กรุณาเลือกตำบล" hide-details></v-select>
     </v-container>
- 
-    <div class="pa-4"> 
+
+    <div class="pa-4">
         <v-card class="mt-3 pa-4 rounded-lg">
             <v-card-title>
                 จำนวนการกรอกข้อมูลในแต่ละเดือน
             </v-card-title>
-            <area-chart :colors="['#3399FF']" :data="chartData"></area-chart> 
+            <area-chart :colors="['#3399FF']" :data="chartData"></area-chart>
         </v-card>
- 
-    </div> 
+
+    </div>
 </div>
 </template>
 
@@ -40,13 +49,13 @@ export default {
     data() {
         return {
             chartData: {
-            '1/7/2020': 140,
-            '2/7/2020': 80,
-            '3/7/2020': 30,
-            '4/7/2020': 50,
-            '5/7/2020': 12,
-            '6/7/2020': 105,
-        },
+                '1/7/2020': 140,
+                '2/7/2020': 80,
+                '3/7/2020': 30,
+                '4/7/2020': 50,
+                '5/7/2020': 12,
+                '6/7/2020': 105,
+            },
             province: [{
                     text: 'พะเยา'
                 },
@@ -173,7 +182,7 @@ export default {
 }
 </script>
 
-<style  scoped>
+<style scoped>
 .bg {
     /* background: rgba(0, 128, 0, 0.1); */
     /* background: rgba(242, 243, 244);
