@@ -37,12 +37,12 @@
                                     <v-icon>mdi-delete</v-icon> -->
                                 <div class="col-ml-4 ">
                                     <div class="ml-auto text-right">
-                                        <!-- <v-btn class="rounded-lg pa-1 mr-1" color="green" outlined @click="dialog1=false">
-                                            <v-icon>mdi-pencil</v-icon>แก้ไข
-                                        </v-btn> -->
-                                        <v-btn class="rounded-lg pa-1 ml-1" color="red" outlined @click="dialog1=false">
-                                            <v-icon>mdi-delete</v-icon>ลบ
+                                        <v-btn depressed class="rounded-lg pa-1 mr-1" color="warning" dark @click="dialog1=false">
+                                            <v-icon>mdi-pencil</v-icon>แก้ไขข้อมูลควาย
                                         </v-btn>
+                                        <!-- <v-btn class="rounded-lg pa-1 ml-1" color="red" outlined @click="dialog1=false">
+                                            <v-icon>mdi-delete</v-icon>ลบ
+                                        </v-btn> -->
                                     </div>
                                 </div>
                             </h5>
@@ -59,7 +59,7 @@
                                             <h5>ภาพด้านข้าง</h5>
                                         </center>
                                     </v-list>
-                                    <v-btn block color="success">อัพโหลด</v-btn>
+                                    <v-btn depressed block color="success">อัพโหลด</v-btn>
                                 </v-card>
                             </v-flex>
                             <v-flex xs6 class="pl-2 pb-2">
@@ -71,7 +71,7 @@
                                         </center>
 
                                     </v-list>
-                                    <v-btn block color="success">อัพโหลด</v-btn>
+                                    <v-btn depressed block color="success">อัพโหลด</v-btn>
                                 </v-card>
                             </v-flex>
 
@@ -87,7 +87,7 @@
                                             </h5>
                                         </div>
                                     </div>
-                                    <v-btn block color="success">อัพโหลด</v-btn>
+                                    <v-btn depressed block color="success">อัพโหลด</v-btn>
                                 </v-card>
                             </v-flex>
 
@@ -103,7 +103,7 @@
                                             </h5>
                                         </div>
                                     </div>
-                                    <v-btn block color="success">อัพโหลด</v-btn>
+                                    <v-btn depressed block color="success">อัพโหลด</v-btn>
                                 </v-card>
                             </v-flex>
 
@@ -125,10 +125,7 @@
                         <v-select outlined color="green" class="rounded-lg" label="สี"></v-select>
                         <v-select outlined color="green" class="rounded-lg" label="แหล่งที่มา"></v-select>
                         <v-select outlined color="green" class="rounded-lg" label="สถานะ"></v-select>
-                    </div>  -->
-                    <v-btn class="rounded-lg pa-6 mb-4" block medium color="warning" dark @click="dialog1=false">
-                        <v-icon>mdi-pencil</v-icon>แก้ไขข้อมูลควาย
-                    </v-btn>
+                    </div>  --> 
                     <v-text-field :readonly="dialog1" class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขควาย"></v-text-field>
                     <v-text-field :readonly="dialog1" class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID"></v-text-field>
                     <v-text-field :readonly="dialog1" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครซิป"></v-text-field>
@@ -179,12 +176,12 @@
                     <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn outlined large dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
+                                <v-btn depressed large dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>
                             <v-flex xs6>
-                                <v-btn outlined large dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                                <v-btn depressed large dark class="rounded-r-lg width" color="red" @click="dialog1=false">
                                     <v-icon>mdi-delete</v-icon>ลบ
                                 </v-btn>
                             </v-flex>
@@ -210,12 +207,12 @@
                     <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn outlined large dark class="rounded-l-lg width " color="green" @click="dialog1=false">
+                                <v-btn depressed large dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>
                             <v-flex xs6>
-                                <v-btn outlined large dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                                <v-btn depressed large dark class="rounded-r-lg width" color="red" @click="dialog1=false">
                                     <v-icon>mdi-delete</v-icon>ลบ
                                 </v-btn>
                             </v-flex>
@@ -241,12 +238,12 @@
                     <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn outlined large dark class="rounded-l-lg width " color="green" @click="dialog1=false">
+                                <v-btn depressed large dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>
                             <v-flex xs6>
-                                <v-btn outlined large dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                                <v-btn depressed large dark class="rounded-r-lg width" color="red" @click="dialog1=false">
                                     <v-icon>mdi-delete</v-icon>ลบ
                                 </v-btn>
                             </v-flex>

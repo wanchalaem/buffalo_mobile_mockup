@@ -115,6 +115,11 @@ function view(name){
     component: view('admin/setPasswordDetail')
   },
   {
+    path: '/admin/resetpasswordadmin',
+    name: 'setPasswordDetailAdmin',
+    component: view('admin/setPasswordDetailAdmin')
+  },
+  {
     path: '/admin/buffalo',
     name: 'infoBufAdmin',
     component: view('admin/infoBufAdmin')

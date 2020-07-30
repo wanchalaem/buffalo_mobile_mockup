@@ -11,11 +11,14 @@
         </v-row>
     </v-container>
     <v-container grid-list-xs>
+        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details type="password" label="รหัสผ่านเก่า" outlined single-line class=" rounded-lg pb-4"></v-text-field>
         <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details type="password" label="รหัสผ่านใหม่" outlined single-line class=" rounded-lg pb-4"></v-text-field>
         <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details type="password" label="ยืนยันรหัสผ่านใหม่" outlined single-line class=" rounded-lg"></v-text-field>
         <br>
         <v-btn block dark large class="rounded-lg " color="green" @click="$router.push('/admin/userprofiledetail')">ตกลง
         </v-btn>
+        <!-- <v-btn block dark large class="rounded-lg " color="green" @click="$router.go(1)">ตกลง
+        </v-btn> -->
     </v-container>
 </div>
 </template>

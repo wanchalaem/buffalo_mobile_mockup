@@ -1,31 +1,33 @@
 <template>
-<div class="bg"> 
+<div class="bg">
     <!-- <NavigationAdmin name="ข้อมูลเกษตกร" /> -->
     <v-container>
         <v-row class="d-flex flex-row ">
-            <v-btn depressed small fab @click="$router.push('/admin/userprofile')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+            <v-btn depressed small fab @click="$router.push('/admin/userprofile')">
+                <v-icon class="icon">mdi-chevron-left</v-icon>
+            </v-btn>
             <h2>ข้อมูลเกษตกร</h2>
         </v-row>
-    </v-container> 
-    <v-container class="mt-1"> 
+    </v-container>
+    <v-container class="mt-1">
         <v-card class="mx-auto rounded-lg elevation-10" max-width="140">
-            <v-img height="160" src="https://www.siamzone.com/music/news/2015/07381.jpg">
+            <v-img height="160" src="https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
             </v-img>
+            <v-btn depressed max-width="140" color="success">
+                <v-icon>mdi-upload</v-icon>อัพโหลดรูปภาพ
+            </v-btn>
         </v-card>
         <br>
         <center>
             <h3> นายแดง เชิดชู </h3><br>
-            <v-btn medium class="rounded-lg ma-2" dark color="indigo" @click="$router.push('/admin/buffalo')">
-                <v-icon>mdi-cow</v-icon>ข้อมูลควาย
-            </v-btn>
             <v-flex xs12 row wrap class="pt-2">
                 <v-flex xs6>
-                    <v-btn class="rounded-lg pr-1" color="success">
-                        <v-icon>mdi-upload</v-icon>อัพโหลดรูปภาพ
+                    <v-btn medium class="rounded-lg" dark color="indigo" @click="$router.push('/admin/buffalo')">
+                        <v-icon>mdi-cow</v-icon>ข้อมูลควาย
                     </v-btn>
                 </v-flex>
                 <v-flex xs6>
-                    <v-btn class="rounded-lg pl-1" color="error" @click="$router.push('/admin/resetpassword')">
+                    <v-btn class="rounded-lg" color="error" @click="$router.push('/admin/resetpassword')">
                         <v-icon>mdi-account-key</v-icon>ตั้งค่ารหัสผ่าน
                     </v-btn>
                 </v-flex>
@@ -33,8 +35,7 @@
         </center>
     </v-container>
 
-    <!-- <v-card class="rounded-lg pa-2"> -->
-    <v-tabs grow color="green">
+    <v-tabs grow color="green" centered>
         <v-tab>
             <v-icon>mdi-account-outline</v-icon>
             <h5>ข้อมูลเกษตกร</h5>
@@ -52,10 +53,10 @@
                         <v-spacer></v-spacer>
                         <div class="col-ml-6 ">
                             <div class="ml-auto text-right">
-                                <v-btn class="rounded-lg mr-2" color="warning" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                <v-btn depressed class="rounded-lg mr-2 " color="warning" @click="dialog1=false">แก้ไขข้อมูลเกษตกร<v-icon>mdi-pencil</v-icon>
                                 </v-btn>
-                                <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
-                                </v-btn>
+                                <!-- <v-btn class="rounded-lg " color="red" dark @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
+                                </v-btn> -->
                             </div>
                         </div>
                     </div>
@@ -81,24 +82,26 @@
                         <v-select class="rounded-lg" prepend-inner-icon="mdi-map-marker-multiple-outline" color="green" outlined label="อำเภอ"></v-select>
                         <v-select class="rounded-lg" prepend-inner-icon="mdi-map-marker-multiple-outline" color="green" outlined label="จังหวัด"></v-select>
                         <v-select class="rounded-lg" prepend-inner-icon="mdi-postage-stamp" color="green" outlined label="รหัสไปรษณีย์"></v-select> -->
-
+                        <div>
+                            <center class="pb-6 ">
+                                <v-card flat class="rounded-lg pt-2">
+                                    <h2>ภาพถ่ายบัตรประจำตัวประชาชน</h2>
+                                    <v-img class="rounded-lg " height="200" width="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
+                                    <v-btn depressed block class="rounded-lg" color="success">
+                                        <v-icon>mdi-upload</v-icon>อัพโหลดบัตรประชาชน
+                                    </v-btn>
+                                </v-card>
+                            </center>
+                        </div>
                         <v-select class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-human-male-female" color="green" id="id" label="คำนำหน้า"></v-select>
                         <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-card-account-details-outline" color="green" id="id" label="ชื่อ"></v-text-field>
                         <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-card-account-details-outline" color="green" id="id" label="นามสกุล"></v-text-field>
                         <v-select class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-human-male-female" color="green" id="id" label="เพศ"></v-select>
                         <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-card-account-details-outline" color="green" id="id" type="number" label="หมายเลขบัตร"></v-text-field>
-                        <div>
-                            <center class="pb-6">
-                                <h6>ภาพถ่ายบัตรประจำตัวประชาชน</h6>
-                                <v-img class="rounded-lg elevation-5" height="200" width="350" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNf3OTIf1lugjQhtLRTP8cwuosPAJmIykTsry1UL87ArfVFx84&usqp=CAU"></v-img>
-                                <v-btn class="rounded-lg" color="success">
-                                    <v-icon>mdi-upload</v-icon>อัพโหลดบัตรประชาชน
-                                </v-btn>
-                            </center>
-                        </div>
+
                         <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-account-clock-outline" color="green" id="id" type="number" label="อายุ"></v-text-field>
-                                    <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-home" color="green" id="id" label="ที่อยู่"></v-text-field>
-                                    <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-phone" color="green" id="id" type="number" label="เบอร์โทรศัพท์"></v-text-field>
+                        <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-home" color="green" id="id" label="ที่อยู่"></v-text-field>
+                        <v-text-field class="rounded-lg" outlined :readonly="dialog1" prepend-inner-icon="mdi-phone" color="green" id="id" type="number" label="เบอร์โทรศัพท์"></v-text-field>
                         <!-- <div v-for="item in informationfarmer" :key="item.name">
                             <v-text-field class="rounded-lg" color="green" outlined :readonly="dialog1" v-model="item.calories" name="name" :label="item.describe" id="id"></v-text-field>
                         </div> -->
@@ -119,23 +122,25 @@
                             <v-spacer></v-spacer>
                             <div class="col-ml-6 ">
                                 <div class="ml-auto text-right">
-                                    <v-btn class="rounded-lg mr-2" color="warning" outlined @click="dialog1=false">แก้ไข<v-icon>mdi-pencil</v-icon>
+                                    <v-btn depressed class="rounded-lg mr-2" color="warning" @click="dialog1=false">แก้ไขข้อมูลฟาร์ม<v-icon>mdi-pencil</v-icon>
                                     </v-btn>
-                                    <v-btn class="rounded-lg " color="red" outlined @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
-                                    </v-btn>
+                                    <!-- <v-btn class="rounded-lg " color="red" dark @click="dialog1=false">ลบ<v-icon>mdi-delete</v-icon>
+                                    </v-btn> -->
                                 </div>
                             </div>
                         </div>
-
+                        <br>
                         <div>
-                            <h3>สภาพฟาร์ม</h3>
-                            <center>
-                                <v-img class="rounded-lg elevation-5" height="200" width="auto" src="https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-                                </v-img>
-                                <v-btn class="rounded-lg pt-1" color="success">
-                                    <v-icon>mdi-upload</v-icon>อัพโหลดภาพถ่ายฟาร์ม
-                                </v-btn>
-                            </center>
+                            <v-card flat class="rounded-lg">
+                                <center class="pt-2">
+                                    <h2 class="pb-2">รูปภาพฟาร์ม</h2>
+                                    <v-img class="rounded-lg elevation-5" height="200" width="auto" src="https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                                    </v-img>
+                                    <v-btn depressed block class="rounded-lg" color="success">
+                                        <v-icon>mdi-upload</v-icon>อัพโหลดภาพถ่ายฟาร์ม
+                                    </v-btn>
+                                </center>
+                            </v-card>
                         </div>
                         <br>
                         <v-flex xs12>
@@ -370,5 +375,9 @@ export default {
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
+}
+
+.button2 {
+    background-color: #008CBA;
 }
 </style>

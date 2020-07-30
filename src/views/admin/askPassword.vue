@@ -3,36 +3,36 @@
     <!-- <Navbar icon="mdi-account-key" name="คำขอรหัสผ่าน" /> -->
     <NavigationAdmin name="คำขอรหัสผ่าน" />
 
-    <!-- <div class="ma-6"> -->
     <v-container grid-list-xs>
+        <v-menu  ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
+            <template  v-slot:activator="{ on, attrs }">
+                <v-text-field color="success" outlined class="rounded-lg mt-3" v-model="date" label="วันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+            </template>
+            <v-date-picker color="success" v-model="date" no-title scrollable>
+                <v-spacer></v-spacer>
+                <v-btn text color="success" @click="menu = false">ยกเลิก</v-btn>
+                <v-btn text color="success" @click="$refs.menu.save(date)">ตกลง</v-btn>
+            </v-date-picker>
+        </v-menu>
         <v-layout row wrap>
-            <v-flex xs12>
-                <v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
-                    <template v-slot:activator="{ on, attrs }">
-                        <v-text-field outlined solo class="rounded-lg mt-3" v-model="date" label="Picker in menu" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
-                    </template>
-                    <v-date-picker v-model="date" no-title scrollable>
-                        <v-spacer></v-spacer>
-                        <v-btn text color="primary" @click="menu = false">Cancel</v-btn>
-                        <v-btn text color="primary" @click="$refs.menu.save(date)">OK</v-btn>
-                    </v-date-picker>
-                </v-menu>
-
-                <v-card class="rounded-lg pa-2">
+            <v-flex xs12> 
+                <v-card v-for="item in 5" class="rounded-lg pa-2 mt-3">
                     <div class="d-flex flex-no-wrap ">
                         <div class="">
-                            <h4>ชื่อ-นามสกุล : นายแดง แม่ใจ </h4>
-                            <h4>เบอร์โทร : 0123123123 </h4>
-                            <h4>สถานะ : แก้ไขรหัสผ่านแล้ว</h4>
+                            <h3 class="pt-1">ชื่อ-นามสกุล : นายแดง แม่ใจ </h3>
+                            <h3 class="pt-1">เบอร์โทร : 0123123123 </h3>
+                            <h3 class="pt-1">สถานะ : แก้ไขรหัสผ่านแล้ว</h3>
                         </div>
-                        
-
                     </div>
-                    
-                    <v-btn outlined dark @click="$router.push('/admin/userprofiledetail')" class="widths rounded-lg" color="success">
+                    <br>
+                    <v-btn depressed dark @click="$router.push('/admin/userprofiledetail')" class="widths rounded-lg" color="success">
                         <h4>ดูข้อมูล</h4>
                     </v-btn>
                 </v-card>
+
+                <div class="text-center pt-4">
+                    <v-pagination color="green" v-model="page" :length="4" prev-icon="mdi-menu-left" next-icon="mdi-menu-right"></v-pagination>
+                </div>
             </v-flex>
 
         </v-layout>
@@ -56,6 +56,7 @@ export default {
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
+            page: 1,
             items: ['แก้ไขรหัสผ่านแล้ว', 'ยังไม่ได้แก้ไขรหัสผ่าน'],
 
             txt: 'Hello World',
@@ -100,5 +101,8 @@ export default {
     background-repeat: repeat;
     background-size: cover;
     /* background-size:100% 100%; */
+}
+.datebg{
+    background: rgb(255, 255, 255);
 }
 </style>

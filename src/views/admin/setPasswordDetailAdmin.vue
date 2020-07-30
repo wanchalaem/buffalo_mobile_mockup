@@ -1,37 +1,24 @@
 <template>
 <div class="">
     <!-- <Navbar icon="mdi-chevron-left" name="ตั้งค่ารหัสผ่าน" /> -->
-    <!-- <NavigationAdmin name="แก้ไขข้อมูลผู้ดูแลระบบ" /> -->
+    <!-- <NavigationAdmin name="ตั้งค่ารหัสผ่าน" /> -->
     <v-container>
         <v-row class="d-flex flex-row ">
             <v-btn depressed color="white" small fab @click="$router.go(-1)">
                 <v-icon class="icon">mdi-chevron-left</v-icon>
             </v-btn>
-            <h2>แก้ไขข้อมูลผู้ดูแลระบบ</h2>
+            <h2>ตั้งค่ารหัสผ่าน</h2>
         </v-row>
     </v-container>
-    <v-container grid-list-xs> 
-        <v-text-field color="green" clearable label="ชื่อ" prepend-inner-icon="mdi-card-account-details-outline" outlined class=" rounded-lg"></v-text-field>
-        <v-text-field color="green" clearable label="นามสกุล" prepend-inner-icon="mdi-card-account-details-outline" outlined class=" rounded-lg"></v-text-field>
-        <v-text-field color="green" clearable label="ชื่อผู้ใช้" prepend-inner-icon="mdi-account" outlined class=" rounded-lg"></v-text-field>
-        <!-- <v-text-field color="green" type="password" clearable label="รหัสผ่านใหม่" prepend-inner-icon="mdi-lock" outlined class=" rounded-lg"></v-text-field>
-        <v-text-field color="green" type="password" clearable label="ยืนยันรหัสผ่านใหม่" prepend-inner-icon="mdi-lock" outlined class=" rounded-lg"></v-text-field> -->
-        <v-text-field color="green" clearable label="อีเมล" prepend-inner-icon="mdi-email" outlined class=" rounded-lg"></v-text-field>
-
+    <v-container grid-list-xs>
+        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details type="password" label="รหัสผ่านเก่า" outlined single-line class=" rounded-lg pb-4"></v-text-field>
+        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details type="password" label="รหัสผ่านใหม่" outlined single-line class=" rounded-lg pb-4"></v-text-field>
+        <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details type="password" label="ยืนยันรหัสผ่านใหม่" outlined single-line class=" rounded-lg"></v-text-field>
+        <br>
         <v-btn block dark large class="rounded-lg " color="green" @click="$router.push('/admin/adminedit')">ตกลง
         </v-btn>
-
-        <!-- <v-layout row wrap>
-            <v-flex xs12>
-                <v-toolbar-title>
-                    <br>
-
-                </v-toolbar-title>
-                <v-spacer></v-spacer>
-
-            </v-flex>
-
-        </v-layout> -->
+        <!-- <v-btn block dark large class="rounded-lg " color="green" @click="$router.go(1)">ตกลง
+        </v-btn> -->
     </v-container>
 </div>
 </template>
@@ -82,10 +69,19 @@ export default {
 }
 
 .bg {
+    /* background: rgba(0, 128, 0, 0.1); */
+    /* background: rgba(242, 243, 244);
+    background-size: cover; */
+
     background: rgba(242, 243, 244);
+    /* Full height */
     height: 100%;
+
+    /* Center and scale the image nicely */
     background-position: center;
+    /* background-repeat: no-repeat; */
     background-repeat: repeat;
     background-size: cover;
+    /* background-size:100% 100%; */
 }
 </style>

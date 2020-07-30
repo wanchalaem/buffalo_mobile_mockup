@@ -2,32 +2,33 @@
 <div class="bg">
     <!-- <Navbar name="ผู้ใช้ทั่วไป" /> -->
     <v-container grid-list-xs>
-        
-   
-    <navigation name="ผู้ใช้ทั่วไป" />
-    <!-- <div class="pa-4"> -->
+
+        <navigation name="ผู้ใช้ทั่วไป" />
+        <!-- <div class="pa-4"> -->
         <v-layout row wrap>
             <v-flex xs12 md4>
                 <v-hover v-slot:default="{ hover }" close-delay="200">
                     <v-card class="pa-3 rounded-lg mb-2" flat :elevation="hover ? 16 : 2  ">
                         <v-img style="height:160px" src="https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
                             <!-- <v-row class="pa-2">  -->
-                                <center>
+                            <center>
                                 <v-avatar class="rounded-lg pt-3 elevation-5" size="120">
                                     <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
-                                </v-avatar> 
-                                    <v-list-item-title class="title body-3 white--text font-weight-light" ><h5>นายแดง สุขใจ (เกษตกร)</h5></v-list-item-title>
-                                </center> 
+                                </v-avatar>
+                                <v-list-item-title class="title body-3 white--text font-weight-light">
+                                    <h5>นายแดง สุขใจ (เกษตกร)</h5>
+                                </v-list-item-title>
+                            </center>
                         </v-img>
                     </v-card>
                 </v-hover>
             </v-flex>
 
             <v-flex xs12>
-                <v-card @click="$router.push('/user/reportsum')" class=" rounded-lg">
+                <v-card id="123" @click="$router.push('/user/reportsum')" class=" rounded-lg">
                     <div class="d-flex flex-no-wrap ">
                         <div class="ma-3">
-                            <v-btn color="info" fab dark>
+                            <v-btn depressed color="info" fab dark>
                                 <v-icon>mdi-cow</v-icon>
                             </v-btn>
                         </div>
@@ -39,21 +40,27 @@
                 </v-card>
             </v-flex>
 
-            <v-flex xs12 md4>
-                <v-hover v-slot:default="{ hover }" close-delay="200">
-                    <v-card class="pa-3 rounded-lg mt-2" flat :elevation="hover ? 16 : 2  ">
-                        <v-img style="height:160px" src="https://images.pexels.com/photos/46188/bison-buffalo-american-animal-46188.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></v-img>
-                    </v-card>
-                </v-hover>
-            </v-flex>
-
         </v-layout>
-        <v-card class="mt-3 pa-4">
+        <v-card class="mt-4 pa-4">
+            <h4 class="text-center">
+                จำนวนควายทั้งหมด
+            </h4>
+            <v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
+                <template v-slot:activator="{ on, attrs }">
+                    <v-text-field color="success" outlined class="rounded-lg mt-3" v-model="date" label="วันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                </template>
+                <v-date-picker color="success" v-model="date" no-title scrollable>
+                    <v-spacer></v-spacer>
+                    <v-btn text color="success" @click="menu = false">ยกเลิก</v-btn>
+                    <v-btn text color="success" @click="$refs.menu.save(date)">ตกลง</v-btn>
+                </v-date-picker>
+            </v-menu>
             <column-chart :colors="['#339933']" :data="chartData"></column-chart>
-            <v-btn @click="$router.push('/user/reportsum')" block dark text color="green">ดูข้อมูลเพิ่มเติม</v-btn>
+            <br>
+            <v-btn depressed class="rounded-lg" @click="$router.push('/user/reportsum')" block dark color="green">ดูข้อมูลเพิ่มเติม</v-btn>
         </v-card>
- </v-container>
-    </div>
+    </v-container>
+</div>
 
 <!-- </div> -->
 </template>
@@ -61,6 +68,10 @@
 <script>
 export default {
     data: () => ({
+        date: new Date().toISOString().substr(0, 10),
+        menu: false,
+        modal: false,
+        menu2: false,
         chartData: {
             '1/7/2020': 20,
             '2/7/2020': 30,

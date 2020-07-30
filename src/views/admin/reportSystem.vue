@@ -17,9 +17,9 @@
     <v-container>
 
         <h3>จำนวนการกรอกข้อมูลในแต่ละเดือน</h3>
-        <v-select solo outlined class="rounded-lg mt-2 mb-2" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
-        <v-select solo outlined class="rounded-lg mb-2" :items="district" label="กรุณาเลือกอำเภอ" hide-details></v-select>
-        <v-select solo outlined class="rounded-lg mb-2" :items="place" label="กรุณาเลือกตำบล" hide-details></v-select>
+        <v-select solo outlined color="success" class="rounded-lg mt-2 mb-2" :items="province" label="กรุณาเลือกจังหวัด" hide-details></v-select>
+        <v-select solo outlined color="success" class="rounded-lg mb-2" :items="district" label="กรุณาเลือกอำเภอ" hide-details></v-select>
+        <v-select solo outlined color="success" class="rounded-lg mb-2" :items="place" label="กรุณาเลือกตำบล" hide-details></v-select>
     </v-container>
 
     <div class="pa-4">

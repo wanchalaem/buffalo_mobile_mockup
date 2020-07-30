@@ -16,23 +16,26 @@
         <!-- <v-card-text> -->
         <v-card v-for="item in 5" class="elevation-5 rounded-lg pa-3 mt-3">
             <div class="d-flex flex-no-wrap">
-                <h4>ผู้ดูแลระบบ</h4>
-            </div>
-            <h4>ชื่อ-นามสกุล : นายแดง แดงแดง </h4>
-            <h4>ชื่อผู้ใช้งาน : dang1234 </h4>
-            <h4>อีเมล : dang@gmail.com </h4>
-            <!-- <h3>สิทธิ์ : ผู้ดูแลระบบ</h3> -->
+                <h2>ผู้ดูแลระบบ</h2>
+                <v-spacer></v-spacer>
+                <v-btn depressed color="red" fab x-small dark @click="dialog1=false"><v-icon>mdi-delete</v-icon></v-btn>
+            </div> 
+            <h3 class="pt-1 font-weight-regular">ชื่อ-นามสกุล : นายแดง แดงแดง </h3>
+            <h3 class="pt-1 font-weight-light" >ชื่อผู้ใช้งาน : dang1234 </h3> 
+            <h3 class="pt-1 font-weight-light">อีเมล : dang@gmail.com </h3> 
             <br>
+              
+            <!-- <v-btn color="red" dark><v-icon>mdi-delete</v-icon>ลบ</v-btn> -->
             <center>
-                <v-flex xs12 row wrap>
+                <v-flex xs12 row wrap> 
                     <v-flex xs6>
-                        <v-btn outlined  dark class="rounded-l-lg width " color="warning" @click="$router.push('/admin/editadmin')">
+                        <v-btn depressed dark class="rounded-l-lg width " color="warning" @click="$router.push('/admin/editadmin')">
                             <v-icon>mdi-pencil</v-icon>แก้ไข
                         </v-btn>
                     </v-flex>
                     <v-flex xs6>
-                        <v-btn outlined  dark class="rounded-r-lg width" color="red" @click="dialog1=false">
-                            <v-icon>mdi-delete</v-icon>ลบ
+                        <v-btn depressed dark class="rounded-r-lg width" color="red" @click="$router.push('/admin/resetpasswordadmin')">
+                            <v-icon>mdi-lock</v-icon>เปลี่ยนรหัสผ่าน
                         </v-btn>
                     </v-flex>
                 </v-flex>

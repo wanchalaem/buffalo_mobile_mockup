@@ -1,14 +1,16 @@
 <template>
-<div class="bg"> 
+<div class="bg">
     <!-- <NavigationAdmin name="ข้อมูลควาย" /> -->
     <v-container>
         <v-row class="d-flex flex-row ">
-            <v-btn depressed small fab @click="$router.push('/admin/userprofiledetail')"><v-icon class="icon">mdi-chevron-left</v-icon></v-btn>
+            <v-btn depressed small fab @click="$router.push('/admin/userprofiledetail')">
+                <v-icon class="icon">mdi-chevron-left</v-icon>
+            </v-btn>
             <h2>ข้อมูลควาย</h2>
         </v-row>
-    </v-container> 
-    <div> 
-        <v-container>  
+    </v-container>
+    <div>
+        <v-container>
             <div>
                 <v-select block large class="rounded-lg" :items="items" label="มีชีวิตหรือไม่มีชีวิต" solo></v-select>
             </div>
@@ -35,23 +37,31 @@
             </v-btn>
 
             <v-card v-for="item in 5" class="elevation-5 rounded-lg pa-3 mt-3" max-width="auto">
-                <h4 class="pl-4 pt-1">เจ้าของควาย : นายแดง สุขใจ</h4>
-                <h4 class="pl-4 pt-1">ชื่อหรือหมายเลขควาย : พ่อเปี้ย</h4>
-                <h4 class="pl-4 pt-1">เบอร์หู : 123</h4>
-                <h4 class="pl-4 pt-1">อายุ : 4ปี</h4>
-                <h4 class="pl-4 pt-1 pb-1">เพศ : ผู้</h4>
+                <!-- <h4 class="pl-4 pt-1">เจ้าของควาย : นายแดง สุขใจ</h4> -->
+                <div class="d-flex flex-no-wrap">
+                    <h3>เจ้าของควาย : นายแดง สุขใจ</h3>
+                    <v-spacer></v-spacer>
+                    <v-btn depressed color="red" fab x-small dark @click="dialog1=false">
+                        <v-icon>mdi-delete</v-icon>
+                    </v-btn>
+                </div>
+                <h3 class="pt-1 font-weight-regular">ชื่อหรือหมายเลขควาย : พ่อเปี้ย</h3>
+                <h3 class="pt-1 font-weight-light">เบอร์หู : 123</h3>
+                <h3 class="pt-1 font-weight-light">อายุ : 4ปี</h3>
+                <h3 class="pt-1 font-weight-light">เพศ : ผู้</h3>
+                <br>
                 <center>
                     <v-flex xs12 row wrap>
-                        <v-flex xs6>
-                            <v-btn outlined dark class="rounded-l-lg width " color="warning" @click="$router.push('/admin/buffaloinformation')">
+                        <v-flex xs12>
+                            <v-btn depressed dark class="rounded-lg width " color="warning" @click="$router.push('/admin/buffaloinformation')">
                                 <v-icon>mdi-pencil</v-icon>แก้ไข
                             </v-btn>
                         </v-flex>
-                        <v-flex xs6>
+                        <!-- <v-flex xs6>
                             <v-btn outlined dark class="rounded-r-lg width" color="red" @click="dialog1=false">
                                 <v-icon>mdi-delete</v-icon>ลบ
                             </v-btn>
-                        </v-flex>
+                        </v-flex> -->
                     </v-flex>
                 </center>
             </v-card>
@@ -161,6 +171,7 @@ export default {
     background-repeat: repeat;
     background-size: cover;
 }
+
 .width {
     width: 95%;
 }

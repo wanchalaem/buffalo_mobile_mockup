@@ -31,20 +31,15 @@
                     <div class="d-flex flex-no-wrap">
                         <h3>รายละเอียดควาย</h3>
                         <div class="ml-auto text-right" style="margin-right: 4px;">
-                            <h5 class="body-3 grey--text font-weight-light">
-                                <!-- <v-btn outlined color="green" @click="dialog=false">แก้ไข<v-icon>mdi-pencil</v-icon>
-                                    </v-btn> -->
-                                <!-- <v-icon>mdi-upload</v-icon>
-                                    <v-icon @click="dialog=false">mdi-pencil</v-icon>
-                                    <v-icon>mdi-delete</v-icon> -->
+                            <h5 class="body-3 grey--text font-weight-light"> 
                                 <div class="col-ml-4 ">
                                     <div class="ml-auto text-right">
-                                        <v-btn class="rounded-lg pa-1 mr-1" color="warning" outlined @click="dialog=false">
+                                        <v-btn depressed class="rounded-lg pa-1 mr-1" color="warning" @click="dialog=false">
                                             <v-icon>mdi-pencil</v-icon>แก้ไข
                                         </v-btn>
-                                        <v-btn class="rounded-lg pa-1 ml-1" color="red" outlined @click="dialog=false">
+                                        <!-- <v-btn class="rounded-lg pa-1 ml-1" color="red" outlined @click="dialog=false">
                                             <v-icon>mdi-delete</v-icon>ลบ
-                                        </v-btn>
+                                        </v-btn> -->
                                     </div>
                                 </div>
                             </h5>
@@ -61,7 +56,7 @@
                                             <h5>ภาพด้านข้าง</h5>
                                         </center>
                                     </v-list>
-                                    <v-btn block color="success">อัพโหลด</v-btn>
+                                    <v-btn depressed block color="success">อัพโหลด</v-btn>
                                 </v-card>
                             </v-flex>
                             <v-flex xs6 class="pl-2 pb-2">
@@ -73,7 +68,7 @@
                                         </center>
 
                                     </v-list>
-                                    <v-btn block color="success">อัพโหลด</v-btn>
+                                    <v-btn depressed block color="success">อัพโหลด</v-btn>
                                 </v-card>
                             </v-flex>
 
@@ -89,7 +84,7 @@
                                             </h5>
                                         </div>
                                     </div>
-                                    <v-btn block color="success">อัพโหลด</v-btn>
+                                    <v-btn depressed block color="success">อัพโหลด</v-btn>
                                 </v-card>
                             </v-flex>
 
@@ -105,7 +100,7 @@
                                             </h5>
                                         </div>
                                     </div>
-                                    <v-btn block color="success">อัพโหลด</v-btn>
+                                    <v-btn depressed block color="success">อัพโหลด</v-btn>
                                 </v-card>
                             </v-flex>
 
@@ -179,12 +174,12 @@
                     <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn outlined medium dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
+                                <v-btn depressed medium dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>
                             <v-flex xs6>
-                                <v-btn outlined medium dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                                <v-btn depressed medium dark class="rounded-r-lg width" color="red" @click="dialog1=false">
                                     <v-icon>mdi-delete</v-icon>ลบ
                                 </v-btn>
                             </v-flex>
@@ -210,12 +205,12 @@
                     <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn outlined medium dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
+                                <v-btn depressed medium dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>
                             <v-flex xs6>
-                                <v-btn outlined medium dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                                <v-btn depressed medium dark class="rounded-r-lg width" color="red" @click="dialog1=false">
                                     <v-icon>mdi-delete</v-icon>ลบ
                                 </v-btn>
                             </v-flex>
@@ -241,12 +236,12 @@
                     <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn outlined medium dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
+                                <v-btn depressed medium dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>
                             <v-flex xs6>
-                                <v-btn outlined medium dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                                <v-btn depressed medium dark class="rounded-r-lg width" color="red" @click="dialog1=false">
                                     <v-icon>mdi-delete</v-icon>ลบ
                                 </v-btn>
                             </v-flex>

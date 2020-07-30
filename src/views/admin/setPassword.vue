@@ -12,30 +12,28 @@
 
         <v-card v-for="item in 5" class="elevation-5 rounded-lg pa-3 mt-3">
             <div class="d-flex flex-no-wrap">
-                <h4>ข้อมูลเกษตรกร</h4>
-            </div>
-            <h4>เลขบัตรประชาชน : 1234567890123 </h4>
-            <h4>ชื่อ : นายแดง แดงดำ </h4>
-            <h4>เบอร์โทรศัพท์ : 0123456789 </h4>
-            <h4>ตำบล : แม่กา </h4>
-            <h4>อำเภอ : เมือง </h4>
-            <h4>จังหวัด : พะเยา </h4>
-            <h4>ฟาร์ม : นายแดง </h4>
-            <h4>กลุ่มเกษตกร : กลุ่มแม่กา </h4>
+                <h2>ข้อมูลเกษตรกร</h2>
+                <v-spacer></v-spacer>
+                <v-btn depressed color="red" fab x-small dark @click="dialog1=false"><v-icon>mdi-delete</v-icon></v-btn>
+            </div> 
+            <h3 class="pt-1 font-weight-regular">ชื่อ : นายแดง แดงดำ </h3>
+            <h3 class="pt-1 font-weight-light">เบอร์โทรศัพท์ : 0123456789 </h3> 
+            <h3 class="pt-1 font-weight-light">จังหวัด : พะเยา </h3>
+            <h3 class="pt-1 font-weight-light">ฟาร์ม : นายแดง </h3> 
             <br>
 
             <center>
                 <v-flex xs12 row wrap>
-                    <v-flex xs6>
-                        <v-btn outlined dark class="rounded-l-lg width " color="warning" @click="$router.push('/admin/userprofiledetail')">
+                    <v-flex xs12>
+                        <v-btn depressed dark class="rounded-lg width" color="warning" @click="$router.push('/admin/userprofiledetail')">
                             <v-icon>mdi-pencil</v-icon>แก้ไข
                         </v-btn>
                     </v-flex>
-                    <v-flex xs6>
-                        <v-btn outlined dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                    <!-- <v-flex xs6>
+                        <v-btn  dark class="rounded-r-lg width" color="red" @click="dialog1=false">
                             <v-icon>mdi-delete</v-icon>ลบ
                         </v-btn>
-                    </v-flex>
+                    </v-flex> -->
                 </v-flex>
             </center>
         </v-card>

@@ -7,7 +7,7 @@
         <v-card @click="$router.push('/user/reportsum')" class="ma-2 rounded-lg">
             <div class="d-flex flex-no-wrap">
                 <div class="ma-3">
-                    <v-btn color="success" fab dark>
+                    <v-btn depressed color="success" fab dark>
                         <v-icon>mdi-clipboard-text-outline</v-icon>
                     </v-btn>
                 </div>
@@ -22,7 +22,7 @@
         <v-card @click="$router.push('/user/reportgrow')" class="ma-2 mt-4 rounded-lg">
             <div class="d-flex flex-no-wrap">
                 <div class="ma-3">
-                    <v-btn color="primary" fab dark>
+                    <v-btn depressed color="primary" fab dark>
                         <v-icon>mdi-clipboard-text-multiple-outline</v-icon>
                     </v-btn>
                 </div>
