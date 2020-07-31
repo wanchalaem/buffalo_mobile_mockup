@@ -13,10 +13,70 @@
         <br>
     </v-container>
 
+    <v-dialog v-model="dialogname" max-width="500px">
+        <v-card>
+            <v-card-title>
+                ชื่อ-นามสกุล
+            </v-card-title>
+            <v-card-text>
+                <v-text-field color="success" name="name" label="ชื่อ" id="id"></v-text-field>
+                <v-text-field color="success" name="name" label="นามสกุล" id="id"></v-text-field>
+            </v-card-text>
+            <v-card-actions> 
+                <v-btn color="error width" depressed @click="dialogname = false">
+                    ยกเลิก
+                </v-btn> 
+                <v-btn color="success width" depressed @click="dialogname = false">
+                    ตกลง
+                </v-btn> 
+            </v-card-actions>
+        </v-card>
+    </v-dialog>
+
+    <v-dialog v-model="dialogemail" max-width="500px">
+        <v-card>
+            <v-card-title>
+                เปลี่ยนอีเมล
+            </v-card-title>
+            <v-card-text>
+                <v-text-field color="success" name="name" label="อีเมล" id="id"></v-text-field>
+            </v-card-text>
+            <v-card-actions>
+                <v-btn color="error width" depressed @click="dialogemail = false">
+                    ยกเลิก
+                </v-btn> 
+                <v-btn color="success width" depressed @click="dialogemail = false">
+                    ตกลง
+                </v-btn> 
+            </v-card-actions>
+        </v-card>
+    </v-dialog>
+
+    <v-dialog v-model="dialogpass" max-width="500px">
+        <v-card>
+            <v-card-title>
+                เปลี่ยนรหัสผ่าน
+            </v-card-title>
+            <v-card-text>
+                <v-text-field color="success" name="name" type="password" label="รหัสผ่านเก่า" id="id"></v-text-field>
+                <v-text-field color="success" name="name" type="password" label="รหัสผ่านใหม่" id="id"></v-text-field>
+                <v-text-field color="success" name="name" type="password" label="ยืนยันรหัสผ่านใหม่" id="id"></v-text-field>
+            </v-card-text>
+            <v-card-actions>
+                <v-btn color="error width" depressed @click="dialogpass = false">
+                    ยกเลิก
+                </v-btn> 
+                <v-btn color="success width" depressed @click="dialogpass = false">
+                    ตกลง
+                </v-btn> 
+            </v-card-actions>
+        </v-card>
+    </v-dialog>
+
     <!-- <v-container grid-list-xs>  -->
     <h3 class="text-center"> ข้อมูลส่วนตัว</h3>
     <br>
-    <v-card class="pa-3">
+    <v-card class="pa-3" @click="dialogname = true">
         <v-row>
             <h4 class="pl-4">ชื่อ-นามสกุล</h4>
             <v-spacer></v-spacer>
@@ -24,15 +84,15 @@
             <v-icon>mdi-chevron-right</v-icon>
         </v-row>
     </v-card>
-    <v-card class="pa-3">
+    <v-card class="pa-3" disabled>
         <v-row>
             <h4 class="pl-4">ชื่อผู้ใช้งาน</h4>
             <v-spacer></v-spacer>
             <h4 class="pr-4">Dang1234 </h4>
-            <v-icon>mdi-chevron-right</v-icon>
+            <!-- <v-icon>mdi-chevron-right</v-icon> -->
         </v-row>
     </v-card>
-    <v-card class="pa-3">
+    <v-card class="pa-3" @click="dialogemail = true">
         <v-row>
             <h4 class="pl-4">อีเมล</h4>
             <v-spacer></v-spacer>
@@ -43,7 +103,7 @@
     <br>
     <h3 class="text-center">ตั้งค่า</h3>
     <br>
-    <v-card class="pa-3">
+    <v-card class="pa-3" @click="dialogpass = true">
         <v-row>
             <h4 class="pl-4">เปลี่ยนรหัสผ่าน</h4>
             <v-spacer></v-spacer>
@@ -100,10 +160,51 @@ export default {
     },
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data: () => ({
+        dialogname: false,
+        dialogemail: false,
+        dialogpass: false,
+        notifications: false,
+        sound: true,
+        widgets: false,
+        items: [{
+                title: 'Click Me',
+            },
+            {
+                title: 'Click Me',
+            },
+            {
+                title: 'Click Me',
+            },
+            {
+                title: 'Click Me 2',
+            },
+        ],
+        select: [{
+                text: 'State 1'
+            },
+            {
+                text: 'State 2'
+            },
+            {
+                text: 'State 3'
+            },
+            {
+                text: 'State 4'
+            },
+            {
+                text: 'State 5'
+            },
+            {
+                text: 'State 6'
+            },
+            {
+                text: 'State 7'
+            },
+        ],
         tab: null,
         search: '',
-        dialog1: true,
-        dialog: false,
+        // dialog1: true,
+        // dialog: false,
         items: [
             'ผู้ดูแลระบบ'
         ],
@@ -226,5 +327,9 @@ export default {
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
+}
+
+.width {
+    width: 48%;
 }
 </style>

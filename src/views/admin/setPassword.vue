@@ -6,20 +6,20 @@
     <v-container>
         <v-text-field class="rounded-lg pt-3" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" solo outlined single-line></v-text-field>
         <br>
-        <v-btn @click="$router.push('/admin/addfarmer')" block class="rounded-lg" color="success">
+        <v-btn @click="$router.push('/admin/addfarmer')" block large class="rounded-lg" color="success">
             <v-icon>mdi-plus</v-icon>เพิ่มเกษตรกร
         </v-btn>
 
         <v-card v-for="item in 5" class="elevation-5 rounded-lg pa-3 mt-3">
             <div class="d-flex flex-no-wrap">
-                <h2>ข้อมูลเกษตรกร</h2>
+                <h3 class="pt-1 font-weight-regular text--primary">ชื่อ : นายแดง แดงดำ </h3>
                 <v-spacer></v-spacer>
-                <v-btn depressed color="red" fab x-small dark @click="dialog1=false"><v-icon>mdi-delete</v-icon></v-btn>
+                <v-btn depressed color="red" fab small dark @click="dialog1=false"><v-icon>mdi-delete</v-icon></v-btn>
             </div> 
-            <h3 class="pt-1 font-weight-regular">ชื่อ : นายแดง แดงดำ </h3>
-            <h3 class="pt-1 font-weight-light">เบอร์โทรศัพท์ : 0123456789 </h3> 
-            <h3 class="pt-1 font-weight-light">จังหวัด : พะเยา </h3>
-            <h3 class="pt-1 font-weight-light">ฟาร์ม : นายแดง </h3> 
+            <!-- <h3 class="pt-1 font-weight-regular text--primary">ชื่อ : นายแดง แดงดำ </h3> -->
+            <h3 class="pt-1 font-weight-light text--secondary">เบอร์โทรศัพท์ : 0123456789 </h3> 
+            <h3 class="pt-1 font-weight-light text--secondary">จังหวัด : พะเยา </h3>
+            <h3 class="pt-1 font-weight-light text--secondary">ฟาร์ม : นายแดง </h3> 
             <br>
 
             <center>

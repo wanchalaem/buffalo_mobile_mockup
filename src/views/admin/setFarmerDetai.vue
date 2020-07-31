@@ -43,7 +43,7 @@
         <v-tab>
             <v-icon dark>mdi-file-outline</v-icon>
             <h5>ข้อมูลฟาร์ม</h5>
-        </v-tab>
+        </v-tab> 
 
         <v-tab-item>
             <v-flex xs12>
