@@ -118,6 +118,37 @@
         </v-tab-item>
 
     </v-tabs>
+    <v-bottom-navigation grow fixed :value="activeBtn" color="success">
+        <v-btn>
+            <span>หน้าหลัก</span>
+            <v-icon>mdi-view-dashboard-outline</v-icon>
+        </v-btn>
+
+        <!-- <v-btn>
+            <span>ข้อมูลส่วนตัว</span>
+            <v-icon>mdi-account</v-icon>
+        </v-btn> -->
+
+        <v-btn>
+            <span>เกษตกร</span>
+            <v-icon>mdi-account-group</v-icon>
+        </v-btn>
+
+        <v-btn>
+            <span>ผู้ดูแลระบบ</span>
+            <v-icon>mdi-account-cog</v-icon>
+        </v-btn>
+
+        <!-- <v-btn>
+            <span>คำขอรหัสผ่าน</span>
+            <v-icon>mdi-account-key</v-icon>
+        </v-btn> -->
+
+        <v-btn>
+            <span>รายงาน</span>
+            <v-icon>mdi-clipboard-text</v-icon>
+        </v-btn>
+    </v-bottom-navigation>
 </div>
 </template>
 
@@ -135,6 +166,7 @@ export default {
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
+            activeBtn:1,
             page: 1,
             items: ['แก้ไขรหัสผ่านแล้ว', 'ยังไม่ได้แก้ไขรหัสผ่าน'],
 

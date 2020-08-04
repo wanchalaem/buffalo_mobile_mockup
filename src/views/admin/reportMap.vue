@@ -19,20 +19,23 @@
         <v-select solo outlined color="success" class="rounded-lg mb-2" :items="place" label="กรุณาเลือกตำบล" hide-details></v-select>
     </v-container>
 
-    <v-container>
+    <v-container class="mb-15">
         <v-card class="rounded-lg elevation-5" flat height="300px" width="400px" img="https://cdn.vuetifyjs.com/images/toolbar/map.jpg">
         </v-card>
 
-    </v-container>
+    </v-container> 
+
+    <buttomnav/>
 </div>
 </template>
 
 <script>
+import buttomnav from '@/components/admin/buttomnav';
 export default {
     name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
     components: {
-
+        buttomnav
     },
     /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
     props: {
@@ -40,7 +43,7 @@ export default {
     },
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
-        return {
+        return { 
             province: [{
                     text: 'พะเยา'
                 },

@@ -22,13 +22,13 @@
                 <v-text-field color="success" name="name" label="ชื่อ" id="id"></v-text-field>
                 <v-text-field color="success" name="name" label="นามสกุล" id="id"></v-text-field>
             </v-card-text>
-            <v-card-actions> 
+            <v-card-actions>
                 <v-btn color="error width" depressed @click="dialogname = false">
                     ยกเลิก
-                </v-btn> 
+                </v-btn>
                 <v-btn color="success width" depressed @click="dialogname = false">
                     ตกลง
-                </v-btn> 
+                </v-btn>
             </v-card-actions>
         </v-card>
     </v-dialog>
@@ -44,10 +44,10 @@
             <v-card-actions>
                 <v-btn color="error width" depressed @click="dialogemail = false">
                     ยกเลิก
-                </v-btn> 
+                </v-btn>
                 <v-btn color="success width" depressed @click="dialogemail = false">
                     ตกลง
-                </v-btn> 
+                </v-btn>
             </v-card-actions>
         </v-card>
     </v-dialog>
@@ -65,15 +65,14 @@
             <v-card-actions>
                 <v-btn color="error width" depressed @click="dialogpass = false">
                     ยกเลิก
-                </v-btn> 
+                </v-btn>
                 <v-btn color="success width" depressed @click="dialogpass = false">
                     ตกลง
-                </v-btn> 
+                </v-btn>
             </v-card-actions>
         </v-card>
     </v-dialog>
 
-    <!-- <v-container grid-list-xs>  -->
     <h3 class="text-center"> ข้อมูลส่วนตัว</h3>
     <br>
     <v-card class="pa-3" @click="dialogname = true">
@@ -89,7 +88,6 @@
             <h4 class="pl-4">ชื่อผู้ใช้งาน</h4>
             <v-spacer></v-spacer>
             <h4 class="pr-4">Dang1234 </h4>
-            <!-- <v-icon>mdi-chevron-right</v-icon> -->
         </v-row>
     </v-card>
     <v-card class="pa-3" @click="dialogemail = true">
@@ -112,54 +110,28 @@
         </v-row>
     </v-card>
     <br>
-    <center>
+    <center class="mb-15">
         <v-btn large disabled color="success" block>บันทึก</v-btn>
     </center>
-    <!-- </v-container> -->
-    <!-- <v-tabs grow color="green">
-        <v-tab>
-            <v-icon>mdi-account-outline</v-icon>
-            <h5>ข้อมูลผู้ดูแลระบบ</h5>
-        </v-tab>
-
-        <v-tab-item>
-            <v-card-text>
-                <div class="d-flex grow flex-wrap">
-                    <v-spacer></v-spacer>
-                    <div class="col-ml-6 ">
-                        <div class="ml-auto text-right">
-                            <v-btn class="rounded-lg mr-2" color="warning" @click="dialog1=false">
-                                <v-icon>mdi-pencil</v-icon>แก้ไข
-                            </v-btn>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <v-text-field outlined class="rounded-lg" prepend-inner-icon="mdi-card-account-details-outline" color="green" label="ชื่อ-นามสกุล"></v-text-field>
-                <v-text-field outlined class="rounded-lg" prepend-inner-icon="mdi-account" color="green" label="ชื่อผู้ใช้งาน"></v-text-field>
-                <v-text-field outlined class="rounded-lg" prepend-inner-icon="mdi-lock" color="green" type="password" label="รหัสผ่าน"></v-text-field>
-                <v-text-field outlined class="rounded-lg" prepend-inner-icon="mdi-email" color="green" label="อีเมล"></v-text-field>
-                <v-btn large class="rounded-lg" disabled block color="success">บันทึก</v-btn>
-            </v-card-text>
-        </v-tab-item>
-    </v-tabs> -->
-
+ 
+    <buttomnav/>
 </div>
 </template>
 
 <script>
+import buttomnav from '@/components/admin/buttomnav';
 export default {
     name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
     components: {
-
+        buttomnav
     },
     /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
     props: {
 
     },
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
-    data: () => ({
+    data: () => ({ 
         dialogname: false,
         dialogemail: false,
         dialogpass: false,

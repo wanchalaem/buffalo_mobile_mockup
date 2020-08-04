@@ -11,7 +11,7 @@
         </v-row>
     </v-container>
     <v-container grid-list-xs>
-         
+            <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details label="รหัสผ่านเก่า" solo outlined single-line type="password" class=" rounded-lg pb-4"></v-text-field>
             <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details label="รหัสผ่านใหม่" solo outlined single-line type="password" class=" rounded-lg pb-4"></v-text-field>
             <v-text-field color="green" prepend-inner-icon="mdi-lock" clearable flat hide-details label="ยืนยันรหัสผ่านใหม่" solo outlined single-line type="password" class=" rounded-lg"></v-text-field>
          <br> 

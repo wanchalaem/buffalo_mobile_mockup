@@ -116,14 +116,13 @@
             <!-- </v-card> -->
             <v-btn @click="$router.push('/admin/buffalo')" class="rounded-lg" block medium color="success">บันทึก</v-btn>
         </v-card-text>
-    </v-card>
-
+    </v-card> 
 </div>
 </template>
 
 <script>
 export default {
-    data: () => ({
+    data: () => ({ 
         items: ['มีชีวิต', 'ไม่มีชีวิต', ],
         dialog: true,
         dialog1: false,

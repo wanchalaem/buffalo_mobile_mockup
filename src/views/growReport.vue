@@ -28,11 +28,17 @@
 
     </v-container>
 
+    <buttomnavuser/>
+
 </div>
 </template>
 
 <script>
+import buttomnavuser from '@/components/buttomnavuser'
 export default {
+    components:{
+        buttomnavuser
+    },
     data: () => ({
 
     }),

@@ -65,11 +65,16 @@
 
         </v-container>
     </div>
+    <buttomnavuser/>
 </div>
 </template>
 
 <script>
+import buttomnavuser from '@/components/buttomnavuser'
 export default {
+    components:{
+        buttomnavuser
+    },
     data: () => ({
         items: ['มีชีวิต', 'ไม่มีชีวิต'],
         dialog1: true,

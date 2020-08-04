@@ -9,7 +9,7 @@
             <h2>รายงานสรุป</h2>
         </v-row>
     </v-container>
-    <v-container id="dropdown-example-1">
+    <v-container id="dropdown-example-1" class="pb-16">
         <!-- <v-btn class="mb-6" fab @click="$router.push('/user/report')" small> -->
         <!-- <v-btn class="mb-6" fab @click="$router.go(-1)" small><v-icon class="icon">mdi-chevron-left</v-icon>
         </v-btn> -->
@@ -37,11 +37,17 @@
         </v-card>
     </v-container>
 
+    <buttomnavuser/>
+
 </div>
 </template>
 
 <script>
+import buttomnavuser from '@/components/buttomnavuser'
 export default {
+    components:{
+        buttomnavuser
+    },
     data: () => ({
         checkbox: false,
         checkbox1: false,

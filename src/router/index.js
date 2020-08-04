@@ -18,6 +18,21 @@ function view(name){
     component: view('register')
   },
   {
+    path: '/sms',
+    name: 'sms',
+    component: view('sms')
+  },
+  {
+    path: '/sms1',
+    name: 'sms1',
+    component: view('sms1')
+  },
+  {
+    path: '/calladmin',
+    name: 'callAdmin',
+    component: view('callAdmin')
+  },
+  {
     path: '/user/home',
     name: 'dashFarmer',
     component: view('dashFarmer')
@@ -26,6 +41,11 @@ function view(name){
     path: '/user/profile',
     name: 'infoFarmer',
     component: view('infoFarmer')
+  },
+  {
+    path: '/user/picture',
+    name: 'picture1',
+    component: view('picture1')
   },
   {
     path: '/user/buffalo',
@@ -98,6 +118,11 @@ function view(name){
     path: '/admin/userprofile',
     name: 'setPassword',
     component: view('admin/setPassword')
+  },
+  {
+    path: '/admin/userpicture',
+    name: 'picture',
+    component: view('admin/picture')
   },
   {
     path: '/admin/userprofiledetail',

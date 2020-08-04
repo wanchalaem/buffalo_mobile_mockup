@@ -1,7 +1,7 @@
 <template>
 <div class="">
     <!-- <NavigationAdmin name="ข้อมูลควาย" /> -->
-    <v-container> 
+    <v-container>
         <v-row class="d-flex flex-row ">
             <v-btn depressed color="white" small fab @click="$router.push('/admin/buffalo')">
                 <v-icon class="icon">mdi-chevron-left</v-icon>
@@ -31,7 +31,7 @@
                     <div class="d-flex flex-no-wrap">
                         <h3>รายละเอียดควาย</h3>
                         <div class="ml-auto text-right" style="margin-right: 4px;">
-                            <h5 class="body-3 grey--text font-weight-light"> 
+                            <h5 class="body-3 grey--text font-weight-light">
                                 <div class="col-ml-4 ">
                                     <div class="ml-auto text-right">
                                         <v-btn depressed class="rounded-lg pa-1 mr-1" color="warning" @click="dialog=false">
@@ -150,7 +150,7 @@
                     <v-text-field :readonly="dialog" class="rounded-lg" prepend-inner-icon="mdi-human-male-height-variant" color="green" type="number" outlined label="ความสูง(เซนติเมตร)"></v-text-field>
 
                     <!-- </v-card> -->
-                    <v-btn class="rounded-lg" block disabled medium color="success">บันทึก</v-btn>
+                    <v-btn class="rounded-lg mb-15" block disabled medium color="success">บันทึก</v-btn>
                 </v-card-text>
 
             </v-card>
@@ -225,7 +225,7 @@
                     <!-- </div> -->
                 </v-card>
 
-                <v-card class="elevation-5 rounded-lg pa-2 mt-4">
+                <v-card class="elevation-5 rounded-lg pa-2 mt-4 mb-15">
                     <div class="d-flex flex-no-wrap">
                         <h3>อายุ 600 วัน</h3>
                     </div><br>
@@ -262,13 +262,17 @@
         </v-tab-item>
 
     </v-tabs>
-
+<buttomnav/>
 </div>
 </template>
 
 <script>
+import buttomnav from '@/components/admin/buttomnav';
 export default {
-    data: () => ({
+    components:{
+        buttomnav
+    },
+    data: () => ({ 
         items: ['มีชีวิต', 'ไม่มีชีวิต', ],
         dialog: true,
         dialog1: false,

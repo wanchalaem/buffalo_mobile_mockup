@@ -22,7 +22,7 @@
         <v-select solo outlined color="success" class="rounded-lg mb-2" :items="place" label="กรุณาเลือกตำบล" hide-details></v-select>
     </v-container>
 
-    <div class="pa-4">
+    <div class="pa-4 mb-15">
         <v-card class="mt-3 pa-4 rounded-lg">
             <v-card-title>
                 จำนวนการกรอกข้อมูลในแต่ละเดือน
@@ -31,15 +31,18 @@
         </v-card>
 
     </div>
+
+    <buttomnav/>
 </div>
 </template>
 
 <script>
+import buttomnav from '@/components/admin/buttomnav';
 export default {
     name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
     components: {
-
+        buttomnav
     },
     /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
     props: {
@@ -47,7 +50,7 @@ export default {
     },
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
-        return {
+        return { 
             chartData: {
                 '1/7/2020': 140,
                 '2/7/2020': 80,

@@ -139,14 +139,18 @@
             </v-card>
         </v-tab-item>
 
-    </v-tabs> -->
-
+    </v-tabs> --> 
+    <buttomnav/>
 </div>
 </template>
 
 <script>
+import buttomnav from '@/components/admin/buttomnav';
 export default {
-    data: () => ({
+    components:{
+        buttomnav
+    },
+    data: () => ({ 
         items: ['มีชีวิต', 'ไม่มีชีวิต'],
         dialog1: true,
         radios: 'ทั้งหมด',

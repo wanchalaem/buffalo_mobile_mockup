@@ -14,12 +14,13 @@
             <div class="d-flex flex-no-wrap">
                 <h3 class="pt-1 font-weight-regular text--primary">ชื่อ : นายแดง แดงดำ </h3>
                 <v-spacer></v-spacer>
-                <v-btn depressed color="red" fab small dark @click="dialog1=false"><v-icon>mdi-delete</v-icon></v-btn>
-            </div> 
-            <!-- <h3 class="pt-1 font-weight-regular text--primary">ชื่อ : นายแดง แดงดำ </h3> -->
-            <h3 class="pt-1 font-weight-light text--secondary">เบอร์โทรศัพท์ : 0123456789 </h3> 
+                <v-btn depressed color="red" fab small dark @click="dialog1=false">
+                    <v-icon>mdi-delete</v-icon>
+                </v-btn>
+            </div>
+            <h3 class="pt-1 font-weight-light text--secondary">เบอร์โทรศัพท์ : 0123456789 </h3>
             <h3 class="pt-1 font-weight-light text--secondary">จังหวัด : พะเยา </h3>
-            <h3 class="pt-1 font-weight-light text--secondary">ฟาร์ม : นายแดง </h3> 
+            <h3 class="pt-1 font-weight-light text--secondary">ฟาร์ม : นายแดง </h3>
             <br>
 
             <center>
@@ -43,15 +44,18 @@
         </div>
 
     </v-container>
+
+    <buttomnav/>
 </div>
 </template>
 
 <script>
+import buttomnav from '@/components/admin/buttomnav';
 export default {
     name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
     components: {
-
+        buttomnav
     },
     /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
     props: {
@@ -59,7 +63,7 @@ export default {
     },
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
-        return {
+        return { 
             page: 1,
             txt: 'Hello World'
 

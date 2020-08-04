@@ -87,19 +87,24 @@
             </v-flex>
         </center>
     <!-- </v-container> -->
+    
+    <buttomnav/>
 </div>
 </template>
 
 <script>
+import buttomnav from '@/components/admin/buttomnav';
 export default {
     name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
-    components: {},
+    components: {
+        buttomnav
+    },
     /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
     props: {},
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
-        return {
+        return { 
             txt: 'Hello World'
         };
     },

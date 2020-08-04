@@ -20,7 +20,7 @@
         <v-select solo outlined color="success" class="rounded-lg mb-2" :items="farm" label="กรุณาเลือกฟาร์ม" hide-details></v-select>
     </v-container>
 
-    <v-container grid-list-xs>
+    <v-container grid-list-xs class="mb-15">
         <v-card class="rounded-lg">
             <div class="d-flex flex-no-wrap ma-4">
                 <div class="ma-3">
@@ -34,16 +34,18 @@
             </div>
         </v-card>
     </v-container>
-
+ 
+ <buttomnav/>       
 </div>
 </template>
 
 <script>
+import buttomnav from '@/components/admin/buttomnav';
 export default {
     name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
     components: {
-
+        buttomnav
     },
     /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
     props: {
@@ -51,7 +53,7 @@ export default {
     },
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
-        return {
+        return { 
 
             province: [{
                     text: 'พะเยา'

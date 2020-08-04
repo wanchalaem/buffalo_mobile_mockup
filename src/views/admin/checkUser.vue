@@ -4,7 +4,7 @@
     <NavigationAdmin name="ผู้ดูแลระบบ" />
 
     <v-container grid-list-xs>
-        <v-text-field clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" solo outlined single-line class="widths rounded-lg pt-3"></v-text-field>
+        <v-text-field color="success" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" solo outlined single-line class="widths rounded-lg pt-3"></v-text-field>
 
         <br>
         <v-btn @click="$router.push('/admin/addadmin')" color="green" class="rounded-lg" large block dark>
@@ -47,14 +47,17 @@
         </div>
     </v-container>
     <!-- </v-card-text>  -->
+    <buttomnav/>
 </div>
 </template>
 
 <script>
+import buttomnav from '@/components/admin/buttomnav';
 export default {
     name: 'checkUser',
     /*-------------------------ประกาศ components ---------------------------------------*/
     components: {
+        buttomnav
 
     },
     /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
@@ -63,7 +66,7 @@ export default {
     },
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
-        return {
+        return { 
             page: 1,
             dialog: false,
             value: [

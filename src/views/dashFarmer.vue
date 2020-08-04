@@ -41,7 +41,7 @@
             </v-flex>
 
         </v-layout>
-        <v-card class="mt-4 pa-4">
+        <v-card class="mt-4 pa-4 mb-15">
             <h4 class="text-center">
                 จำนวนควายทั้งหมด
             </h4>
@@ -60,13 +60,18 @@
             <v-btn depressed class="rounded-lg" @click="$router.push('/user/reportsum')" block dark color="green">ดูข้อมูลเพิ่มเติม</v-btn>
         </v-card>
     </v-container>
+    <buttomnavuser/>
 </div>
 
 <!-- </div> -->
 </template>
 
 <script>
+import buttomnavuser from '@/components/buttomnavuser'
 export default {
+    components:{
+        buttomnavuser
+    },
     data: () => ({
         date: new Date().toISOString().substr(0, 10),
         menu: false,
