@@ -1,16 +1,45 @@
 <template>
 <div class="bg">
-    <!-- <Navbar icon="mdi-account-key" name="เกี่ยวกับเกษตรกร" /> -->
     <NavigationAdmin name="เกษตรกร" />
-
     <v-container>
-        <v-text-field class="rounded-lg pt-3" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" solo outlined single-line></v-text-field>
-        <br>
-        <v-btn @click="$router.push('/admin/addfarmer')" block large class="rounded-lg" color="success">
-            <v-icon>mdi-plus</v-icon>เพิ่มเกษตรกร
-        </v-btn>
+        <v-container>
+            <v-card class="rounded-lg">
+                <v-text-field class="rounded-lg pa-3" clearable flat hide-details append-icon="mdi-magnify" label="ค้นหา" solo outlined single-line></v-text-field>
+                <v-btn @click="$router.push('/admin/addfarmer')" block large class="rounded-lg" color="success">
+                    <v-icon>mdi-plus</v-icon>เพิ่มเกษตรกร
+                </v-btn>
+            </v-card>
+        </v-container>
 
-        <v-card v-for="item in 5" class="elevation-5 rounded-lg pa-3 mt-3">
+        <v-flex xs12 row wrap>
+            <v-flex xs6 v-for="item in 6">
+                <v-card class="rounded-lg pa-3 ml-6 mb-4">
+                    <div class="d-flex flex-no-wrap mb-2">
+                        <v-spacer></v-spacer>
+                        <v-btn color="red" fab depressed x-small dark @click="dialog1=false">
+                            <v-icon>mdi-delete</v-icon>
+                        </v-btn>
+                    </div>
+                    <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg" aspect-ratio="2"></v-img>
+                    <h3 class="pt-1 font-weight-regular text--primary">ชื่อ : นายแดง แดงดำ </h3>
+                    <h3 class="pt-1 font-weight-light text--secondary">เบอร์โทรศัพท์ : 0123456789 </h3>
+                    <h3 class="pt-1 font-weight-light text--secondary">จังหวัด : พะเยา </h3>
+                    <h3 class="pt-1 font-weight-light text--secondary">ฟาร์ม : นายแดง </h3>
+                    <br>
+                    <center>
+                        <v-flex xs12 row wrap>
+                            <v-flex xs12>
+                                <v-btn depressed dark class="rounded-lg width " color="warning" @click="$router.push('/admin/userprofiledetail')">
+                                    <v-icon>mdi-pencil</v-icon>แก้ไข
+                                </v-btn>
+                            </v-flex>
+                        </v-flex>
+                    </center>
+                </v-card>
+            </v-flex>
+        </v-flex>
+
+        <!-- <v-card v-for="item in 5" class="elevation-5 rounded-lg pa-3 mt-3">
             <div class="d-flex flex-no-wrap">
                 <h3 class="pt-1 font-weight-regular text--primary">ชื่อ : นายแดง แดงดำ </h3>
                 <v-spacer></v-spacer>
@@ -29,23 +58,18 @@
                         <v-btn depressed dark class="rounded-lg width" color="warning" @click="$router.push('/admin/userprofiledetail')">
                             <v-icon>mdi-pencil</v-icon>แก้ไข
                         </v-btn>
-                    </v-flex>
-                    <!-- <v-flex xs6>
-                        <v-btn  dark class="rounded-r-lg width" color="red" @click="dialog1=false">
-                            <v-icon>mdi-delete</v-icon>ลบ
-                        </v-btn>
-                    </v-flex> -->
+                    </v-flex> 
                 </v-flex>
             </center>
-        </v-card>
+        </v-card> -->
 
         <div class="text-center pt-4">
             <v-pagination color="green" v-model="page" :length="4" prev-icon="mdi-menu-left" next-icon="mdi-menu-right"></v-pagination>
         </div>
-
+        <br><br><br>
     </v-container>
 
-    <buttomnav/>
+    <buttomnav />
 </div>
 </template>
 
@@ -63,7 +87,7 @@ export default {
     },
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
-        return { 
+        return {
             page: 1,
             txt: 'Hello World'
 

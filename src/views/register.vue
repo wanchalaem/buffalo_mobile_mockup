@@ -15,11 +15,16 @@
                         <hr><br>
                     </div>
                     <v-form>
-                        <v-text-field class="rounded-lg" solo label="ชื่อผู้ใช้งาน" prepend-inner-icon="mdi-account-star"></v-text-field>
-                        <v-text-field class="rounded-lg" solo label="ชื่อ" prepend-inner-icon="mdi-account" type="text"></v-text-field>
-                        <v-text-field class="rounded-lg" solo label="นามสกุล" prepend-inner-icon="mdi-account"></v-text-field> 
-                        <v-text-field class="rounded-lg" solo label="รหัสผ่าน" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
-                        <v-text-field class="rounded-lg" solo label="ยืนยันรหัสผ่าน" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
+                        <v-text-field class="rounded-lg" color="green" solo label="ชื่อผู้ใช้งาน" prepend-inner-icon="mdi-account-star"></v-text-field>
+                        <v-text-field class="rounded-lg" color="green" solo label="ชื่อ" prepend-inner-icon="mdi-account" type="text"></v-text-field>
+                        <v-text-field class="rounded-lg" color="green" solo label="นามสกุล" prepend-inner-icon="mdi-account"></v-text-field> 
+                        <v-text-field class="rounded-lg" color="green" solo label="รหัสผ่าน" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
+                        <v-text-field class="rounded-lg" color="green" solo label="ยืนยันรหัสผ่าน" prepend-inner-icon="mdi-lock" type="password"></v-text-field>
+                        <v-text-field class="rounded-lg" color="green" solo label="บ้านเลขที่" prepend-inner-icon="mdi-home-edit" type="text"></v-text-field>
+                        <v-text-field class="rounded-lg" color="green" solo label="หมู่บ้าน" prepend-inner-icon="mdi-home-group" type="text"></v-text-field>
+                        <v-text-field class="rounded-lg" color="green" solo label="ตำบล" prepend-inner-icon="mdi-pin" type="text"></v-text-field>
+                        <v-text-field class="rounded-lg" color="green" solo label="อำเภอ" prepend-inner-icon="mdi-pin" type="text"></v-text-field>
+                        <v-text-field class="rounded-lg" color="green" solo label="จังหวัด" prepend-inner-icon="mdi-pin" type="text"></v-text-field>
                     </v-form>
 
                     <v-spacer></v-spacer>

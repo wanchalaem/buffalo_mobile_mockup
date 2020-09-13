@@ -10,7 +10,7 @@
             </v-btn>
             <h2>ข้อมูลควาย</h2>
         </v-row>
- 
+
     </v-container>
 
     <!-- <v-container grid-list-xs>
@@ -38,80 +38,41 @@
         <v-tab-item>
             <v-card flat>
                 <v-card-text>
-                    <div class="d-flex flex-no-wrap">
-                        <h3>รายละเอียดควาย</h3>
-                        <div class="ml-auto text-right" style="margin-right: 4px;">
-                            <h5 class="body-3 grey--text font-weight-light"> 
-                                <div class="col-ml-4 ">
-                                    <div class="ml-auto text-right">
-                                        <v-btn depressed class="rounded-lg pa-1 mr-1" color="warning" dark @click="dialog1=false">
-                                            <v-icon>mdi-pencil</v-icon>แก้ไขข้อมูลควาย
-                                        </v-btn> 
-                                    </div>
-                                </div>
-                            </h5>
-                        </div>
-                    </div>
+                    <h2>รายละเอียดควาย</h2>
                     <br>
                     <center>
-                        <v-flex xs12 row wrap>
+                        <v-card>
+                            <v-card-title primary-title>
+                                รูปภาพ
+                            </v-card-title>
+                            <v-divider class="mx-4"></v-divider>
+                            <v-card-text>
+                                <v-flex xs12 row wrap>
                             <v-flex xs6 class="pr-2 pb-4">
-                                <v-card class="elevation-5 rounded-lg">
-                                    <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="1.7"></v-img>
+                                <v-card class="rounded-lg">
+                                    <v-img src="https://images.pexels.com/photos/1054650/pexels-photo-1054650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="1.2"></v-img>
                                     <v-list two-line>
                                         <center>
-                                            <h5>ภาพด้านข้าง</h5>
+                                            <h3>ภาพด้านข้าง</h3>
                                         </center>
                                     </v-list>
                                     <v-btn depressed block color="success">อัพโหลด</v-btn>
                                 </v-card>
                             </v-flex>
                             <v-flex xs6 class="pl-2 pb-2">
-                                <v-card class="elevation-5 rounded-lg ">
-                                    <v-img src="https://images.pexels.com/photos/2261770/pexels-photo-2261770.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="1.7"></v-img>
+                                <v-card class="rounded-lg ">
+                                    <v-img src="https://images.pexels.com/photos/2261770/pexels-photo-2261770.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" aspect-ratio="1.2"></v-img>
                                     <v-list two-line>
                                         <center>
-                                            <h5>ภาพด้านหลัง</h5>
+                                            <h3>ภาพด้านหลัง</h3>
                                         </center>
-
                                     </v-list>
                                     <v-btn depressed block color="success">อัพโหลด</v-btn>
                                 </v-card>
-                            </v-flex>
-
-                            <v-flex xs6 class="pr-2">
-                                <v-card class="elevation-5 rounded-lg ">
-                                    <div class="d-flex flex-no-wrap">
-                                        <div class="ma-3">
-                                            <v-icon dark large class="elevation-6 error rounded-lg" style="max-height: auto; width: auto;">mdi-file-pdf-outline</v-icon>
-                                        </div>
-                                        <div class="ml-auto text-right " style="margin-right:4px; margin-top:8px;">
-                                            <h5>
-                                                ใบพันธุ์ประวัติอ้างอิง
-                                            </h5>
-                                        </div>
-                                    </div>
-                                    <v-btn depressed block color="success">อัพโหลด</v-btn>
-                                </v-card>
-                            </v-flex>
-
-                            <v-flex xs6 class="pl-2">
-                                <v-card class="elevation-5 rounded-lg ">
-                                    <div class="d-flex flex-no-wrap">
-                                        <div class="ma-3">
-                                            <v-icon dark large class="elevation-6 error rounded-lg" style="max-height: auto; width: auto;">mdi-file-pdf-outline</v-icon>
-                                        </div>
-                                        <div class="ml-auto text-right " style="margin-right:4px; margin-top:8px;">
-                                            <h5>
-                                                ใบพันธุ์ประวัติทางการ
-                                            </h5>
-                                        </div>
-                                    </div>
-                                    <v-btn depressed block color="success">อัพโหลด</v-btn>
-                                </v-card>
-                            </v-flex>
-
-                        </v-flex>
+                            </v-flex> 
+                        </v-flex> 
+                        </v-card-text> 
+                        </v-card>
                     </center>
                     <br>
 
@@ -131,7 +92,7 @@
                         <v-select outlined color="green" class="rounded-lg" label="สถานะ"></v-select>
                     </div>  -->
 
-                    <v-text-field :readonly="dialog1" class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขควาย"></v-text-field>
+                    <!-- <v-text-field :readonly="dialog1" class="rounded-lg" prepend-inner-icon="mdi-cow" color="green" outlined label="ชื่อหรือหมายเลขควาย"></v-text-field>
                     <v-text-field :readonly="dialog1" class="rounded-lg" prepend-inner-icon="mdi-numeric-10-box-multiple-outline" color="green" outlined type="number" label="หมายเลข NID"></v-text-field>
                     <v-text-field :readonly="dialog1" class="rounded-lg" prepend-inner-icon="mdi-numeric" color="green" outlined type="number" label="หมายเลขไมโครซิป"></v-text-field>
                     <v-menu ref="menu" v-model="menu" :close-on-content-click="false" transition="scale-transition" offset-y min-width="290px">
@@ -157,9 +118,9 @@
                     <v-text-field :readonly="dialog1" class="rounded-lg" prepend-inner-icon="mdi-arrow-left-right" color="green" outlined type="number" label="ความยาวรอบลำตัว(เซนติเมตร)"></v-text-field>
                     <v-text-field :readonly="dialog1" class="rounded-lg" prepend-inner-icon="mdi-human-male-height-variant" color="green" outlined type="number" label="ความสูง(เซนติเมตร)"></v-text-field>
 
-                    <v-btn class="rounded-lg" block disabled large color="success">บันทึก</v-btn>
+                    <v-btn class="rounded-lg" block disabled large color="success">บันทึก</v-btn> -->
 
-                    <!-- <v-dialog v-model="dialogcow" max-width="500px">
+                    <v-dialog v-model="dialogcow" max-width="500px">
                         <v-card>
                             <v-card-title>
                                 ชื่อหรือหมายเลขควาย
@@ -168,10 +129,10 @@
                                 <v-text-field color="success" label="ชื่อหรือหมายเลขควาย" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogcow = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogcow = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogcow = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogcow = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -181,7 +142,7 @@
                         <v-row>
                             <h4 class="pl-4">ชื่อหรือหมายเลขควาย</h4>
                             <v-spacer></v-spacer>
-                            <h4 class="pr-4">นาย</h4>
+                            <h4 class="pr-4">ควายไทย</h4>
                             <v-icon>mdi-chevron-right</v-icon>
                         </v-row>
                     </v-card>
@@ -195,10 +156,10 @@
                                 <v-text-field color="success" type="number" label="หมายเลขNID" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialognid = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialognid = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialognid = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialognid = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -222,10 +183,10 @@
                                 <v-text-field color="success" label="หมายเลขไมโครชิป" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogmicro = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogmicro = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogmicro = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogmicro = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -254,10 +215,10 @@
                                 </v-menu>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogdate = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogdate = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogdate = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogdate = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -281,10 +242,10 @@
                                 <v-select color="success" :items="itemsgender" label="เพศ"></v-select>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialoggender = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialoggender = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialoggender = false">
+                                <v-btn color="success width1" depressed @click="dialoggender = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -308,10 +269,10 @@
                                 <v-text-field color="success" type="number" label="อายุ" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogage = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogage = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogage = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogage = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -335,16 +296,16 @@
                                 <v-select color="success" :items="itemscolor" label="สี"></v-select>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogcolor = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogcolor = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogcolor = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogcolor = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
                         </v-card>
                     </v-dialog>
-                    <v-card class="pa-3" @click="dialogaddress = true">
+                    <v-card class="pa-3" @click="dialogcolor = true">
                         <v-row>
                             <h4 class="pl-4">สี</h4>
                             <v-spacer></v-spacer>
@@ -362,16 +323,16 @@
                                 <v-select color="success" :items="itemsimport" label="แหล่งที่มา"></v-select>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogimport = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogimport = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogimport = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogimport = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
                         </v-card>
                     </v-dialog>
-                    <v-card class="pa-3" @click="dialogphone = true">
+                    <v-card class="pa-3" @click="dialogimport = true">
                         <v-row>
                             <h4 class="pl-4">แหล่งที่มา</h4>
                             <v-spacer></v-spacer>
@@ -389,10 +350,10 @@
                                 <v-text-field color="success" type="number" label="ราคา" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogprice = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogprice = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogprice = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogprice = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -413,13 +374,13 @@
                                 สถานะ
                             </v-card-title>
                             <v-card-text>
-                                <v-select color="success" :items="itemsprice" label="สถานะ"></v-select>
+                                <v-select color="success" :items="itemsstatus" label="สถานะ"></v-select>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogstatus = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogstatus = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogstatus = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogstatus = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -429,7 +390,7 @@
                         <v-row>
                             <h4 class="pl-4">สถานะ</h4>
                             <v-spacer></v-spacer>
-                            <h4 class="pr-4">30,000</h4>
+                            <h4 class="pr-4">ไม่ท้อง</h4>
                             <v-icon>mdi-chevron-right</v-icon>
                         </v-row>
                     </v-card>
@@ -443,10 +404,10 @@
                                 <v-text-field color="success" label="ชื่อหรือหมายเลขพ่อ" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialognnf = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialognnf = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialognnf = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialognnf = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -470,10 +431,10 @@
                                 <v-text-field color="success" type="number" label="หมายเลขNIDพ่อ" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialognidf = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialognidf = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialognidf = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialognidf = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -497,10 +458,10 @@
                                 <v-text-field color="success" type="number" label="หมายเลขไมโครซิบพ่อ" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogmicrof = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogmicrof = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogmicrof = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogmicrof = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -524,10 +485,10 @@
                                 <v-text-field color="success" label="ชื่อหรือหมายเลขแม่" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialognnm = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialognnm = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialognnm = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialognnm = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -551,10 +512,10 @@
                                 <v-text-field color="success" type="number" label="หมายเลขNIDแม่" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialognidm = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialognidm = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialognidm = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialognidm = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -578,10 +539,10 @@
                                 <v-text-field color="success" type="number" label="หมายเลขไมโครซิบแม่" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogmicrom = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogmicrom = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogmicrom = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogmicrom = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -605,10 +566,10 @@
                                 <v-text-field color="success" type="number" label="น้ำหนัก(กิโลกรัม)" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogkg = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogkg = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogkg = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogkg = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -632,10 +593,10 @@
                                 <v-text-field color="success" type="number" label="ความกว้างรอบอก(เซนติเมตร)" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogweight = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogweight = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogweight = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogweight = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -659,10 +620,10 @@
                                 <v-text-field color="success" type="number" label="ความยาวรอบลำตัว(เซนติเมตร)" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogbodyweight = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogbodyweight = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogbodyweight = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogbodyweight = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -686,10 +647,10 @@
                                 <v-text-field color="success" type="number" label="ความสูง(เซนติเมตร)" id="id"></v-text-field>
                             </v-card-text>
                             <v-card-actions>
-                                <v-btn color="error width" depressed @click="dialogheight = false">
+                                <v-btn color="error width1" class="rounded-lg" depressed @click="dialogheight = false">
                                     ยกเลิก
                                 </v-btn>
-                                <v-btn color="success width" depressed @click="dialogheight = false">
+                                <v-btn color="success width1" class="rounded-lg" depressed @click="dialogheight = false">
                                     ตกลง
                                 </v-btn>
                             </v-card-actions>
@@ -705,9 +666,39 @@
                     </v-card>
 
                     <br>
-                    <center class="mb-15">
+                    <v-card>
+                        <v-card-title primary-title>
+                            พันธุ์ประวัติ
+                        </v-card-title>
+                        <v-divider class="mx-4"></v-divider>
+                        <v-card-text>
+                            <v-card-title class="black--text white darken-4">
+                                <v-icon @click="$router.go()" large color="error">mdi-file-pdf-outline</v-icon>
+                                <v-divider vertical inset class="mx-1" dark></v-divider>
+                                <h5 @click="$router.go()">ใบพันธุ์ประวัติอ้างอิง</h5>
+                                <v-spacer></v-spacer>
+                                <v-btn :loading="loading3" :disabled="loading3" color="indigo" fab small class="white--text" @click="loader = 'loading3'">
+                                    <v-icon>mdi-cloud-upload</v-icon>
+                                </v-btn>
+                            </v-card-title>
+
+                            <v-card-title class="black--text white darken-4">
+                                <v-icon @click="$router.go()" large color="error">mdi-file-pdf-outline</v-icon>
+                                <v-divider vertical inset class="mx-1" dark></v-divider>
+                                <h5 @click="$router.go()">ใบพันธุ์ประวัติทางการ</h5>
+                                <v-spacer></v-spacer>
+                                <v-btn :loading="loading3" :disabled="loading3" color="indigo" fab small class="white--text" @click="loader = 'loading3'">
+                                    <v-icon >mdi-cloud-upload</v-icon>
+                                </v-btn>
+                            </v-card-title>
+
+                        </v-card-text>
+                    </v-card>
+
+                    <br>
+                    <center class="mb-2">
                         <v-btn class="rounded-lg" large disabled color="success" block>บันทึก</v-btn>
-                    </center> -->
+                    </center>
 
                 </v-card-text>
 
@@ -715,110 +706,95 @@
         </v-tab-item>
 
         <v-tab-item class="">
-            <v-container grid-list-xs> 
-                <v-btn large block @click="$router.push('/user/buffaloage')" class="rounded-lg" color="green" dark>
+            <v-container grid-list-xs>
+                <v-btn depressed large block @click="$router.push('/user/buffaloage')" class="rounded-lg" color="green" dark>
                     <h3>เพิ่มข้อมูลอายุ</h3>
-                </v-btn>
-
+                </v-btn> 
                 <v-card class="elevation-5 rounded-lg pa-2 mt-4">
-                    <div class="d-flex flex-no-wrap">
-                        <h3>อายุ 240 วัน</h3>
-                    </div><br>
-                    <div v-for="item in desserts1" :key="item.name">
-                        <v-text-field color="green" class="rounded-lg" outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
-                    </div> 
-                    <center>
+                    <v-card-title primary-title>
+                        อายุ 240 วัน
+                    </v-card-title>
+                    <v-divider class="mx-4"></v-divider>
+                    <v-card-text>
+                        <div v-for="item in desserts1" :key="item.name">
+                        <v-text-field  color="green" class="rounded-lg" :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
+                        </div>
+                        <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn depressed large dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
+                                <v-btn depressed large dark class="rounded-l-lg width mr-2" color="warning" @click="dialog=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>
                             <v-flex xs6>
-                                <v-btn depressed large dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                                <v-btn depressed large dark class="rounded-r-lg width ml-2" color="red" >
                                     <v-icon>mdi-delete</v-icon>ลบ
                                 </v-btn>
                             </v-flex>
-                        </v-flex>
-                        <!-- <v-btn outlined large dark class="rounded-l-lg width mr-1" color="green" @click="dialog1=false">
-                        <v-icon>mdi-pencil</v-icon>แก้ไข
-                    </v-btn>
-                    <v-btn outlined large dark class="rounded-r-lg width " color="red" @click="dialog1=false">
-                        <v-icon>mdi-delete</v-icon>ลบ
-                    </v-btn> -->
-                    </center>
-                    <!-- </div> -->
+                        </v-flex> 
+                        </center>
+                    </v-card-text> 
                 </v-card>
 
                 <v-card class="elevation-5 rounded-lg pa-2 mt-4">
-                    <div class="d-flex flex-no-wrap">
-                        <h3>อายุ 400 วัน</h3>
-                    </div><br>
-                    <div v-for="item in desserts1" :key="item.name">
-                        <v-text-field color="green" class="rounded-lg" outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
-                    </div>
-                    <!-- <div class="d-flex flex-no-wrap"> -->
-                    <center>
+                    <v-card-title primary-title>
+                        อายุ 400 วัน
+                    </v-card-title>
+                    <v-divider class="mx-4"></v-divider>
+                    <v-card-text>
+                        <div v-for="item in desserts1" :key="item.name">
+                        <v-text-field  color="green" class="rounded-lg" :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
+                        </div>
+                        <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn depressed large dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
+                                <v-btn depressed large dark class="rounded-l-lg width mr-2" color="warning" @click="dialog=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>
                             <v-flex xs6>
-                                <v-btn depressed large dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                                <v-btn depressed large dark class="rounded-r-lg width ml-2" color="red" >
                                     <v-icon>mdi-delete</v-icon>ลบ
                                 </v-btn>
                             </v-flex>
-                        </v-flex>
-                        <!-- <v-btn outlined large dark class="rounded-l-lg width mr-1" color="green" @click="dialog1=false">
-                        <v-icon>mdi-pencil</v-icon>แก้ไข
-                    </v-btn>
-                    <v-btn outlined large dark class="rounded-r-lg width " color="red" @click="dialog1=false">
-                        <v-icon>mdi-delete</v-icon>ลบ
-                    </v-btn> -->
-                    </center>
-                    <!-- </div> -->
+                        </v-flex> 
+                        </center>
+                    </v-card-text> 
                 </v-card>
 
                 <v-card class="elevation-5 rounded-lg pa-2 mt-4">
-                    <div class="d-flex flex-no-wrap">
-                        <h3>อายุ 600 วัน</h3>
-                    </div><br>
-                    <div v-for="item in desserts1" :key="item.name">
-                        <v-text-field color="green" class="rounded-lg" outlined :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
-                    </div>
-                    <!-- <div class="d-flex flex-no-wrap"> -->
-                    <center>
+                    <v-card-title primary-title>
+                        อายุ 600 วัน
+                    </v-card-title>
+                    <v-divider class="mx-4"></v-divider>
+                    <v-card-text>
+                        <div v-for="item in desserts1" :key="item.name">
+                        <v-text-field  color="green" class="rounded-lg" :readonly="dialog" v-model="item.calories1" name="name" :label="item.describe1" id="id"></v-text-field>
+                        </div>
+                        <center>
                         <v-flex xs12 row wrap>
                             <v-flex xs6>
-                                <v-btn depressed large dark class="rounded-l-lg width " color="warning" @click="dialog1=false">
+                                <v-btn depressed large dark class="rounded-l-lg width mr-2" color="warning" @click="dialog=false">
                                     <v-icon>mdi-pencil</v-icon>แก้ไข
                                 </v-btn>
                             </v-flex>
                             <v-flex xs6>
-                                <v-btn depressed large dark class="rounded-r-lg width" color="red" @click="dialog1=false">
+                                <v-btn depressed large dark class="rounded-r-lg width ml-2" color="red" >
                                     <v-icon>mdi-delete</v-icon>ลบ
                                 </v-btn>
                             </v-flex>
-                        </v-flex>
-                        <!-- <v-btn outlined large dark class="rounded-l-lg width mr-1" color="green" @click="dialog1=false">
-                        <v-icon>mdi-pencil</v-icon>แก้ไข
-                    </v-btn>
-                    <v-btn outlined large dark class="rounded-r-lg width " color="red" @click="dialog1=false">
-                        <v-icon>mdi-delete</v-icon>ลบ
-                    </v-btn> -->
-                    </center>
-                    <!-- </div> -->
+                        </v-flex> 
+                        </center>
+                    </v-card-text> 
                 </v-card>
-
-                <!-- </v-card> -->
+ 
             </v-container>
 
         </v-tab-item>
 
     </v-tabs>
-    <buttomnavuser/>
+
+    <buttomnavuser />
 
 </div>
 </template>
@@ -826,28 +802,63 @@
 <script>
 import buttomnavuser from '@/components/buttomnavuser'
 export default {
-    components:{
+    components: {
         buttomnavuser
     },
     data: () => ({
+        dialogcow: false,
+        dialognid: false,
+        dialogmicro: false,
+        dialogdate: false,
+        dialoggender: false,
+        dialogage: false,
+        dialogcolor: false,
+        dialogimport: false,
+        dialogprice: false,
+        dialogstatus: false,
+        dialognnf: false,
+        dialognidf: false,
+        dialogmicrof: false,
+        dialognnm: false,
+        dialognidm: false,
+        dialogmicrom: false,
+        dialogkg: false,
+        dialogweight: false,
+        dialogbodyweight: false,
+        dialogheight: false,
+
+        itemsgender: ['ผู้', 'เมีย'],
+        itemscolor: ['ดำ', 'น้ำตาล'],
+        itemsimport: ['พ่อค้าคนกลาง', 'ตลาด', 'เพาะพันธุ์'],
+        itemsstatus: ['ท้อง', 'ไม่ท้อง'],
+
+        loader: null,
+        loading: false,
+        loading2: false,
+        loading3: false,
+        loading4: false,
+        loading5: false,
+
+        length: 2,
+        onboarding: 0,
+
         items: ['มีชีวิต', 'ไม่มีชีวิต', ],
-        dialog: false,
+        dialog: true,
         dialog1: true,
         date: null,
         menu: false,
-        items: [
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
+        items: [{
+                src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+            },
+            {
+                src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+            },
+            {
+                src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+            },
+            {
+                src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+            },
         ],
         desserts: [{
                 describe: 'หมายเลขบัตรประชาชนเกษตรกร',
@@ -959,12 +970,32 @@ export default {
         menu(val) {
             val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
         },
+        loader() {
+            const l = this.loader
+            this[l] = !this[l]
+
+            setTimeout(() => (this[l] = false), 3000)
+
+            this.loader = null
+        },
+
     },
     /*-------------------------Methods------------------------------------------*/
     methods: {
         load: async function () {},
         save1(date) {
             this.$refs.menu.save(date)
+        },
+
+        next() {
+            this.onboarding = this.onboarding + 1 === this.length ?
+                0 :
+                this.onboarding + 1
+        },
+        prev() {
+            this.onboarding = this.onboarding - 1 < 0 ?
+                this.length - 1 :
+                this.onboarding - 1
         },
     },
 
@@ -974,6 +1005,10 @@ export default {
 <style>
 .width {
     width: 95%;
+}
+
+.width1 {
+    width: 48%;
 }
 
 .bg {

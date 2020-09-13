@@ -87,7 +87,7 @@ function view(name){
     path: '/user/resetpassword',
     name: 'setPassFarmer',
     component: view('setPassFarmer')
-  },
+  }, 
   
   {
     path: '/admin/home',
@@ -190,6 +190,11 @@ function view(name){
     name: 'reportSystem',
     component: view('admin/reportSystem')
   },
+  {
+    path: '/admin/export',
+    name: 'reportexport',
+    component: view('admin/reportexport')
+  }, 
  
 
   // {

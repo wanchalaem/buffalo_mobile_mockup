@@ -4,41 +4,18 @@
     <NavigationAdmin name="คำขอรหัสผ่าน" />
 
     <v-container grid-list-xs>
-        <v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
-            <template v-slot:activator="{ on, attrs }">
-                <v-text-field color="success" outlined class="rounded-lg mt-3" v-model="date" label="วันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
-            </template>
-            <v-date-picker color="success" v-model="date" no-title scrollable>
-                <v-spacer></v-spacer>
-                <v-btn text color="success" @click="menu = false">ยกเลิก</v-btn>
-                <v-btn text color="success" @click="$refs.menu.save(date)">ตกลง</v-btn>
-            </v-date-picker>
-        </v-menu>
-
-        <!-- <v-layout row wrap>
-            <v-flex xs12>
-                <v-card v-for="item in 5" class="rounded-lg pa-2 mt-3">
-                    <div class="d-flex flex-no-wrap">
-                        <h3 class="pt-1 font-weight-light text--primary">ชื่อ-นามสกุล : นายแดง แม่ใจ </h3>
-                        <v-spacer></v-spacer>
-                        <v-btn depressed color="red" fab small dark @click="dialog1=false">
-                            <v-icon>mdi-delete</v-icon>
-                        </v-btn>
-                    </div> 
-                    <h3 class="pt-1 font-weight-light text--secondary">เบอร์โทร : 0123123123 </h3>
-                    <h3 class="pt-1 font-weight-light text--secondary">สถานะ : แก้ไขรหัสผ่านแล้ว</h3>
-                    <br>
-                    <v-btn depressed dark @click="$router.push('/admin/userprofiledetail')" class="widths rounded-lg" color="success">
-                        <h4>ดูข้อมูล</h4>
-                    </v-btn>
-                </v-card>
-
-                <div class="text-center pt-4">
-                    <v-pagination color="green" v-model="page" :length="4" prev-icon="mdi-menu-left" next-icon="mdi-menu-right"></v-pagination>
-                </div>
-            </v-flex>
-
-        </v-layout> -->
+        <v-card class="pa-3 pb-1 rounded-lg">
+            <v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="date" transition="scale-transition" offset-y min-width="290px">
+                <template v-slot:activator="{ on, attrs }">
+                    <v-text-field color="success" outlined class="rounded-lg mt-3" v-model="date" label="วันที่" prepend-inner-icon="mdi-calendar" readonly v-bind="attrs" v-on="on"></v-text-field>
+                </template>
+                <v-date-picker color="success" v-model="date" no-title scrollable>
+                    <v-spacer></v-spacer>
+                    <v-btn text color="success" @click="menu = false">ยกเลิก</v-btn>
+                    <v-btn text color="success" @click="$refs.menu.save(date)">ตกลง</v-btn>
+                </v-date-picker>
+            </v-menu> 
+        </v-card> 
     </v-container>
 
     <v-tabs grow color="green">
@@ -53,7 +30,7 @@
 
         <v-tab-item>
             <v-card flat>
-                <v-card-text> 
+                <v-card-text>
                     <v-layout row wrap>
                         <v-flex xs12>
                             <v-card v-for="item in 5" class="rounded-lg pa-2 mt-3">
@@ -86,7 +63,7 @@
 
         <v-tab-item>
             <v-card flat>
-                <v-card-text> 
+                <v-card-text>
                     <v-layout row wrap>
                         <v-flex xs12>
                             <v-card v-for="item in 5" class="rounded-lg pa-2 mt-3">
@@ -117,47 +94,19 @@
             </v-card>
         </v-tab-item>
 
-    </v-tabs>
-    <v-bottom-navigation grow fixed :value="activeBtn" color="success">
-        <v-btn>
-            <span>หน้าหลัก</span>
-            <v-icon>mdi-view-dashboard-outline</v-icon>
-        </v-btn>
+    </v-tabs> 
 
-        <!-- <v-btn>
-            <span>ข้อมูลส่วนตัว</span>
-            <v-icon>mdi-account</v-icon>
-        </v-btn> -->
-
-        <v-btn>
-            <span>เกษตกร</span>
-            <v-icon>mdi-account-group</v-icon>
-        </v-btn>
-
-        <v-btn>
-            <span>ผู้ดูแลระบบ</span>
-            <v-icon>mdi-account-cog</v-icon>
-        </v-btn>
-
-        <!-- <v-btn>
-            <span>คำขอรหัสผ่าน</span>
-            <v-icon>mdi-account-key</v-icon>
-        </v-btn> -->
-
-        <v-btn>
-            <span>รายงาน</span>
-            <v-icon>mdi-clipboard-text</v-icon>
-        </v-btn>
-    </v-bottom-navigation>
+    <buttomnav />
 </div>
 </template>
 
 <script>
+import buttomnav from '@/components/admin/buttomnav';
 export default {
     name: 'Root',
     /*-------------------------ประกาศ components ---------------------------------------*/
     components: {
-
+buttomnav
     },
     /*-------------------------รับค่าเมื่อเราเป็น components---------------------------------------*/
     props: {
@@ -166,7 +115,7 @@ export default {
     /*-------------------------ประกาศตัวแปรที่ใช้ ผูกกับ v-model ---------------------------------------*/
     data() {
         return {
-            activeBtn:1,
+            activeBtn: 1,
             page: 1,
             items: ['แก้ไขรหัสผ่านแล้ว', 'ยังไม่ได้แก้ไขรหัสผ่าน'],
 

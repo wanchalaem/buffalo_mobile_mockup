@@ -141,7 +141,7 @@
                             </v-date-picker>
                         </v-menu>
                         <area-chart :colors="['#1E90FF']" :data="chartData"></area-chart>
-                        <center>
+                        <center class="mt-6">
                             <v-btn depressed @click="$router.push('/admin/reportbuffalo')" block dark class="rounded-lg" color="green">ดูข้อมูลเพิ่มเติม</v-btn>
                         </center>
                     </v-card>

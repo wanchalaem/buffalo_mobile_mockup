@@ -16,11 +16,11 @@
 
         <div class="text-center"> 
 
-            <v-chip class="pa-1 ma-1" @click="$router.push('/user/picture')" color="success" dark large>
+            <v-chip class="ma-2" @click="$router.push('/user/picture')" color="success" dark large>
                 <v-icon>mdi-image-outline</v-icon>รูปภาพ
             </v-chip>
 
-            <v-chip class="pa-1 ma-1" @click="$router.push('/user/resetpassword')" color="red" dark large>
+            <v-chip class="ma-2" @click="$router.push('/user/resetpassword')" color="red" dark large>
                 <v-icon>mdi-lock</v-icon>รหัสผ่าน
             </v-chip>
         </div>

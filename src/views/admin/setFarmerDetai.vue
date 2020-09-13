@@ -3,7 +3,10 @@
     <!-- <NavigationAdmin name="ข้อมูลเกษตกร" /> -->
     <v-container>
         <v-row class="d-flex flex-row ">
-            <v-btn depressed small fab @click="$router.push('/admin/userprofile')">
+            <!-- <v-btn depressed small fab @click="$router.push('/admin/userprofile')">
+                <v-icon class="icon">mdi-chevron-left</v-icon>
+            </v-btn> -->
+            <v-btn depressed small fab @click="$router.go(-1)">
                 <v-icon class="icon">mdi-chevron-left</v-icon>
             </v-btn>
             <h2>ข้อมูลเกษตกร</h2>
